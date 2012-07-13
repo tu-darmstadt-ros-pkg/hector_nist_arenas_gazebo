@@ -1,0 +1,9 @@
+<properties>
+    <type>wall</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>small_wall_no_tex.stl</mesh>
+    <meta-info>
+        <mi desc="Name">Small Wall - No Texture</mi>
+        <mi desc="Height">1.2 m</mi>
+    </meta-info>
+</properties>

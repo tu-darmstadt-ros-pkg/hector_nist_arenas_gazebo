@@ -1,0 +1,9 @@
+<properties>
+    <type>wall</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>small_wall.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Small Wall</mi>
+        <mi desc="Height">1.2 m</mi>
+    </meta-info>
+</properties>

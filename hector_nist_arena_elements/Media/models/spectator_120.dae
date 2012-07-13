@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Stefan Kohlbrecher</author>
+      <authoring_tool>Blender 2.62.2 r45133</authoring_tool>
+    </contributor>
+    <created>2012-03-29T21:24:27</created>
+    <modified>2012-03-29T21:24:27</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="plywood256x256_jpg" name="plywood256x256_jpg">
+      <init_from>plywood256x256.jpg</init_from>
+    </image>
+  </library_images>
+  <library_effects>
+    <effect id="Material-effect">
+      <profile_COMMON>
+        <newparam sid="plywood256x256_jpg-surface">
+          <surface type="2D">
+            <init_from>plywood256x256_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="plywood256x256_jpg-sampler">
+          <sampler2D>
+            <source>plywood256x256_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="plywood256x256_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+        <extra>
+          <technique profile="GOOGLEEARTH">
+            <double_sided>1</double_sided>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra><technique profile="MAX3D"><double_sided>1</double_sided></technique></extra>
+    </effect>
+    <effect id="Material_001-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">1 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">1 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">1 0 0 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+        <extra>
+          <technique profile="GOOGLEEARTH">
+            <double_sided>1</double_sided>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra><technique profile="MAX3D"><double_sided>1</double_sided></technique></extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material-material" name="Material">
+      <instance_effect url="#Material-effect"/>
+    </material>
+    <material id="Material_001-material" name="Material.001">
+      <instance_effect url="#Material_001-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Plane_001-mesh" name="Plane.001">
+      <mesh>
+        <source id="Plane_001-mesh-positions">
+          <float_array id="Plane_001-mesh-positions-array" count="24">-0.361486 -1.81233 0.1791031 -0.361486 -1.81233 1.247959 0.361486 -1.81233 1.247959 0.361486 -1.81233 0.1791031 -0.361486 -2.881186 0.1791033 -0.361486 -2.881185 1.247959 0.361486 -2.881185 1.247959 0.361486 -2.881186 0.1791033</float_array>
+          <technique_common>
+            <accessor source="#Plane_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane_001-mesh-normals">
+          <float_array id="Plane_001-mesh-normals-array" count="36">-1 0 0 0 0 1 1 0 0 0 -2.2306e-7 -1 0 1 -2.2306e-7 0 -1 4.46119e-7 -1 0 0 0 0 1 1 0 0 0 -2.2306e-7 -1 0 1 -2.2306e-7 0 -1 4.46119e-7</float_array>
+          <technique_common>
+            <accessor source="#Plane_001-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane_001-mesh-map-0">
+          <float_array id="Plane_001-mesh-map-0-array" count="72">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#Plane_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane_001-mesh-vertices">
+          <input semantic="POSITION" source="#Plane_001-mesh-positions"/>
+        </vertices>
+        <polylist material="Material_0012" count="12">
+          <input semantic="VERTEX" source="#Plane_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane_001-mesh-map-0" offset="2" set="0"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>5 0 0 0 0 1 4 0 2 2 1 3 5 1 4 6 1 5 3 2 6 6 2 7 7 2 8 0 3 9 7 3 10 4 3 11 2 4 12 0 4 13 1 4 14 5 5 15 7 5 16 6 5 17 0 6 18 5 6 19 1 6 20 5 7 21 2 7 22 1 7 23 6 8 24 3 8 25 2 8 26 7 9 27 0 9 28 3 9 29 0 10 30 2 10 31 3 10 32 7 11 33 5 11 34 4 11 35</p>
+        </polylist>
+      </mesh>
+      <extra><technique profile="MAYA"><double_sided>1</double_sided></technique></extra>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Plane_001" type="NODE">
+        <translate sid="location">0 5.96046e-8 5.96046e-8</translate>
+        <rotate sid="rotationZ">0 0 1 1.27222e-14</rotate>
+        <rotate sid="rotationY">0 1 0 -1.27222e-14</rotate>
+        <rotate sid="rotationX">1 0 0 -90</rotate>
+        <scale sid="scale">0.59 0.59 0.4271725</scale>
+        <instance_geometry url="#Plane_001-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material1" target="#Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Material_0012" target="#Material_001-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

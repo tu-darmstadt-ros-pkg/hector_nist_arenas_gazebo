@@ -1,0 +1,14 @@
+<package>
+  <description brief="hector_nist_arena_elements">
+
+     hector_nist_arena_elements contains models of elements/parts used in NIST standard test arenas for response robots. Using these elements, scenarios can be generated for simulation using gazebo.
+
+  </description>
+  <author>Johannes Simon, Stefan Kohlbrecher</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/hector_nist_arena_elements</url>
+
+</package>
+
+

@@ -1,0 +1,9 @@
+<properties>
+    <type>floor</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>full_ramp.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Full Ramp</mi>
+        <mi desc="Height">339 mm</mi>
+    </meta-info>
+</properties>

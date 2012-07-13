@@ -1,0 +1,9 @@
+<properties>
+    <type>wall</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>fiducial_barrel.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Fiducial Barrel</mi>
+        <mi desc="Height">1.2 m</mi>
+    </meta-info>
+</properties>

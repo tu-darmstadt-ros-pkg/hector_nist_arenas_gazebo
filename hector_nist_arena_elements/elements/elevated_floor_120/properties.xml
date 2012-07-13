@@ -1,0 +1,9 @@
+<properties>
+    <type>floor</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>elevated_floor_120.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Elevated Floor</mi>
+        <mi desc="Height">1.2 m</mi>
+    </meta-info>
+</properties>

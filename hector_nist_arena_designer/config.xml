@@ -1,0 +1,34 @@
+<config>
+ <!-- Elements shown in the left editor pane -->
+ <!-- Default rotation is 0 -->
+ <arena-elements>
+  <element type="small_wall"/>
+  <element type="tall_wall"/>
+  <element type="fiducial_barrel"/>
+  <element type="fiducial_barrel_high"/>
+  <element type="wall_holes1"/>
+  <element type="full_ramp"/>
+  <element type="half_ramp"/>
+  <element type="victim_with_box1"/>
+  <element type="victim_1"/>
+  <element type="stepfield_red_diagonal"/>
+  <element type="simple_elev_ramp"/>
+  <element type="elevated_floor_120"/>
+  <element type="corner_diag_120"/>
+  <element type="wall_diag_120"/>
+  <element type="manip_storage"/>
+  <element type="stairs_120"/>
+  <element type="small_wall_no_tex"/>
+  <element type="small_wall_gap_no_tex"/>
+  <element type="spectator_120"/>
+  <element type="small_wall_triple_holes"/>
+  
+  <!--
+        <element type="floor"/>
+        <element type="element1"/>
+        <element type="element2"/>
+        <element type="wall"/>
+        <element type="wall" rotation="90"/>
+        -->
+ </arena-elements>
+</config>

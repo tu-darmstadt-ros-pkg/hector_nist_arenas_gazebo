@@ -1,0 +1,9 @@
+<properties>
+    <type>floor</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>stepfield_red_diagonal.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Step Field</mi>
+        <mi desc="Height">0.5 m</mi>
+    </meta-info>
+</properties>

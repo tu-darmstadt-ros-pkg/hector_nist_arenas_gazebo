@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>741</width>
+    <height>534</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>RoboCup Rescue Arena Designer</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QGraphicsView" name="elementView">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="arenaViewContainer" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="margin">
+        <number>0</number>
+       </property>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>741</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveAs"/>
+    <addaction name="actionExport"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionShowDocumentation"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionRotateCounterClockwise"/>
+   <addaction name="actionRotateClockwise"/>
+   <addaction name="actionRemove"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoomIn"/>
+   <addaction name="actionZoomOut"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>339</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>270</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="4" column="0" colspan="2">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="0" rowspan="3" colspan="2">
+      <widget class="QWidget" name="infoWidget" native="true">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>-1</number>
+        </property>
+        <item row="1" column="0">
+         <widget class="MetaInfoBox" name="metaInfoBox">
+          <property name="title">
+           <string>Component Info</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="infoBox">
+          <property name="minimumSize">
+           <size>
+            <width>170</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Selection Info</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>&lt;b&gt;Position&lt;/b&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="infoPos">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>&lt;b&gt;Rotation&lt;/b&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="infoRot">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="infoItemMountPointLabel">
+             <property name="text">
+              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lucida Grande'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Mount Point&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QComboBox" name="infoItemMountPoint"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="infoOffsetLabel">
+             <property name="text">
+              <string>&lt;b&gt;Offset&lt;/b&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLabel" name="infoOffset">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QLabel" name="infoHintLabel">
+       <property name="text">
+        <string>&lt;b&gt;Help&lt;/b&gt;&lt;br/&gt;
+Select an element in the arena to display its properties.&lt;br/&gt;
+&lt;br/&gt;
+To allow custom-shaped elements, transparent parts of element icons can not be selected.&lt;br/&gt;
+&lt;br/&gt;
+If you want to select multiple objects, either use the rubber-band selection tool (left-click and drag) or press and hold Ctrl (Cmd on OS X).</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionRotateCounterClockwise">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icon/icons/rotate_ccw.png</normaloff>:/icon/icons/rotate_ccw.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate counter-clockwise</string>
+   </property>
+   <property name="toolTip">
+    <string>Rotate element counter-clockwise by 90°</string>
+   </property>
+   <property name="shortcut">
+    <string>L</string>
+   </property>
+  </action>
+  <action name="actionRotateClockwise">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icon/icons/rotate_cw.png</normaloff>:/icon/icons/rotate_cw.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate clockwise</string>
+   </property>
+   <property name="toolTip">
+    <string>Rotate element clockwise by 90°</string>
+   </property>
+   <property name="shortcut">
+    <string>R</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icon/icons/document_export.png</normaloff>:/icon/icons/document_export.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export to .world File ...</string>
+   </property>
+   <property name="toolTip">
+    <string>Export arena to a format readable by Gazebo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionRemove">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icon/icons/remove.png</normaloff>:/icon/icons/remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove</string>
+   </property>
+   <property name="toolTip">
+    <string>Remove element from arena</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icon/icons/document_open.png</normaloff>:/icon/icons/document_open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Arena ...</string>
+   </property>
+   <property name="toolTip">
+    <string>Open an arena .raf file ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSaveAs">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icon/icons/document_save_as.png</normaloff>:/icon/icons/document_save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Arena as...</string>
+   </property>
+   <property name="toolTip">
+    <string>Save arena as .raf file ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icon/icons/document_save.png</normaloff>:/icon/icons/document_save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Arena</string>
+   </property>
+   <property name="toolTip">
+    <string>Saves the current arena</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icon/icons/document_new.png</normaloff>:/icon/icons/document_new.png</iconset>
+   </property>
+   <property name="text">
+    <string>New arena</string>
+   </property>
+   <property name="toolTip">
+    <string>Opens a new, empty arena</string>
+   </property>
+  </action>
+  <action name="actionZoomIn">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icon/icons/zoom_in.png</normaloff>:/icon/icons/zoom_in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+   <property name="toolTip">
+    <string>Magnify the arena</string>
+   </property>
+  </action>
+  <action name="actionZoomOut">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icon/icons/zoom_out.png</normaloff>:/icon/icons/zoom_out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+  </action>
+  <action name="actionShowDocumentation">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icon/icons/help_contents.png</normaloff>:/icon/icons/help_contents.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open HTML Documentation</string>
+   </property>
+   <property name="toolTip">
+    <string>Open the Designer's HTML documentation in a webbrowser</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MetaInfoBox</class>
+   <extends>QGroupBox</extends>
+   <header>ui/metainfobox.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

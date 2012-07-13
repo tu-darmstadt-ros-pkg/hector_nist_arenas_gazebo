@@ -1,0 +1,9 @@
+<properties>
+    <type>floor</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>wall_diag_120.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Diagonal Wall</mi>
+        <mi desc="Height">1.2 m</mi>
+    </meta-info>
+</properties>
