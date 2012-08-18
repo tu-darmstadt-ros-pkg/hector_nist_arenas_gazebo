@@ -83,6 +83,7 @@ private:
 
     QString m_hector_arena_gui_package_dir;
     QString m_hector_arena_elements_package_dir;
+    QString m_hector_arena_worlds_package_dir;
 
     // Default window title set in UI file
     QString m_windowTitlePrefix;
