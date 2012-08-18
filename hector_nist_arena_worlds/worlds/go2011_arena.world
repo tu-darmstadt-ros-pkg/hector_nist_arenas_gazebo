@@ -1,0 +1,3091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gazebo:world xmlns:gazebo="http://playerstage.sourceforge.net/gazebo/xmlschema/#gz" xmlns:model="http://playerstage.sourceforge.net/gazebo/xmlschema/#model" xmlns:body="http://playerstage.sourceforge.net/gazebo/xmlschema/#body" xmlns:geom="http://playerstage.sourceforge.net/gazebo/xmlschema/#geom" xmlns:physics="http://playerstage.sourceforge.net/gazebo/xmlschema/#physics" xmlns:rendering="http://playerstage.sourceforge.net/gazebo/xmlschema/#rendering">
+    <physics:ode>
+        <stepTime>0.001</stepTime>
+        <gravity>0 0 -9.81</gravity>
+        <cfm>10e-10</cfm>
+        <erp>0.2</erp>
+        <stepType>quick</stepType>
+        <stepIters>10</stepIters>
+        <contactMaxCorrectingVel>100.0</contactMaxCorrectingVel>
+        <contactSurfaceLayer>0.001</contactSurfaceLayer>
+        <updateRate>-0.1</updateRate>
+    </physics:ode>
+    <rendering:gui>
+        <type>flkt</type>
+        <size>800 600</size>
+        <pos>0 0</pos>
+        <frames>
+            <row height="100%">
+                <camera width="100%">
+                    <xyz>0 0 3</xyz>
+                    <rpy>0 90 90</rpy>
+                </camera>
+            </row>
+        </frames>
+    </rendering:gui>
+    <rendering:ogre>
+        <ambient>0.2 0.2 0.2 1.0</ambient>
+        <sky>
+            <material>Gazebo/CloudySky</material>
+        </sky>
+        <grid>false</grid>
+    </rendering:ogre>
+    <model:renderable name="point_white">
+        <xyz>0 0 20</xyz>
+        <rpy>0 50 50</rpy>
+        <enableGravity>false</enableGravity>
+        <light>
+            <type>directional</type>
+            <diffuseColor>0.7 0.7 0.7</diffuseColor>
+            <specularColor>0.1 0.1 0.1</specularColor>
+            <attenuation>0.2 0.1 0</attenuation>
+            <range>100.0</range>
+        </light>
+    </model:renderable>
+    <model:physical name="gplane">
+        <xyz>0 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:plane name="plane">
+            <geom:plane name="plane">
+                <laserRetro>2000.0</laserRetro>
+                <mu1>50.0</mu1>
+                <mu2>50.0</mu2>
+                <kp>1000000000.0</kp>
+                <kd>1.0</kd>
+                <normal>0 0 1</normal>
+                <size>120 120</size>
+                <segments>10 10</segments>
+                <uvTile>100 100</uvTile>
+                <material>Gazebo/GrayGrid</material>
+            </geom:plane>
+        </body:plane>
+    </model:physical>
+    <model:physical name="small_wall_1">
+        <xyz>0 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_1_body">
+            <geom:trimesh name="small_wall_1_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_2">
+        <xyz>1.2 0 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_2_body">
+            <geom:trimesh name="small_wall_2_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_3">
+        <xyz>0 0 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_3_body">
+            <geom:trimesh name="small_wall_3_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_4">
+        <xyz>-1.2 1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_4_body">
+            <geom:trimesh name="small_wall_4_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_5">
+        <xyz>-1.2 0 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_5_body">
+            <geom:trimesh name="small_wall_5_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_6">
+        <xyz>-1.2 -1.2 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_6_body">
+            <geom:trimesh name="small_wall_6_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_7">
+        <xyz>-1.2 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_7_body">
+            <geom:trimesh name="small_wall_7_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_8">
+        <xyz>0 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_8_body">
+            <geom:trimesh name="small_wall_8_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_9">
+        <xyz>1.2 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_9_body">
+            <geom:trimesh name="small_wall_9_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_10">
+        <xyz>1.2 -1.2 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_10_body">
+            <geom:trimesh name="small_wall_10_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_11">
+        <xyz>3.6 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_11_body">
+            <geom:trimesh name="small_wall_11_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_12">
+        <xyz>3.6 -1.2 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_12_body">
+            <geom:trimesh name="small_wall_12_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_13">
+        <xyz>4.8 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_13_body">
+            <geom:trimesh name="small_wall_13_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_14">
+        <xyz>6 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_14_body">
+            <geom:trimesh name="small_wall_14_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_15">
+        <xyz>3.6 1.2 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_15_body">
+            <geom:trimesh name="small_wall_15_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_16">
+        <xyz>3.6 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_16_body">
+            <geom:trimesh name="small_wall_16_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_17">
+        <xyz>2.4 1.2 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_17_body">
+            <geom:trimesh name="small_wall_17_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_18">
+        <xyz>2.4 3.6 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_18_body">
+            <geom:trimesh name="small_wall_18_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_19">
+        <xyz>2.4 3.6 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_19_body">
+            <geom:trimesh name="small_wall_19_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_20">
+        <xyz>2.4 3.6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_20_body">
+            <geom:trimesh name="small_wall_20_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_21">
+        <xyz>0 4.8 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_21_body">
+            <geom:trimesh name="small_wall_21_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_22">
+        <xyz>0 4.8 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_22_body">
+            <geom:trimesh name="small_wall_22_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_23">
+        <xyz>-1.2 4.8 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_23_body">
+            <geom:trimesh name="small_wall_23_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_24">
+        <xyz>-1.2 4.8 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_24_body">
+            <geom:trimesh name="small_wall_24_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_25">
+        <xyz>-1.2 6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_25_body">
+            <geom:trimesh name="small_wall_25_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_26">
+        <xyz>1.2 7.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_26_body">
+            <geom:trimesh name="small_wall_26_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_27">
+        <xyz>3.6 6 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_27_body">
+            <geom:trimesh name="small_wall_27_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_28">
+        <xyz>3.6 6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_28_body">
+            <geom:trimesh name="small_wall_28_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_29">
+        <xyz>4.8 7.2 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_29_body">
+            <geom:trimesh name="small_wall_29_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_30">
+        <xyz>6 0 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_30_body">
+            <geom:trimesh name="small_wall_30_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_holes1_1">
+        <xyz>7.2 1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_holes1_1_body">
+            <geom:trimesh name="wall_holes1_1_geom">
+                <mesh>small_wall_holes1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall_holes1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_31">
+        <xyz>4.8 2.4 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_31_body">
+            <geom:trimesh name="small_wall_31_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_32">
+        <xyz>4.8 2.4 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_32_body">
+            <geom:trimesh name="small_wall_32_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_33">
+        <xyz>7.2 0 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_33_body">
+            <geom:trimesh name="small_wall_33_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="victim_with_box1_1">
+        <xyz>6.9 1.2 0.6</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="victim_with_box1_1_body">
+            <geom:trimesh name="victim_with_box1_1_geom">
+                <mesh>victim-with-box1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>victim-with-box1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_34">
+        <xyz>6 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_34_body">
+            <geom:trimesh name="small_wall_34_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_35">
+        <xyz>7.2 -2.4 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_35_body">
+            <geom:trimesh name="small_wall_35_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_36">
+        <xyz>9.6 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_36_body">
+            <geom:trimesh name="small_wall_36_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_37">
+        <xyz>10.8 0 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_37_body">
+            <geom:trimesh name="small_wall_37_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_38">
+        <xyz>10.8 -1.2 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_38_body">
+            <geom:trimesh name="small_wall_38_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_39">
+        <xyz>9.6 -2.4 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_39_body">
+            <geom:trimesh name="small_wall_39_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_40">
+        <xyz>10.8 1.2 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_40_body">
+            <geom:trimesh name="small_wall_40_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_41">
+        <xyz>9.6 1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_41_body">
+            <geom:trimesh name="small_wall_41_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_42">
+        <xyz>8.4 2.4 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_42_body">
+            <geom:trimesh name="small_wall_42_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_43">
+        <xyz>8.4 3.6 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_43_body">
+            <geom:trimesh name="small_wall_43_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_44">
+        <xyz>9.6 2.4 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_44_body">
+            <geom:trimesh name="small_wall_44_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_45">
+        <xyz>8.4 3.6 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_45_body">
+            <geom:trimesh name="small_wall_45_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_46">
+        <xyz>8.4 3.6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_46_body">
+            <geom:trimesh name="small_wall_46_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_47">
+        <xyz>9.6 3.6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_47_body">
+            <geom:trimesh name="small_wall_47_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_48">
+        <xyz>8.4 4.8 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_48_body">
+            <geom:trimesh name="small_wall_48_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_49">
+        <xyz>9.6 6 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_49_body">
+            <geom:trimesh name="small_wall_49_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_50">
+        <xyz>9.6 7.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_50_body">
+            <geom:trimesh name="small_wall_50_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_51">
+        <xyz>8.4 7.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_51_body">
+            <geom:trimesh name="small_wall_51_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_52">
+        <xyz>7.2 6 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_52_body">
+            <geom:trimesh name="small_wall_52_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="fiducial_barrel_1">
+        <xyz>4.8 0 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="fiducial_barrel_1_body">
+            <geom:trimesh name="fiducial_barrel_1_geom">
+                <mesh>fiducial_barrel.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>fiducial_barrel.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="fiducial_barrel_2">
+        <xyz>6 0 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="fiducial_barrel_2_body">
+            <geom:trimesh name="fiducial_barrel_2_geom">
+                <mesh>fiducial_barrel.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>fiducial_barrel.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="fiducial_barrel_3">
+        <xyz>7.2 0 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="fiducial_barrel_3_body">
+            <geom:trimesh name="fiducial_barrel_3_geom">
+                <mesh>fiducial_barrel.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>fiducial_barrel.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="fiducial_barrel_4">
+        <xyz>8.4 0 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="fiducial_barrel_4_body">
+            <geom:trimesh name="fiducial_barrel_4_geom">
+                <mesh>fiducial_barrel.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>fiducial_barrel.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="fiducial_barrel_5">
+        <xyz>8.4 2.4 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="fiducial_barrel_5_body">
+            <geom:trimesh name="fiducial_barrel_5_geom">
+                <mesh>fiducial_barrel.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>fiducial_barrel.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="fiducial_barrel_6">
+        <xyz>9.6 2.4 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="fiducial_barrel_6_body">
+            <geom:trimesh name="fiducial_barrel_6_geom">
+                <mesh>fiducial_barrel.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>fiducial_barrel.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="fiducial_barrel_7">
+        <xyz>9.6 6 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="fiducial_barrel_7_body">
+            <geom:trimesh name="fiducial_barrel_7_geom">
+                <mesh>fiducial_barrel.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>fiducial_barrel.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="fiducial_barrel_8">
+        <xyz>10.8 6 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="fiducial_barrel_8_body">
+            <geom:trimesh name="fiducial_barrel_8_geom">
+                <mesh>fiducial_barrel.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>fiducial_barrel.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_1">
+        <xyz>0 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_1_body">
+            <geom:trimesh name="half_ramp_1_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_2">
+        <xyz>0 0 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_2_body">
+            <geom:trimesh name="half_ramp_2_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_3">
+        <xyz>-1.2 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_3_body">
+            <geom:trimesh name="half_ramp_3_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_4">
+        <xyz>-1.2 0 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_4_body">
+            <geom:trimesh name="half_ramp_4_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_5">
+        <xyz>-1.2 -1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_5_body">
+            <geom:trimesh name="half_ramp_5_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_6">
+        <xyz>0 -1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_6_body">
+            <geom:trimesh name="half_ramp_6_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_7">
+        <xyz>-1.2 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_7_body">
+            <geom:trimesh name="half_ramp_7_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_8">
+        <xyz>0 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_8_body">
+            <geom:trimesh name="half_ramp_8_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_9">
+        <xyz>1.2 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_9_body">
+            <geom:trimesh name="half_ramp_9_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_10">
+        <xyz>2.4 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_10_body">
+            <geom:trimesh name="half_ramp_10_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_11">
+        <xyz>3.6 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_11_body">
+            <geom:trimesh name="half_ramp_11_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_12">
+        <xyz>4.8 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_12_body">
+            <geom:trimesh name="half_ramp_12_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_13">
+        <xyz>1.2 -1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_13_body">
+            <geom:trimesh name="half_ramp_13_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_14">
+        <xyz>1.2 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_14_body">
+            <geom:trimesh name="half_ramp_14_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_15">
+        <xyz>1.2 0 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_15_body">
+            <geom:trimesh name="half_ramp_15_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_16">
+        <xyz>2.4 0 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_16_body">
+            <geom:trimesh name="half_ramp_16_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_17">
+        <xyz>3.6 0 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_17_body">
+            <geom:trimesh name="half_ramp_17_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_18">
+        <xyz>4.8 0 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_18_body">
+            <geom:trimesh name="half_ramp_18_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="stepfield_red_diagonal_1">
+        <xyz>2.4 1.2 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="stepfield_red_diagonal_1_body">
+            <geom:trimesh name="stepfield_red_diagonal_1_geom">
+                <mesh>stepfield_red_diagonal.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>stepfield_red_diagonal.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_holes1_2">
+        <xyz>1.2 1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_holes1_2_body">
+            <geom:trimesh name="wall_holes1_2_geom">
+                <mesh>small_wall_holes1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall_holes1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="victim_with_box1_2">
+        <xyz>0.9 1.2 0.6</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="victim_with_box1_2_body">
+            <geom:trimesh name="victim_with_box1_2_geom">
+                <mesh>victim-with-box1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>victim-with-box1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_19">
+        <xyz>2.4 -1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_19_body">
+            <geom:trimesh name="half_ramp_19_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_20">
+        <xyz>3.6 -1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_20_body">
+            <geom:trimesh name="half_ramp_20_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_21">
+        <xyz>2.4 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_21_body">
+            <geom:trimesh name="half_ramp_21_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_22">
+        <xyz>3.6 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_22_body">
+            <geom:trimesh name="half_ramp_22_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="simple_elev_ramp_1">
+        <xyz>6 2.4 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="simple_elev_ramp_1_body">
+            <geom:trimesh name="simple_elev_ramp_1_geom">
+                <mesh>simple_elev_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>simple_elev_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_23">
+        <xyz>4.8 -1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_23_body">
+            <geom:trimesh name="half_ramp_23_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_24">
+        <xyz>6 -1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_24_body">
+            <geom:trimesh name="half_ramp_24_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_25">
+        <xyz>7.2 -1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_25_body">
+            <geom:trimesh name="half_ramp_25_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_26">
+        <xyz>4.8 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_26_body">
+            <geom:trimesh name="half_ramp_26_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_27">
+        <xyz>6 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_27_body">
+            <geom:trimesh name="half_ramp_27_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_28">
+        <xyz>7.2 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_28_body">
+            <geom:trimesh name="half_ramp_28_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_29">
+        <xyz>6 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_29_body">
+            <geom:trimesh name="half_ramp_29_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_30">
+        <xyz>7.2 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_30_body">
+            <geom:trimesh name="half_ramp_30_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_31">
+        <xyz>6 0 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_31_body">
+            <geom:trimesh name="half_ramp_31_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_32">
+        <xyz>7.2 0 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_32_body">
+            <geom:trimesh name="half_ramp_32_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="fiducial_barrel_9">
+        <xyz>9.6 -1.2 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="fiducial_barrel_9_body">
+            <geom:trimesh name="fiducial_barrel_9_geom">
+                <mesh>fiducial_barrel.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>fiducial_barrel.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_33">
+        <xyz>8.4 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_33_body">
+            <geom:trimesh name="half_ramp_33_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_34">
+        <xyz>9.6 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_34_body">
+            <geom:trimesh name="half_ramp_34_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_35">
+        <xyz>8.4 -1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_35_body">
+            <geom:trimesh name="half_ramp_35_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_36">
+        <xyz>9.6 -1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_36_body">
+            <geom:trimesh name="half_ramp_36_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_37">
+        <xyz>8.4 0 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_37_body">
+            <geom:trimesh name="half_ramp_37_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_38">
+        <xyz>9.6 0 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_38_body">
+            <geom:trimesh name="half_ramp_38_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_39">
+        <xyz>8.4 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_39_body">
+            <geom:trimesh name="half_ramp_39_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="half_ramp_40">
+        <xyz>9.6 -1.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="half_ramp_40_body">
+            <geom:trimesh name="half_ramp_40_geom">
+                <mesh>half_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>half_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_53">
+        <xyz>9.6 -2.4 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_53_body">
+            <geom:trimesh name="small_wall_53_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_54">
+        <xyz>10.8 -3.6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_54_body">
+            <geom:trimesh name="small_wall_54_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="tall_wall_1">
+        <xyz>6 6 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="tall_wall_1_body">
+            <geom:trimesh name="tall_wall_1_geom">
+                <mesh>tall_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>tall_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="tall_wall_2">
+        <xyz>7.2 4.8 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="tall_wall_2_body">
+            <geom:trimesh name="tall_wall_2_geom">
+                <mesh>tall_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>tall_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="tall_wall_3">
+        <xyz>6 3.6 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="tall_wall_3_body">
+            <geom:trimesh name="tall_wall_3_geom">
+                <mesh>tall_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>tall_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="elevated_floor_120_1">
+        <xyz>6 3.6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="elevated_floor_120_1_body">
+            <geom:trimesh name="elevated_floor_120_1_geom">
+                <mesh>elevated_floor_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>elevated_floor_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="elevated_floor_120_2">
+        <xyz>6 4.8 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="elevated_floor_120_2_body">
+            <geom:trimesh name="elevated_floor_120_2_geom">
+                <mesh>elevated_floor_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>elevated_floor_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_1">
+        <xyz>7.2 4.8 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_1_body">
+            <geom:trimesh name="full_ramp_1_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_2">
+        <xyz>7.2 3.6 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_2_body">
+            <geom:trimesh name="full_ramp_2_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_3">
+        <xyz>8.4 4.8 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_3_body">
+            <geom:trimesh name="full_ramp_3_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_4">
+        <xyz>8.4 6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_4_body">
+            <geom:trimesh name="full_ramp_4_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_5">
+        <xyz>9.6 6 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_5_body">
+            <geom:trimesh name="full_ramp_5_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_6">
+        <xyz>9.6 4.8 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_6_body">
+            <geom:trimesh name="full_ramp_6_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_holes1_3">
+        <xyz>10.8 4.8 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_holes1_3_body">
+            <geom:trimesh name="wall_holes1_3_geom">
+                <mesh>small_wall_holes1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall_holes1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="victim_with_box1_3">
+        <xyz>10.8 5.1 0.6</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="victim_with_box1_3_body">
+            <geom:trimesh name="victim_with_box1_3_geom">
+                <mesh>victim-with-box1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>victim-with-box1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="stepfield_red_diagonal_2">
+        <xyz>3.6 2.4 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="stepfield_red_diagonal_2_body">
+            <geom:trimesh name="stepfield_red_diagonal_2_geom">
+                <mesh>stepfield_red_diagonal.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>stepfield_red_diagonal.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_holes1_4">
+        <xyz>2.4 -2.4 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_holes1_4_body">
+            <geom:trimesh name="wall_holes1_4_geom">
+                <mesh>small_wall_holes1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall_holes1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="stepfield_red_diagonal_3">
+        <xyz>4.8 3.6 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="stepfield_red_diagonal_3_body">
+            <geom:trimesh name="stepfield_red_diagonal_3_geom">
+                <mesh>stepfield_red_diagonal.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>stepfield_red_diagonal.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="elevated_floor_120_3">
+        <xyz>4.8 3.6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="elevated_floor_120_3_body">
+            <geom:trimesh name="elevated_floor_120_3_geom">
+                <mesh>elevated_floor_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>elevated_floor_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="tall_wall_4">
+        <xyz>4.8 4.8 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="tall_wall_4_body">
+            <geom:trimesh name="tall_wall_4_geom">
+                <mesh>tall_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>tall_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="tall_wall_5">
+        <xyz>4.8 3.6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="tall_wall_5_body">
+            <geom:trimesh name="tall_wall_5_geom">
+                <mesh>tall_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>tall_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_7">
+        <xyz>2.4 6 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_7_body">
+            <geom:trimesh name="full_ramp_7_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_8">
+        <xyz>2.4 4.8 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_8_body">
+            <geom:trimesh name="full_ramp_8_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_9">
+        <xyz>3.6 6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_9_body">
+            <geom:trimesh name="full_ramp_9_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_10">
+        <xyz>3.6 4.8 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_10_body">
+            <geom:trimesh name="full_ramp_10_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_11">
+        <xyz>4.8 6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_11_body">
+            <geom:trimesh name="full_ramp_11_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_12">
+        <xyz>4.8 4.8 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_12_body">
+            <geom:trimesh name="full_ramp_12_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_13">
+        <xyz>6 6 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_13_body">
+            <geom:trimesh name="full_ramp_13_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_14">
+        <xyz>1.2 6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_14_body">
+            <geom:trimesh name="full_ramp_14_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_15">
+        <xyz>1.2 4.8 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_15_body">
+            <geom:trimesh name="full_ramp_15_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_holes1_5">
+        <xyz>1.2 3.6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_holes1_5_body">
+            <geom:trimesh name="wall_holes1_5_geom">
+                <mesh>small_wall_holes1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall_holes1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_16">
+        <xyz>-1.2 6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_16_body">
+            <geom:trimesh name="full_ramp_16_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_17">
+        <xyz>0 4.8 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_17_body">
+            <geom:trimesh name="full_ramp_17_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_18">
+        <xyz>0 6 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_18_body">
+            <geom:trimesh name="full_ramp_18_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="full_ramp_19">
+        <xyz>-1.2 4.8 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="full_ramp_19_body">
+            <geom:trimesh name="full_ramp_19_geom">
+                <mesh>full_ramp.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>full_ramp.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_holes1_6">
+        <xyz>-2.4 6 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_holes1_6_body">
+            <geom:trimesh name="wall_holes1_6_geom">
+                <mesh>small_wall_holes1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall_holes1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="corner_diag_120_1">
+        <xyz>7.2 -2.4 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="corner_diag_120_1_body">
+            <geom:trimesh name="corner_diag_120_1_geom">
+                <mesh>corner_diag_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>corner_diag_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="corner_diag_120_2">
+        <xyz>8.4 -3.6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="corner_diag_120_2_body">
+            <geom:trimesh name="corner_diag_120_2_geom">
+                <mesh>corner_diag_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>corner_diag_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_diag_120_1">
+        <xyz>12 -1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_diag_120_1_body">
+            <geom:trimesh name="wall_diag_120_1_geom">
+                <mesh>wall_diag_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>wall_diag_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_diag_120_2">
+        <xyz>12 0 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_diag_120_2_body">
+            <geom:trimesh name="wall_diag_120_2_geom">
+                <mesh>wall_diag_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>wall_diag_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_55">
+        <xyz>12 1.2 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_55_body">
+            <geom:trimesh name="small_wall_55_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_diag_120_3">
+        <xyz>12 2.4 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_diag_120_3_body">
+            <geom:trimesh name="wall_diag_120_3_geom">
+                <mesh>wall_diag_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>wall_diag_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_56">
+        <xyz>13.2 3.6 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_56_body">
+            <geom:trimesh name="small_wall_56_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_diag_120_4">
+        <xyz>12 4.8 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_diag_120_4_body">
+            <geom:trimesh name="wall_diag_120_4_geom">
+                <mesh>wall_diag_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>wall_diag_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="corner_diag_120_3">
+        <xyz>7.2 8.4 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="corner_diag_120_3_body">
+            <geom:trimesh name="corner_diag_120_3_geom">
+                <mesh>corner_diag_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>corner_diag_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="corner_diag_120_4">
+        <xyz>6 8.4 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="corner_diag_120_4_body">
+            <geom:trimesh name="corner_diag_120_4_geom">
+                <mesh>corner_diag_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>corner_diag_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_57">
+        <xyz>4.8 8.4 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_57_body">
+            <geom:trimesh name="small_wall_57_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_diag_120_5">
+        <xyz>8.4 8.4 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_diag_120_5_body">
+            <geom:trimesh name="wall_diag_120_5_geom">
+                <mesh>wall_diag_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>wall_diag_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_diag_120_6">
+        <xyz>10.8 8.4 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_diag_120_6_body">
+            <geom:trimesh name="wall_diag_120_6_geom">
+                <mesh>wall_diag_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>wall_diag_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="corner_diag_120_5">
+        <xyz>9.6 9.6 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="corner_diag_120_5_body">
+            <geom:trimesh name="corner_diag_120_5_geom">
+                <mesh>corner_diag_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>corner_diag_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="small_wall_58">
+        <xyz>12 6 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="small_wall_58_body">
+            <geom:trimesh name="small_wall_58_geom">
+                <mesh>small_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_holes1_7">
+        <xyz>12 -2.4 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_holes1_7_body">
+            <geom:trimesh name="wall_holes1_7_geom">
+                <mesh>small_wall_holes1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall_holes1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="victim_with_box1_4">
+        <xyz>12 -2.7 0.3</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="victim_with_box1_4_body">
+            <geom:trimesh name="victim_with_box1_4_geom">
+                <mesh>victim-with-box1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>victim-with-box1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="stepfield_red_diagonal_4">
+        <xyz>6 3.6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="stepfield_red_diagonal_4_body">
+            <geom:trimesh name="stepfield_red_diagonal_4_geom">
+                <mesh>stepfield_red_diagonal.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>stepfield_red_diagonal.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="tall_wall_6">
+        <xyz>0 7.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="tall_wall_6_body">
+            <geom:trimesh name="tall_wall_6_geom">
+                <mesh>tall_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>tall_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="tall_wall_7">
+        <xyz>0 6 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="tall_wall_7_body">
+            <geom:trimesh name="tall_wall_7_geom">
+                <mesh>tall_wall.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>tall_wall.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="fiducial_barrel_high_1">
+        <xyz>0 6 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="fiducial_barrel_high_1_body">
+            <geom:trimesh name="fiducial_barrel_high_1_geom">
+                <mesh>fiducial_barrel_high.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>fiducial_barrel_high.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="fiducial_barrel_high_2">
+        <xyz>6 4.8 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="fiducial_barrel_high_2_body">
+            <geom:trimesh name="fiducial_barrel_high_2_geom">
+                <mesh>fiducial_barrel_high.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>fiducial_barrel_high.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="fiducial_barrel_high_3">
+        <xyz>4.8 4.8 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="fiducial_barrel_high_3_body">
+            <geom:trimesh name="fiducial_barrel_high_3_geom">
+                <mesh>fiducial_barrel_high.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>fiducial_barrel_high.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_holes1_8">
+        <xyz>12 7.2 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_holes1_8_body">
+            <geom:trimesh name="wall_holes1_8_geom">
+                <mesh>small_wall_holes1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall_holes1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="victim_with_box1_5">
+        <xyz>12 6.9 0.9</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="victim_with_box1_5_body">
+            <geom:trimesh name="victim_with_box1_5_geom">
+                <mesh>victim-with-box1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>victim-with-box1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="stepfield_red_diagonal_5">
+        <xyz>2.4 2.4 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="stepfield_red_diagonal_5_body">
+            <geom:trimesh name="stepfield_red_diagonal_5_geom">
+                <mesh>stepfield_red_diagonal.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>stepfield_red_diagonal.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="wall_holes1_9">
+        <xyz>1.2 2.4 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="wall_holes1_9_body">
+            <geom:trimesh name="wall_holes1_9_geom">
+                <mesh>small_wall_holes1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>small_wall_holes1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="victim_with_box1_6">
+        <xyz>1.2 2.1 0.6</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="victim_with_box1_6_body">
+            <geom:trimesh name="victim_with_box1_6_geom">
+                <mesh>victim-with-box1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>victim-with-box1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="corner_diag_120_6">
+        <xyz>2.4 7.2 0</xyz>
+        <rpy>0 0 -180</rpy>
+        <static>true</static>
+        <body:trimesh name="corner_diag_120_6_body">
+            <geom:trimesh name="corner_diag_120_6_geom">
+                <mesh>corner_diag_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>corner_diag_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="victim_with_box1_7">
+        <xyz>0.9 3.6 0.9</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="victim_with_box1_7_body">
+            <geom:trimesh name="victim_with_box1_7_geom">
+                <mesh>victim-with-box1.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>victim-with-box1.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="manip_storage_1">
+        <xyz>2.4 3.6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="manip_storage_1_body">
+            <geom:trimesh name="manip_storage_1_geom">
+                <mesh>manip_storage.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>manip_storage.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="stairs_120_1">
+        <xyz>4.8 2.4 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="stairs_120_1_body">
+            <geom:trimesh name="stairs_120_1_geom">
+                <mesh>stairs_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>stairs_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="spectator_120_1">
+        <xyz>-1.2 -1.2 0</xyz>
+        <rpy>0 0 -90</rpy>
+        <static>true</static>
+        <body:trimesh name="spectator_120_1_body">
+            <geom:trimesh name="spectator_120_1_geom">
+                <mesh>spectator_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>spectator_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="spectator_120_2">
+        <xyz>-1.2 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="spectator_120_2_body">
+            <geom:trimesh name="spectator_120_2_geom">
+                <mesh>spectator_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>spectator_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="spectator_120_3">
+        <xyz>-1.2 0 0</xyz>
+        <rpy>0 0 -270</rpy>
+        <static>true</static>
+        <body:trimesh name="spectator_120_3_body">
+            <geom:trimesh name="spectator_120_3_geom">
+                <mesh>spectator_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>spectator_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+</gazebo:world>

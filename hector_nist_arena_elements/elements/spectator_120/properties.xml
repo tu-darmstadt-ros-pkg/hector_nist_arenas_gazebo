@@ -1,0 +1,9 @@
+<properties>
+    <type>floor</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>spectator_120.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Spectator</mi>
+        <mi desc="Height">1200 mm</mi>
+    </meta-info>
+</properties>

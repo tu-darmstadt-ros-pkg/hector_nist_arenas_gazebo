@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icons/rotate_ccw.png</file>
+        <file>icons/rotate_cw.png</file>
+        <file>icons/document_export.png</file>
+        <file>icons/remove.png</file>
+        <file>icons/document_new.png</file>
+        <file>icons/document_open.png</file>
+        <file>icons/document_save_as.png</file>
+        <file>icons/document_save.png</file>
+        <file>icons/zoom_in.png</file>
+        <file>icons/zoom_out.png</file>
+        <file>icons/help_about.png</file>
+        <file>icons/help_contents.png</file>
+    </qresource>
+</RCC>

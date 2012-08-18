@@ -1,0 +1,9 @@
+<properties>
+    <type>item</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>victim-1.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Victim</mi>
+        <mi desc="Height">0.2 m</mi>
+    </meta-info>
+</properties>

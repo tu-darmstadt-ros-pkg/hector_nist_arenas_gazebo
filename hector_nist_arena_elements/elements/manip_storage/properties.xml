@@ -1,0 +1,9 @@
+<properties>
+    <type>floor</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>manip_storage.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Manipulation Storage Area</mi>
+        <mi desc="Height">1000 mm</mi>
+    </meta-info>
+</properties>

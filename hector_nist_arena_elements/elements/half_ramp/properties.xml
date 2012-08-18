@@ -1,0 +1,9 @@
+<properties>
+    <type>floor</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>half_ramp.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Half Ramp</mi>
+        <mi desc="Height">178 mm</mi>
+    </meta-info>
+</properties>

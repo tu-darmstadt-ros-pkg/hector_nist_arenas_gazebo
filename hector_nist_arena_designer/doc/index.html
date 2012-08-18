@@ -1,0 +1,172 @@
+<html>
+<head>
+	<title>Hector Arena Designer Documentation</title>
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+
+<center>
+<div style="text-align:left; width:1000px;">
+<h1>Hector Arena Designer</h1>
+
+<div id="bd">
+<div id="yui-main">
+<div class="yui-b">
+
+<h2 id="chapter-title">Documentation</h2>
+The Arena Designer was designed to be a multi-platform, easy-to-use tool to create NIST-compliant rescue arenas. Here's a screenshot of the editor with an example arena loaded:<br/>
+<div class="figure">
+	<img src="img/screenshot.png">
+	<p class="caption">Figure 1. Screenshot of Hector Arena Designer showing one of the example arenas.</p>
+</div>
+
+Theoretically, a rescue arena could be put together using a fully-blown 3D modeling application such as Blender, Autodesk's 3DS Max. However, most of the options offered in these tools are irrelevant for building a rescue arena. Therefore, this Arena Designer aims to simplify the arena design process by making a few simplifications:<br/>
+<ol>
+	<li>The arena is considered to be two-dimensional.</li>
+	<li>All elements are aligned in a grid, with each grid point being 1.2m x 1.2m.
+	<li>Elements can only be rotated by multitudes of 90 &deg;.
+</ol>
+
+Arenas can be put together by dragging elements from the element pane (left) to the arena (middle). All elements automatically snap to the grid, with the exception of freely-movable items like victims (red in the example above).
+
+
+<h3>Coordinate System</h3>
+Like Gazebo, the Arena Designer uses a right-hand coordinate system (meaning the y-axis points upwards). Most arena elements, with the exception of freely movable items, can only be placed at integer coordinates.
+<div class="figure">
+	<img src="img/grid.png">
+	<p class="caption">Figure 2. The coordinate system used to align arena elements.</p>
+</div>
+For example, the blue box in figure 2 is placed at (1,0). <i>Items</i> like victim dummies, however, can be placed at arbitrary positions, like the item illustrated by the blue circle placed at (-0.8, 1.2).
+
+
+<h3>Arena Elements</h3>
+The Arena Designer comes with an extendible set of elements that can be placed in the arena. New elements can be added by creating a new folder in the <code>hector_arena_elements</code> package in the <code>elements/</code> folder with the name of the element, e.g. <code>small_wall</code>. Each of these elements comes with at least three files:
+<pre class="cn literal-block">
+<code>hector_arena_elements/elements/NAME/properties.xml</code>
+<code>hector_arena_elements/elements/NAME/icon.png</code>
+<code>hector_arena_elements/Media/models/NAME.dae</code>
+</pre>
+The only file that <i>must</i> exist is <code>properties.xml</code>. For the other two files, an arbitrary name can be chosen and has to be specified in the <code>properties.xml</code>. This file specifies all properties of the element that are required for the Arena Designer to handle it (add, render, serialize, export to .world file, etc.). The pixmap in <code>icon.png</code> is used as representation of the element in the Arena Designer. It has no influence on the appearance of the element in Gazebo. The last file is the 3D model referenced in an exported Gazebo-compliant .world file. This file is in no stage parsed or opened, its name is only referenced in the .world file.
+
+In the following, a few example elements are listed:<br/>
+<br/>
+<table class="cn docutils" style="padding:10px;">
+<caption>Table 1. Example Arena Elements</caption>
+<colgroup>
+<col width="26%">
+<col width="22%">
+<col width="52%">
+</colgroup>
+<thead valign="bottom">
+<tr>
+<th class="head"><p class="first last cn">Name<div style="height: 18px;" id="b40" class="comment-indicator"><span></span></div></p>
+</th>
+<th class="head"><p class="first last cn">Pixmap<div style="height: 18px;" id="b40" class="comment-indicator"><span></span></div></p>
+</th>
+<th class="head"><p class="first last cn">3D Model<div style="height: 18px;" id="b41" class="comment-indicator"><span></span></div></p>
+</th>
+<th class="head"><p class="first last cn"><code>properties.xml</code><div style="height: 18px;" id="b42" class="comment-indicator"><span></span></div></p>
+</th>
+</tr>
+
+<tr>
+<td><code>stepfield_red_diagonal</code></td>
+<td><img src="img/stepfield_red_diagonal.png"/></td>
+<td><img src="img/stepfield_red_diagonal_3d.png" width="150" /></td>
+<td>
+<pre>
+&lt;properties&gt;
+    &lt;type&gt;floor&lt;/type&gt;
+    &lt;pixmap&gt;icon.png&lt;/pixmap&gt;
+    &lt;mesh&gt;stepfield_red_diagonal.dae&lt;/mesh&gt;
+    &lt;meta-info&gt;
+        &lt;mi desc="Name"&gt;Step Field&lt;/mi&gt;
+        &lt;mi desc="Height"&gt;0.5 m&lt;/mi&gt;
+    &lt;/meta-info&gt;
+&lt;/properties&gt;
+</pre>
+</td>
+</tr>
+
+<tr>
+<td><code>victim_with_box1</code></td>
+<td><img src="img/victim_with_box1.png"/></td>
+<td><img src="img/victim_with_box1_3d.png" width="150" /></td>
+<td>
+<pre>
+&lt;properties&gt;
+    &lt;type&gt;mountable-item&lt;/type&gt;
+    &lt;pixmap&gt;icon.png&lt;/pixmap&gt;
+    &lt;mesh&gt;victim-with-box1.dae&lt;/mesh&gt;
+    &lt;meta-info&gt;
+        &lt;mi desc="Name"&gt;Victim with box&lt;/mi&gt;
+        &lt;mi desc="Height"&gt;0.3 m&lt;/mi&gt;
+    &lt;/meta-info&gt;
+&lt;/properties&gt;
+</pre>
+</td>
+</tr>
+
+<tr>
+<td><code>wall_holes1</code></td>
+<td><img src="img/wall_holes1.png"/></td>
+<td><img src="img/wall_holes1_3d.png" width="150" /></td>
+<td>
+<pre>
+&lt;properties&gt;
+    &lt;type&gt;wall&lt;/type&gt;
+    &lt;pixmap&gt;icon.png&lt;/pixmap&gt;
+    &lt;mesh&gt;small_wall_holes1.dae&lt;/mesh&gt;
+    &lt;item-mount-points&gt;
+        &lt;item-mount-point x="0.3" y="0.9" desc="Top Left"/&gt;
+        &lt;item-mount-point x="0.9" y="0.6" desc="Middle"/&gt;
+        &lt;item-mount-point x="0.3" y="0.3" desc="Bottom Left"/&gt;
+    &lt;/item-mount-points&gt;
+    &lt;meta-info&gt;
+        &lt;mi desc="Name"&gt;Small wall with victim holes&lt;/mi&gt;
+        &lt;mi desc="Height"&gt;1.2 m&lt;/mi&gt;
+    &lt;/meta-info&gt;
+&lt;/properties&gt;
+</pre>
+</td>
+</tr>
+
+</thead>
+</table>
+
+Let's explain each property seperately:
+<table>
+<tr>
+		<td width="10"></td>
+		<td width="100" ><b><code>type</code></b></td>
+		<td>Can be one of either <code>floor, item, mountable-item</code> or <code>wall</code>. Items can be moved freely and mountable items can be attached to walls.</td>
+</tr>
+<tr>
+	<td></td>
+	<td><b><code>pixmap</code></b></td>
+	<td>The pixmap's file name.</td>
+</tr>
+<tr>
+	<td></td>
+	<td><b><code>mesh</code></b></td>
+	<td>File name of the 3D model (Usually either in COLLADA or STL format).</td>
+</tr>
+<tr>
+	<td></td>
+	<td><b><code>meta-info</code></b></td>
+	<td>A list of arbitrary additional information for each element. This list will be displayed in the "Component Info" box in the right panel of the GUI.</td>
+</tr>
+<tr>
+	<td></td>
+	<td><b><code>item-mount-points</code></b></td>
+	<td>Only applicable to walls. This specifies a list of points to which items (e.g. a box containing a victim dummy) can be mounted (i.e., attached). The coordinates are relative to the bottom-left corner of the wall and specified in meters (that is, (0.6, 0.6) is the center of the wall and (1.2, 1.2) its top-right corner). When an item is placed at this wall - more specifically: at the same grid position with the same rotation as this wall - you will be able to choose from one of these mount points in the right panel of the GUI. The name specified by the <code>desc</code> attribute is used as label in the drop down menu (see figure 1).</td>
+</tr>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+</center>
+</body>
+</html>

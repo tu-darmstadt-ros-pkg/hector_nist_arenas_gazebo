@@ -1,0 +1,14 @@
+<properties>
+    <type>wall</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>small_wall_triple_holes.dae</mesh>
+    <item-mount-points>
+        <item-mount-point x="0.3" y="0.9" desc="Top Left"/>
+        <item-mount-point x="0.9" y="0.6" desc="Middle"/>
+        <item-mount-point x="0.3" y="0.3" desc="Bottom Left"/>
+    </item-mount-points>
+    <meta-info>
+        <mi desc="Name">Small wall with triple victim holes</mi>
+        <mi desc="Height">1.2 m</mi>
+    </meta-info>
+</properties>
