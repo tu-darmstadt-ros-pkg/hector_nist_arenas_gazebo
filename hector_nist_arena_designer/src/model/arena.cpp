@@ -260,6 +260,194 @@ void Arena::saveWorld(const QString& filename)
     out.close();
 }
 
+void Arena::saveWorldSdf(const QString& filename)
+{
+    QFile out(filename);
+    out.open(QFile::WriteOnly);
+
+    QXmlStreamWriter writer(&out);
+    // Insert line-breaks for readability
+    writer.setAutoFormatting(true);
+
+    writer.writeStartDocument();
+
+    writer.writeStartElement("gazebo");
+    writer.writeAttribute("version", "1.0");
+
+    writer.writeStartElement("world");
+    writer.writeAttribute("name", "default");
+
+    writer.writeStartElement("scene");
+    writer.writeStartElement("ambient");
+    writer.writeAttribute("rgba","0.5 0.5 0.5 1");
+    writer.writeEndElement();
+
+    writer.writeStartElement("background");
+    writer.writeAttribute("rgba","0.5 0.5 0.5 1");
+    writer.writeEndElement();
+
+    writer.writeStartElement("shadows");
+    writer.writeAttribute("enabled","false");
+    writer.writeEndElement();
+
+    writer.writeEndElement();
+
+    writer.writeStartElement("physics");
+    writer.writeAttribute("type","ode");
+
+    writer.writeStartElement("gravity");
+    writer.writeAttribute("xyz","0 0 -9.81");
+    writer.writeEndElement();
+
+    writer.writeStartElement("ode");
+
+    writer.writeStartElement("solver");
+    writer.writeAttribute("type","quick");
+    writer.writeAttribute("dt","0.001");
+    writer.writeAttribute("iters","10");
+    writer.writeAttribute("sor","1.3");
+    writer.writeEndElement();
+
+    writer.writeStartElement("constraints");
+    writer.writeAttribute("cfm","0.0");
+    writer.writeAttribute("erp","0.2");
+    writer.writeAttribute("contact_max_correcting_vel","10");
+    writer.writeAttribute("contact_surface_layer","0.001");
+    writer.writeEndElement();
+
+    writer.writeEndElement();
+
+    writer.writeEndElement();
+
+    writer.writeStartElement("light");
+    writer.writeAttribute("type","directional");
+    writer.writeAttribute("name","directional_light_1");
+    writer.writeAttribute("cast_shadows","false");
+
+    writer.writeStartElement("origin");
+    writer.writeAttribute("pose","0 0 30 0.1 0.1 0");
+    writer.writeEndElement();
+
+    writer.writeStartElement("diffuse");
+    writer.writeAttribute("rgba",".5 .5 .5 1");
+    writer.writeEndElement();
+
+    writer.writeStartElement("specular");
+    writer.writeAttribute("rgba",".1 .1 .1 1");
+    writer.writeEndElement();
+
+    writer.writeStartElement("attenuation");
+    writer.writeAttribute("range","300");
+    writer.writeEndElement();
+
+    writer.writeStartElement("direction");
+    writer.writeAttribute("xyz","0.1 0.1 -1");
+    writer.writeEndElement();
+
+    writer.writeEndElement();
+
+    writer.writeStartElement("model");
+
+    writer.writeAttribute("name", "plane_model");
+    writer.writeAttribute("static", "true");
+
+    writer.writeStartElement("link");
+    writer.writeAttribute("name","plane_model_link");
+
+    writer.writeStartElement("collision");
+    writer.writeAttribute("name","plane_model_collision");
+
+    writer.writeStartElement("geometry");
+
+    writer.writeStartElement("plane");
+    writer.writeAttribute("normal","0 0 1");
+    writer.writeEndElement();
+
+    writer.writeEndElement(); //geometry
+
+    writer.writeStartElement("surface");
+
+    writer.writeStartElement("friction");
+
+    writer.writeStartElement("ode");
+    writer.writeAttribute("mu","10.0");
+    writer.writeAttribute("mu2","10.0");
+    writer.writeAttribute("fdir1","0 0 0");
+    writer.writeAttribute("slip1","0");
+    writer.writeAttribute("slip2","0");
+    writer.writeEndElement(); //ode
+
+    writer.writeEndElement(); //friction
+
+    writer.writeStartElement("bounce");
+    writer.writeAttribute("restitution_coefficient","0");
+    writer.writeAttribute("threshold","1000000.0");
+    writer.writeEndElement(); //bounce
+
+    writer.writeStartElement("contact");
+
+    writer.writeStartElement("ode");
+    writer.writeAttribute("soft_cfm","0");
+    writer.writeAttribute("soft_erp","0.2");
+    writer.writeAttribute("kp","1e10");
+    writer.writeAttribute("kd","1");
+    writer.writeAttribute("max_vel","100.0");
+    writer.writeAttribute("min_depth","0.0001");
+    writer.writeEndElement(); //ode
+
+    writer.writeEndElement(); //contact
+
+    writer.writeEndElement(); //surface
+    writer.writeEndElement(); //collision
+
+
+    writer.writeStartElement("visual");
+    writer.writeAttribute("name","plane_model_visual");
+    writer.writeAttribute("cast_shadows","false");
+
+    writer.writeStartElement("geometry");
+
+    writer.writeStartElement("plane");
+    writer.writeAttribute("normal","0 0 1");
+    writer.writeEndElement();
+
+    writer.writeEndElement(); //geometry
+
+    writer.writeStartElement("material");
+    writer.writeAttribute("script","Gazebo/Grey");
+    writer.writeEndElement();
+
+
+
+
+    //writer.writeEndElement();
+
+    writer.writeEndElement();
+
+    writer.writeEndElement();
+
+    writer.writeEndElement();
+
+
+
+
+
+
+
+
+
+
+    foreach (ArenaElement *element, m_elements)
+        element->saveWorldSdf(writer);
+
+
+    writer.writeEndElement();
+
+    writer.writeEndDocument();
+
+    out.close();
+}
+
 void Arena::slotModified()
 {
     emit modified();

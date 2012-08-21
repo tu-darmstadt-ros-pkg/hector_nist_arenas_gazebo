@@ -21,6 +21,7 @@ public:
     void save(const QString& filename);
     /// Writes .world format-compliant XML
     void saveWorld(const QString& filename);
+    void saveWorldSdf(const QString& filename);
 
     /// Creates and adds an element of type elementType
     ArenaElement* addElement(const QString& elementType);

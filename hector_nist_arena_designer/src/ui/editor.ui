@@ -60,7 +60,7 @@
      <x>0</x>
      <y>0</y>
      <width>741</width>
-     <height>22</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -72,6 +72,7 @@
     <addaction name="actionSave"/>
     <addaction name="actionSaveAs"/>
     <addaction name="actionExport"/>
+    <addaction name="actionExportSdf"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -135,7 +136,7 @@
          <number>0</number>
         </property>
         <property name="horizontalSpacing">
-         <number>-1</number>
+         <number>6</number>
         </property>
         <item row="1" column="0">
          <widget class="MetaInfoBox" name="metaInfoBox">
@@ -238,7 +239,7 @@ If you want to select multiple objects, either use the rubber-band selection too
   </widget>
   <action name="actionRotateCounterClockwise">
    <property name="icon">
-    <iconset resource="../resources.qrc">
+    <iconset resource="../../resources.qrc">
      <normaloff>:/icon/icons/rotate_ccw.png</normaloff>:/icon/icons/rotate_ccw.png</iconset>
    </property>
    <property name="text">
@@ -253,7 +254,7 @@ If you want to select multiple objects, either use the rubber-band selection too
   </action>
   <action name="actionRotateClockwise">
    <property name="icon">
-    <iconset resource="../resources.qrc">
+    <iconset resource="../../resources.qrc">
      <normaloff>:/icon/icons/rotate_cw.png</normaloff>:/icon/icons/rotate_cw.png</iconset>
    </property>
    <property name="text">
@@ -268,7 +269,7 @@ If you want to select multiple objects, either use the rubber-band selection too
   </action>
   <action name="actionExport">
    <property name="icon">
-    <iconset resource="../resources.qrc">
+    <iconset resource="../../resources.qrc">
      <normaloff>:/icon/icons/document_export.png</normaloff>:/icon/icons/document_export.png</iconset>
    </property>
    <property name="text">
@@ -277,13 +278,10 @@ If you want to select multiple objects, either use the rubber-band selection too
    <property name="toolTip">
     <string>Export arena to a format readable by Gazebo</string>
    </property>
-   <property name="shortcut">
-    <string>Ctrl+E</string>
-   </property>
   </action>
   <action name="actionRemove">
    <property name="icon">
-    <iconset resource="../resources.qrc">
+    <iconset resource="../../resources.qrc">
      <normaloff>:/icon/icons/remove.png</normaloff>:/icon/icons/remove.png</iconset>
    </property>
    <property name="text">
@@ -298,7 +296,7 @@ If you want to select multiple objects, either use the rubber-band selection too
   </action>
   <action name="actionOpen">
    <property name="icon">
-    <iconset resource="../resources.qrc">
+    <iconset resource="../../resources.qrc">
      <normaloff>:/icon/icons/document_open.png</normaloff>:/icon/icons/document_open.png</iconset>
    </property>
    <property name="text">
@@ -313,7 +311,7 @@ If you want to select multiple objects, either use the rubber-band selection too
   </action>
   <action name="actionSaveAs">
    <property name="icon">
-    <iconset resource="../resources.qrc">
+    <iconset resource="../../resources.qrc">
      <normaloff>:/icon/icons/document_save_as.png</normaloff>:/icon/icons/document_save_as.png</iconset>
    </property>
    <property name="text">
@@ -328,7 +326,7 @@ If you want to select multiple objects, either use the rubber-band selection too
   </action>
   <action name="actionSave">
    <property name="icon">
-    <iconset resource="../resources.qrc">
+    <iconset resource="../../resources.qrc">
      <normaloff>:/icon/icons/document_save.png</normaloff>:/icon/icons/document_save.png</iconset>
    </property>
    <property name="text">
@@ -343,7 +341,7 @@ If you want to select multiple objects, either use the rubber-band selection too
   </action>
   <action name="actionNew">
    <property name="icon">
-    <iconset resource="../resources.qrc">
+    <iconset resource="../../resources.qrc">
      <normaloff>:/icon/icons/document_new.png</normaloff>:/icon/icons/document_new.png</iconset>
    </property>
    <property name="text">
@@ -355,7 +353,7 @@ If you want to select multiple objects, either use the rubber-band selection too
   </action>
   <action name="actionZoomIn">
    <property name="icon">
-    <iconset resource="../resources.qrc">
+    <iconset resource="../../resources.qrc">
      <normaloff>:/icon/icons/zoom_in.png</normaloff>:/icon/icons/zoom_in.png</iconset>
    </property>
    <property name="text">
@@ -367,7 +365,7 @@ If you want to select multiple objects, either use the rubber-band selection too
   </action>
   <action name="actionZoomOut">
    <property name="icon">
-    <iconset resource="../resources.qrc">
+    <iconset resource="../../resources.qrc">
      <normaloff>:/icon/icons/zoom_out.png</normaloff>:/icon/icons/zoom_out.png</iconset>
    </property>
    <property name="text">
@@ -376,7 +374,7 @@ If you want to select multiple objects, either use the rubber-band selection too
   </action>
   <action name="actionShowDocumentation">
    <property name="icon">
-    <iconset resource="../resources.qrc">
+    <iconset resource="../../resources.qrc">
      <normaloff>:/icon/icons/help_contents.png</normaloff>:/icon/icons/help_contents.png</iconset>
    </property>
    <property name="text">
@@ -386,18 +384,26 @@ If you want to select multiple objects, either use the rubber-band selection too
     <string>Open the Designer's HTML documentation in a webbrowser</string>
    </property>
   </action>
+  <action name="actionExportSdf">
+   <property name="text">
+    <string>Export to .sdf File ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
    <class>MetaInfoBox</class>
    <extends>QGroupBox</extends>
-   <header>ui/metainfobox.h</header>
+   <header>../src/ui/metainfobox.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../resources.qrc"/>
+  <include location="../../resources.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -6,6 +6,8 @@
 #include <QList>
 #include <QDebug>
 
+#include <math.h>
+
 ArenaElement::ArenaElement(const ArenaElementType * const type, int id)
     : m_type(type)
     , m_rotation(0)
@@ -201,6 +203,101 @@ void ArenaElement::saveWorld(QXmlStreamWriter& writer)
 
     // model:physical
     writer.writeEndElement();
+}
+
+void ArenaElement::saveWorldSdf(QXmlStreamWriter& writer)
+{
+    writer.writeStartElement("model");
+    QString name;
+    QTextStream(&name) << m_type->name() << "_" << m_instanceId;
+    writer.writeAttribute("name", name);
+    writer.writeAttribute("static", "true");
+
+    ArenaElement *context = m_arena->contextElement(this);
+    QList<ItemMountPoint> contextItemMountPoints;
+    if (context)
+        contextItemMountPoints = context->type()->itemMountPoints();
+
+    // Use "corrected" mount point index
+    int itemMountPoint = m_itemMountPoint;
+    if (!isMountableItem() || !context)
+    {
+        itemMountPoint = -1;
+    }
+    else
+    {
+        // When there are possible mount points, use the first if none is assigned
+        itemMountPoint = qMax(itemMountPoint, 0);
+        // But make sure the index doesn't exceed the last mount point
+        if (contextItemMountPoints.count() <= itemMountPoint)
+            itemMountPoint = -1;
+    }
+
+    qreal offsetX = 0;
+    qreal offsetZ = 0;
+    if (itemMountPoint >= 0)
+    {
+        Q_ASSERT(context);
+        Q_ASSERT(contextItemMountPoints.count() > itemMountPoint);
+        ItemMountPoint mountPoint = contextItemMountPoints[itemMountPoint];
+        offsetX = mountPoint.second.x() - 0.6;
+        offsetZ = mountPoint.second.y();
+    }
+
+    QTransform trans;
+    trans.rotate(-m_rotation);
+    QPointF mappedOffset = trans.map(QPointF(offsetX, 0));
+    mappedOffset += m_itemOffset * 1.2;
+
+    QString xyz;
+    // One unit is 1.2 meters, gazebo is set up to think in meters
+    QTextStream(&xyz) << m_pos.x() * 1.2 + mappedOffset.x() << " "
+                      << m_pos.y() * 1.2 + mappedOffset.y() << " " << offsetZ;
+
+    QString rpy;
+    QTextStream(&rpy) << "0 0 " << -(m_rotation/180.0)*M_PI;
+    //writer.writeTextElement("rpy", rpy);
+
+    writer.writeStartElement("link");
+    writer.writeAttribute("name",name+"_link");
+
+    writer.writeStartElement("origin");
+    writer.writeAttribute("pose",xyz + " " + rpy);
+    writer.writeEndElement();
+
+    writer.writeStartElement("collision");
+    writer.writeAttribute("name",name+"_collision");
+
+    writer.writeStartElement("geometry");
+
+    writer.writeStartElement("mesh");
+    writer.writeAttribute("filename",m_type->mesh());
+    writer.writeAttribute("scale","1 1 1");
+    writer.writeEndElement();
+
+    writer.writeEndElement();
+
+    writer.writeEndElement();
+
+    writer.writeStartElement("visual");
+    writer.writeAttribute("name",name+"_visual");
+    writer.writeAttribute("cast_shadows","false");
+
+    writer.writeStartElement("geometry");
+
+    writer.writeStartElement("mesh");
+    writer.writeAttribute("filename",m_type->mesh());
+    writer.writeAttribute("scale","1 1 1");
+    writer.writeEndElement();
+
+    writer.writeEndElement();
+
+    writer.writeEndElement();
+
+    writer.writeEndElement();
+
+    writer.writeEndElement();
+
 }
 
 

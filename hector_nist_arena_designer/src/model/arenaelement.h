@@ -33,6 +33,7 @@ public:
     void save(QXmlStreamWriter& writer);
     /// Writes .world format-compliant XML
     void saveWorld(QXmlStreamWriter& writer);
+    void saveWorldSdf(QXmlStreamWriter& writer);
 
     /// Called from Arena::addElement()
     void setArena(Arena *arena) { m_arena = arena; }

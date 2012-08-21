@@ -44,6 +44,7 @@ public slots:
     void slotSave();
     void slotSaveAs();
     void slotExport();
+    void slotExportSdf();
     void slotSelectionChanged();
 
     // -- Help Menu --
