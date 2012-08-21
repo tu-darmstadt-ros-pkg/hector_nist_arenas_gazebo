@@ -1,8 +1,8 @@
+<?xml version="1.0"?>
+
 <launch>
-
-  <!-- start gazebo with an empty plane -->
-  <param name="/use_sim_time" value="true" />
-
-  <node name="gazebo" pkg="gazebo" type="gazebo" args="$(find hector_arena_elements)/worlds/go2011_arena.world" respawn="false" output="screen"/>
+  <include file="$(find hector_nist_arena_worlds)/launch/start.launch">
+   <arg name="world" value="go2011_arena.world"/> 
+  </include>
 
 </launch>
