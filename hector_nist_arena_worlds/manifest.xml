@@ -8,6 +8,8 @@
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/hector_nist_arena_worlds</url>
+  
+  <depend package="hector_nist_arena_elements"/>
 
 </package>
 

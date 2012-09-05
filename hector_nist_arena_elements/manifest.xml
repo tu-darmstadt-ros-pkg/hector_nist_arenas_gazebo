@@ -8,6 +8,13 @@
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/hector_nist_arena_elements</url>
+  
+  <depend package="gazebo"/>
+  
+  <export>
+    <gazebo gazebo_media_path="${prefix}" />
+  </export>
+
 
 </package>
 
