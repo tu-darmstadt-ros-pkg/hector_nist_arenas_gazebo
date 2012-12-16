@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find hector_nist_arena_worlds)/launch/start.launch">
+   <arg name="world" value="thailand_robot_championship_2012_default.world"/> 
+  </include>
+</launch>

@@ -1,0 +1,1848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gazebo version="1.0">
+    <world name="default">
+        <scene>
+            <ambient rgba="0.5 0.5 0.5 1"/>
+            <background rgba="0.5 0.5 0.5 1"/>
+            <shadows enabled="false"/>
+        </scene>
+        <physics type="ode">
+            <gravity xyz="0 0 -9.81"/>
+            <ode>
+                <solver type="quick" dt="0.001" iters="10" sor="1.3"/>
+                <constraints cfm="0.0" erp="0.2" contact_max_correcting_vel="10" contact_surface_layer="0.001"/>
+            </ode>
+        </physics>
+        <light type="directional" name="directional_light_1" cast_shadows="false">
+            <origin pose="0 0 30 0.1 0.1 0"/>
+            <diffuse rgba=".5 .5 .5 1"/>
+            <specular rgba=".1 .1 .1 1"/>
+            <attenuation range="300"/>
+            <direction xyz="0.1 0.1 -1"/>
+        </light>
+        <model name="plane_model" static="true">
+            <link name="plane_model_link">
+                <collision name="plane_model_collision">
+                    <geometry>
+                        <plane normal="0 0 1"/>
+                    </geometry>
+                    <surface>
+                        <friction>
+                            <ode mu="10.0" mu2="10.0" fdir1="0 0 0" slip1="0" slip2="0"/>
+                        </friction>
+                        <bounce restitution_coefficient="0" threshold="1000000.0"/>
+                        <contact>
+                            <ode soft_cfm="0" soft_erp="0.2" kp="1e10" kd="1" max_vel="100.0" min_depth="0.0001"/>
+                        </contact>
+                    </surface>
+                </collision>
+                <visual name="plane_model_visual" cast_shadows="false">
+                    <geometry>
+                        <plane normal="0 0 1"/>
+                    </geometry>
+                    <material script="Gazebo/Grey"/>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_1" static="true">
+            <link name="small_wall_1_link">
+                <origin pose="0 0 0 0 0 -4.71239"/>
+                <collision name="small_wall_1_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_1_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_2" static="true">
+            <link name="small_wall_2_link">
+                <origin pose="-1.2 0 0 0 0 -3.14159"/>
+                <collision name="small_wall_2_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_2_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_3" static="true">
+            <link name="small_wall_3_link">
+                <origin pose="0 0 0 0 0 0"/>
+                <collision name="small_wall_3_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_3_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_4" static="true">
+            <link name="small_wall_4_link">
+                <origin pose="1.2 1.2 0 0 0 -4.71239"/>
+                <collision name="small_wall_4_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_4_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_5" static="true">
+            <link name="small_wall_5_link">
+                <origin pose="1.2 2.4 0 0 0 -3.14159"/>
+                <collision name="small_wall_5_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_5_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_6" static="true">
+            <link name="small_wall_6_link">
+                <origin pose="2.4 2.4 0 0 0 -4.71239"/>
+                <collision name="small_wall_6_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_6_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_7" static="true">
+            <link name="small_wall_7_link">
+                <origin pose="2.4 3.6 0 0 0 -3.14159"/>
+                <collision name="small_wall_7_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_7_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_8" static="true">
+            <link name="small_wall_8_link">
+                <origin pose="2.4 3.6 0 0 0 -1.5708"/>
+                <collision name="small_wall_8_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_8_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_9" static="true">
+            <link name="small_wall_9_link">
+                <origin pose="3.6 4.8 0 0 0 -3.14159"/>
+                <collision name="small_wall_9_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_9_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_10" static="true">
+            <link name="small_wall_10_link">
+                <origin pose="3.6 3.6 0 0 0 -1.5708"/>
+                <collision name="small_wall_10_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_10_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_11" static="true">
+            <link name="small_wall_11_link">
+                <origin pose="3.6 1.2 0 0 0 0"/>
+                <collision name="small_wall_11_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_11_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_12" static="true">
+            <link name="small_wall_12_link">
+                <origin pose="3.6 1.2 0 0 0 -4.71239"/>
+                <collision name="small_wall_12_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_12_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_13" static="true">
+            <link name="small_wall_13_link">
+                <origin pose="1.2 0 0 0 0 -3.14159"/>
+                <collision name="small_wall_13_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_13_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_14" static="true">
+            <link name="small_wall_14_link">
+                <origin pose="2.4 0 0 0 0 -4.71239"/>
+                <collision name="small_wall_14_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_14_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_15" static="true">
+            <link name="small_wall_15_link">
+                <origin pose="2.4 1.2 0 0 0 -3.14159"/>
+                <collision name="small_wall_15_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_15_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_16" static="true">
+            <link name="small_wall_16_link">
+                <origin pose="4.8 2.4 0 0 0 0"/>
+                <collision name="small_wall_16_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_16_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_17" static="true">
+            <link name="small_wall_17_link">
+                <origin pose="4.8 2.4 0 0 0 -1.5708"/>
+                <collision name="small_wall_17_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_17_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_18" static="true">
+            <link name="small_wall_18_link">
+                <origin pose="4.8 1.2 0 0 0 -1.5708"/>
+                <collision name="small_wall_18_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_18_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_19" static="true">
+            <link name="small_wall_19_link">
+                <origin pose="4.8 1.2 0 0 0 -3.14159"/>
+                <collision name="small_wall_19_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_19_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_20" static="true">
+            <link name="small_wall_20_link">
+                <origin pose="6 2.4 0 0 0 -3.14159"/>
+                <collision name="small_wall_20_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_20_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_21" static="true">
+            <link name="small_wall_21_link">
+                <origin pose="7.2 1.2 0 0 0 -4.71239"/>
+                <collision name="small_wall_21_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_21_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_22" static="true">
+            <link name="small_wall_22_link">
+                <origin pose="7.2 1.2 0 0 0 -3.14159"/>
+                <collision name="small_wall_22_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_22_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_23" static="true">
+            <link name="small_wall_23_link">
+                <origin pose="4.8 0 0 0 0 -1.5708"/>
+                <collision name="small_wall_23_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_23_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_24" static="true">
+            <link name="small_wall_24_link">
+                <origin pose="4.8 0 0 0 0 -3.14159"/>
+                <collision name="small_wall_24_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_24_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_25" static="true">
+            <link name="small_wall_25_link">
+                <origin pose="3.6 0 0 0 0 -3.14159"/>
+                <collision name="small_wall_25_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_25_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_26" static="true">
+            <link name="small_wall_26_link">
+                <origin pose="3.6 -1.2 0 0 0 -4.71239"/>
+                <collision name="small_wall_26_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_26_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_27" static="true">
+            <link name="small_wall_27_link">
+                <origin pose="2.4 -2.4 0 0 0 0"/>
+                <collision name="small_wall_27_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_27_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_28" static="true">
+            <link name="small_wall_28_link">
+                <origin pose="0 -1.2 0 0 0 -1.5708"/>
+                <collision name="small_wall_28_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_28_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_29" static="true">
+            <link name="small_wall_29_link">
+                <origin pose="-1.2 -1.2 0 0 0 -4.71239"/>
+                <collision name="small_wall_29_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_29_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_30" static="true">
+            <link name="small_wall_30_link">
+                <origin pose="0 -1.2 0 0 0 -3.14159"/>
+                <collision name="small_wall_30_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_30_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_31" static="true">
+            <link name="small_wall_31_link">
+                <origin pose="-1.2 -1.2 0 0 0 -3.14159"/>
+                <collision name="small_wall_31_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_31_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_32" static="true">
+            <link name="small_wall_32_link">
+                <origin pose="0 -2.4 0 0 0 -4.71239"/>
+                <collision name="small_wall_32_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_32_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_33" static="true">
+            <link name="small_wall_33_link">
+                <origin pose="0 -3.6 0 0 0 -4.71239"/>
+                <collision name="small_wall_33_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_33_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="stairs_120_1" static="true">
+            <link name="stairs_120_1_link">
+                <origin pose="1.2 -3.6 0 0 0 -3.14159"/>
+                <collision name="stairs_120_1_collision">
+                    <geometry>
+                        <mesh filename="stairs_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="stairs_120_1_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="stairs_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="tall_wall_1" static="true">
+            <link name="tall_wall_1_link">
+                <origin pose="-1.2 -4.8 0 0 0 -1.5708"/>
+                <collision name="tall_wall_1_collision">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="tall_wall_1_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="tall_wall_2" static="true">
+            <link name="tall_wall_2_link">
+                <origin pose="0 -6 0 0 0 0"/>
+                <collision name="tall_wall_2_collision">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="tall_wall_2_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="tall_wall_3" static="true">
+            <link name="tall_wall_3_link">
+                <origin pose="1.2 -4.8 0 0 0 -3.14159"/>
+                <collision name="tall_wall_3_collision">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="tall_wall_3_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="tall_wall_4" static="true">
+            <link name="tall_wall_4_link">
+                <origin pose="2.4 -4.8 0 0 0 -3.14159"/>
+                <collision name="tall_wall_4_collision">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="tall_wall_4_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="tall_wall_5" static="true">
+            <link name="tall_wall_5_link">
+                <origin pose="3.6 -4.8 0 0 0 -3.14159"/>
+                <collision name="tall_wall_5_collision">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="tall_wall_5_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="simple_elev_ramp_1" static="true">
+            <link name="simple_elev_ramp_1_link">
+                <origin pose="2.4 -3.6 0 0 0 -3.14159"/>
+                <collision name="simple_elev_ramp_1_collision">
+                    <geometry>
+                        <mesh filename="simple_elev_ramp.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="simple_elev_ramp_1_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="simple_elev_ramp.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_34" static="true">
+            <link name="small_wall_34_link">
+                <origin pose="1.2 -3.6 0 0 0 -1.5708"/>
+                <collision name="small_wall_34_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_34_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_35" static="true">
+            <link name="small_wall_35_link">
+                <origin pose="2.4 -3.6 0 0 0 -1.5708"/>
+                <collision name="small_wall_35_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_35_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_36" static="true">
+            <link name="small_wall_36_link">
+                <origin pose="1.2 -3.6 0 0 0 -4.71239"/>
+                <collision name="small_wall_36_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_36_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="elevated_floor_120_1" static="true">
+            <link name="elevated_floor_120_1_link">
+                <origin pose="0 -4.8 0 0 0 0"/>
+                <collision name="elevated_floor_120_1_collision">
+                    <geometry>
+                        <mesh filename="elevated_floor_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="elevated_floor_120_1_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="elevated_floor_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="elevated_floor_120_2" static="true">
+            <link name="elevated_floor_120_2_link">
+                <origin pose="1.2 -4.8 0 0 0 0"/>
+                <collision name="elevated_floor_120_2_collision">
+                    <geometry>
+                        <mesh filename="elevated_floor_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="elevated_floor_120_2_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="elevated_floor_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_37" static="true">
+            <link name="small_wall_37_link">
+                <origin pose="1.2 -2.4 0 0 0 -1.5708"/>
+                <collision name="small_wall_37_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_37_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_38" static="true">
+            <link name="small_wall_38_link">
+                <origin pose="3.6 -1.2 0 0 0 -3.14159"/>
+                <collision name="small_wall_38_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_38_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_39" static="true">
+            <link name="small_wall_39_link">
+                <origin pose="4.8 -2.4 0 0 0 -4.71239"/>
+                <collision name="small_wall_39_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_39_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_40" static="true">
+            <link name="small_wall_40_link">
+                <origin pose="4.8 -4.8 0 0 0 -3.14159"/>
+                <collision name="small_wall_40_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_40_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_41" static="true">
+            <link name="small_wall_41_link">
+                <origin pose="4.8 -4.8 0 0 0 0"/>
+                <collision name="small_wall_41_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_41_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_42" static="true">
+            <link name="small_wall_42_link">
+                <origin pose="4.8 -4.8 0 0 0 -1.5708"/>
+                <collision name="small_wall_42_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_42_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_43" static="true">
+            <link name="small_wall_43_link">
+                <origin pose="6 -1.2 0 0 0 -4.71239"/>
+                <collision name="small_wall_43_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_43_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_44" static="true">
+            <link name="small_wall_44_link">
+                <origin pose="6 -2.4 0 0 0 -4.71239"/>
+                <collision name="small_wall_44_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_44_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_45" static="true">
+            <link name="small_wall_45_link">
+                <origin pose="7.2 -3.6 0 0 0 0"/>
+                <collision name="small_wall_45_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_45_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_46" static="true">
+            <link name="small_wall_46_link">
+                <origin pose="7.2 -2.4 0 0 0 -4.71239"/>
+                <collision name="small_wall_46_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_46_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_47" static="true">
+            <link name="small_wall_47_link">
+                <origin pose="3.6 -6 0 0 0 -1.5708"/>
+                <collision name="small_wall_47_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_47_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_48" static="true">
+            <link name="small_wall_48_link">
+                <origin pose="3.6 -7.2 0 0 0 0"/>
+                <collision name="small_wall_48_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_48_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_49" static="true">
+            <link name="small_wall_49_link">
+                <origin pose="3.6 -7.2 0 0 0 -4.71239"/>
+                <collision name="small_wall_49_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_49_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="simple_elev_ramp_2" static="true">
+            <link name="simple_elev_ramp_2_link">
+                <origin pose="3.6 -8.4 0 0 0 -3.14159"/>
+                <collision name="simple_elev_ramp_2_collision">
+                    <geometry>
+                        <mesh filename="simple_elev_ramp.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="simple_elev_ramp_2_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="simple_elev_ramp.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="elevated_floor_120_4" static="true">
+            <link name="elevated_floor_120_4_link">
+                <origin pose="4.8 -9.6 0 0 0 0"/>
+                <collision name="elevated_floor_120_4_collision">
+                    <geometry>
+                        <mesh filename="elevated_floor_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="elevated_floor_120_4_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="elevated_floor_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="elevated_floor_120_5" static="true">
+            <link name="elevated_floor_120_5_link">
+                <origin pose="3.6 -9.6 0 0 0 0"/>
+                <collision name="elevated_floor_120_5_collision">
+                    <geometry>
+                        <mesh filename="elevated_floor_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="elevated_floor_120_5_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="elevated_floor_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="elevated_floor_120_6" static="true">
+            <link name="elevated_floor_120_6_link">
+                <origin pose="6 -9.6 0 0 0 0"/>
+                <collision name="elevated_floor_120_6_collision">
+                    <geometry>
+                        <mesh filename="elevated_floor_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="elevated_floor_120_6_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="elevated_floor_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="stairs_120_2" static="true">
+            <link name="stairs_120_2_link">
+                <origin pose="6 -8.4 0 0 0 -3.14159"/>
+                <collision name="stairs_120_2_collision">
+                    <geometry>
+                        <mesh filename="stairs_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="stairs_120_2_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="stairs_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_50" static="true">
+            <link name="small_wall_50_link">
+                <origin pose="6 -7.2 0 0 0 -4.71239"/>
+                <collision name="small_wall_50_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_50_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_51" static="true">
+            <link name="small_wall_51_link">
+                <origin pose="6 -6 0 0 0 -3.14159"/>
+                <collision name="small_wall_51_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_51_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_52" static="true">
+            <link name="small_wall_52_link">
+                <origin pose="7.2 -6 0 0 0 -4.71239"/>
+                <collision name="small_wall_52_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_52_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_53" static="true">
+            <link name="small_wall_53_link">
+                <origin pose="7.2 -4.8 0 0 0 -3.14159"/>
+                <collision name="small_wall_53_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_53_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_54" static="true">
+            <link name="small_wall_54_link">
+                <origin pose="8.4 -4.8 0 0 0 -3.14159"/>
+                <collision name="small_wall_54_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_54_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_55" static="true">
+            <link name="small_wall_55_link">
+                <origin pose="8.4 -4.8 0 0 0 -1.5708"/>
+                <collision name="small_wall_55_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_55_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_56" static="true">
+            <link name="small_wall_56_link">
+                <origin pose="8.4 -4.8 0 0 0 0"/>
+                <collision name="small_wall_56_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_56_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_57" static="true">
+            <link name="small_wall_57_link">
+                <origin pose="7.2 -4.8 0 0 0 0"/>
+                <collision name="small_wall_57_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_57_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_58" static="true">
+            <link name="small_wall_58_link">
+                <origin pose="9.6 -3.6 0 0 0 -4.71239"/>
+                <collision name="small_wall_58_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_58_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_59" static="true">
+            <link name="small_wall_59_link">
+                <origin pose="9.6 -2.4 0 0 0 -4.71239"/>
+                <collision name="small_wall_59_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_59_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_60" static="true">
+            <link name="small_wall_60_link">
+                <origin pose="9.6 -2.4 0 0 0 0"/>
+                <collision name="small_wall_60_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_60_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_61" static="true">
+            <link name="small_wall_61_link">
+                <origin pose="9.6 -2.4 0 0 0 -1.5708"/>
+                <collision name="small_wall_61_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_61_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_62" static="true">
+            <link name="small_wall_62_link">
+                <origin pose="10.8 -3.6 0 0 0 0"/>
+                <collision name="small_wall_62_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_62_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_63" static="true">
+            <link name="small_wall_63_link">
+                <origin pose="10.8 -3.6 0 0 0 -1.5708"/>
+                <collision name="small_wall_63_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_63_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_64" static="true">
+            <link name="small_wall_64_link">
+                <origin pose="10.8 -3.6 0 0 0 -3.14159"/>
+                <collision name="small_wall_64_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_64_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_65" static="true">
+            <link name="small_wall_65_link">
+                <origin pose="9.6 -4.8 0 0 0 -1.5708"/>
+                <collision name="small_wall_65_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_65_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_66" static="true">
+            <link name="small_wall_66_link">
+                <origin pose="9.6 -6 0 0 0 0"/>
+                <collision name="small_wall_66_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_66_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_67" static="true">
+            <link name="small_wall_67_link">
+                <origin pose="4.8 -8.4 0 0 0 -4.71239"/>
+                <collision name="small_wall_67_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_67_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_68" static="true">
+            <link name="small_wall_68_link">
+                <origin pose="4.8 -8.4 0 0 0 -1.5708"/>
+                <collision name="small_wall_68_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_68_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_69" static="true">
+            <link name="small_wall_69_link">
+                <origin pose="4.8 -8.4 0 0 0 -3.14159"/>
+                <collision name="small_wall_69_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_69_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_70" static="true">
+            <link name="small_wall_70_link">
+                <origin pose="7.2 -8.4 0 0 0 -4.71239"/>
+                <collision name="small_wall_70_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_70_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_71" static="true">
+            <link name="small_wall_71_link">
+                <origin pose="8.4 -7.2 0 0 0 -4.71239"/>
+                <collision name="small_wall_71_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_71_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_72" static="true">
+            <link name="small_wall_72_link">
+                <origin pose="8.4 -8.4 0 0 0 0"/>
+                <collision name="small_wall_72_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_72_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_73" static="true">
+            <link name="small_wall_73_link">
+                <origin pose="8.4 -8.4 0 0 0 -1.5708"/>
+                <collision name="small_wall_73_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_73_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_74" static="true">
+            <link name="small_wall_74_link">
+                <origin pose="8.4 -8.4 0 0 0 -3.14159"/>
+                <collision name="small_wall_74_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_74_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_75" static="true">
+            <link name="small_wall_75_link">
+                <origin pose="8.4 -9.6 0 0 0 -4.71239"/>
+                <collision name="small_wall_75_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_75_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="tall_wall_6" static="true">
+            <link name="tall_wall_6_link">
+                <origin pose="6 -9.6 0 0 0 -3.14159"/>
+                <collision name="tall_wall_6_collision">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="tall_wall_6_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="tall_wall_7" static="true">
+            <link name="tall_wall_7_link">
+                <origin pose="4.8 -9.6 0 0 0 -3.14159"/>
+                <collision name="tall_wall_7_collision">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="tall_wall_7_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="tall_wall_8" static="true">
+            <link name="tall_wall_8_link">
+                <origin pose="3.6 -9.6 0 0 0 -3.14159"/>
+                <collision name="tall_wall_8_collision">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="tall_wall_8_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="tall_wall_9" static="true">
+            <link name="tall_wall_9_link">
+                <origin pose="3.6 -9.6 0 0 0 -4.71239"/>
+                <collision name="tall_wall_9_collision">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="tall_wall_9_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="tall_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_76" static="true">
+            <link name="small_wall_76_link">
+                <origin pose="3.6 -8.4 0 0 0 -4.71239"/>
+                <collision name="small_wall_76_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_76_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_77" static="true">
+            <link name="small_wall_77_link">
+                <origin pose="9.6 -8.4 0 0 0 0"/>
+                <collision name="small_wall_77_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_77_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_78" static="true">
+            <link name="small_wall_78_link">
+                <origin pose="8.4 -6 0 0 0 -1.5708"/>
+                <collision name="small_wall_78_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_78_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_79" static="true">
+            <link name="small_wall_79_link">
+                <origin pose="10.8 -7.2 0 0 0 -4.71239"/>
+                <collision name="small_wall_79_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_79_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_80" static="true">
+            <link name="small_wall_80_link">
+                <origin pose="10.8 -6 0 0 0 -3.14159"/>
+                <collision name="small_wall_80_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_80_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_81" static="true">
+            <link name="small_wall_81_link">
+                <origin pose="10.8 -6 0 0 0 -1.5708"/>
+                <collision name="small_wall_81_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_81_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_82" static="true">
+            <link name="small_wall_82_link">
+                <origin pose="12 -4.8 0 0 0 0"/>
+                <collision name="small_wall_82_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_82_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_83" static="true">
+            <link name="small_wall_83_link">
+                <origin pose="12 -4.8 0 0 0 -1.5708"/>
+                <collision name="small_wall_83_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_83_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_84" static="true">
+            <link name="small_wall_84_link">
+                <origin pose="13.2 -6 0 0 0 0"/>
+                <collision name="small_wall_84_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_84_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_85" static="true">
+            <link name="small_wall_85_link">
+                <origin pose="13.2 -6 0 0 0 -1.5708"/>
+                <collision name="small_wall_85_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_85_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_86" static="true">
+            <link name="small_wall_86_link">
+                <origin pose="13.2 -6 0 0 0 -3.14159"/>
+                <collision name="small_wall_86_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_86_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_87" static="true">
+            <link name="small_wall_87_link">
+                <origin pose="12 -7.2 0 0 0 -1.5708"/>
+                <collision name="small_wall_87_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_87_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_88" static="true">
+            <link name="small_wall_88_link">
+                <origin pose="12 -7.2 0 0 0 -3.14159"/>
+                <collision name="small_wall_88_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_88_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_89" static="true">
+            <link name="small_wall_89_link">
+                <origin pose="10.8 -8.4 0 0 0 -1.5708"/>
+                <collision name="small_wall_89_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_89_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_90" static="true">
+            <link name="small_wall_90_link">
+                <origin pose="10.8 -9.6 0 0 0 0"/>
+                <collision name="small_wall_90_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_90_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_91" static="true">
+            <link name="small_wall_91_link">
+                <origin pose="9.6 -9.6 0 0 0 -1.5708"/>
+                <collision name="small_wall_91_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_91_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_92" static="true">
+            <link name="small_wall_92_link">
+                <origin pose="9.6 -9.6 0 0 0 -3.14159"/>
+                <collision name="small_wall_92_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_92_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_93" static="true">
+            <link name="small_wall_93_link">
+                <origin pose="8.4 -10.8 0 0 0 -4.71239"/>
+                <collision name="small_wall_93_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_93_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_94" static="true">
+            <link name="small_wall_94_link">
+                <origin pose="9.6 -10.8 0 0 0 -4.71239"/>
+                <collision name="small_wall_94_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_94_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_95" static="true">
+            <link name="small_wall_95_link">
+                <origin pose="8.4 -10.8 0 0 0 -3.14159"/>
+                <collision name="small_wall_95_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_95_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_96" static="true">
+            <link name="small_wall_96_link">
+                <origin pose="7.2 -10.8 0 0 0 0"/>
+                <collision name="small_wall_96_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_96_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_97" static="true">
+            <link name="small_wall_97_link">
+                <origin pose="7.2 -2.4 0 0 0 0"/>
+                <collision name="small_wall_97_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_97_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_98" static="true">
+            <link name="small_wall_98_link">
+                <origin pose="8.4 -2.4 0 0 0 -4.71239"/>
+                <collision name="small_wall_98_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_98_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_99" static="true">
+            <link name="small_wall_99_link">
+                <origin pose="8.4 0 0 0 0 -4.71239"/>
+                <collision name="small_wall_99_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_99_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_100" static="true">
+            <link name="small_wall_100_link">
+                <origin pose="8.4 0 0 0 0 -3.14159"/>
+                <collision name="small_wall_100_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_100_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="small_wall_101" static="true">
+            <link name="small_wall_101_link">
+                <origin pose="8.4 -1.2 0 0 0 -1.5708"/>
+                <collision name="small_wall_101_collision">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="small_wall_101_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="small_wall.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <model name="elevated_floor_120_7" static="true">
+            <link name="elevated_floor_120_7_link">
+                <origin pose="2.4 -4.8 0 0 0 0"/>
+                <collision name="elevated_floor_120_7_collision">
+                    <geometry>
+                        <mesh filename="elevated_floor_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </collision>
+                <visual name="elevated_floor_120_7_visual" cast_shadows="false">
+                    <geometry>
+                        <mesh filename="elevated_floor_120.dae" scale="1 1 1"/>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+    </world>
+</gazebo>
