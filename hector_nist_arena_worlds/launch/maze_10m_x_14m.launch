@@ -2,7 +2,7 @@
 
 <launch>
   <include file="$(find hector_nist_arena_worlds)/launch/start.launch">
-   <arg name="world" value="go2011_arena.world"/> 
+   <arg name="world" value="maze_10m_x_14m.world"/> 
   </include>
 
 </launch>
