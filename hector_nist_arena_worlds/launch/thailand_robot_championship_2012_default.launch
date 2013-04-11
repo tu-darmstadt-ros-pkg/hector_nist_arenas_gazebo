@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 
 <launch>
+  <arg name="gui" default="true"/>
+
   <include file="$(find hector_nist_arena_worlds)/launch/start.launch">
    <arg name="world" value="thailand_robot_championship_2012_default.world"/> 
+   <arg name="gui" value="$(arg gui)"/> 
   </include>
 </launch>

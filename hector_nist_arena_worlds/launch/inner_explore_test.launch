@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 
 <launch>
+  <arg name="gui" default="true"/>
+
   <include file="$(find hector_nist_arena_worlds)/launch/start.launch">
-   <arg name="world" value="inner_explore_test.world"/> 
+   <arg name="world" value="inner_explore_test.world"/>
+   <arg name="gui" value="$(arg gui)"/> 
   </include>
 </launch>
