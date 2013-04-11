@@ -6,11 +6,11 @@
             <background rgba="0.5 0.5 0.5 1"/>
             <shadows enabled="false"/>
         </scene>
-        <physics type="ode">
+        <physics type="ode" update_rate="1000">
             <gravity xyz="0 0 -9.81"/>
             <ode>
                 <solver type="quick" dt="0.001" iters="10" sor="1.3"/>
-                <constraints cfm="0.0" erp="0.2" contact_max_correcting_vel="10" contact_surface_layer="0.001"/>
+                <constraints cfm="0.0" erp="0.2" contact_max_correcting_vel="100.0" contact_surface_layer="0.001"/>
             </ode>
         </physics>
         <light type="directional" name="directional_light_1" cast_shadows="false">
