@@ -271,85 +271,63 @@ void Arena::saveWorldSdf(const QString& filename)
 
     writer.writeStartDocument();
 
-    writer.writeStartElement("gazebo");
-    writer.writeAttribute("version", "1.0");
+    writer.writeStartElement("sdf");
+    writer.writeAttribute("version", "1.3");
 
     writer.writeStartElement("world");
     writer.writeAttribute("name", "default");
 
     writer.writeStartElement("scene");
-    writer.writeStartElement("ambient");
-    writer.writeAttribute("rgba","0.5 0.5 0.5 1");
-    writer.writeEndElement();
-
-    writer.writeStartElement("background");
-    writer.writeAttribute("rgba","0.5 0.5 0.5 1");
-    writer.writeEndElement();
-
-    writer.writeStartElement("shadows");
-    writer.writeAttribute("enabled","false");
-    writer.writeEndElement();
-
+    writer.writeTextElement("ambient", "0.5 0.5 0.5 1");
+    writer.writeTextElement("background","0.5 0.5 0.5 1");
+    writer.writeTextElement("shadows", "false");
     writer.writeEndElement();
 
     writer.writeStartElement("physics");
-    writer.writeAttribute("type","ode");
+    writer.writeAttribute("type", "ode");
 
-    writer.writeStartElement("gravity");
-    writer.writeAttribute("xyz","0 0 -9.81");
-    writer.writeEndElement();
+    writer.writeTextElement("gravity", "0 0 -9.81");
 
     writer.writeStartElement("ode");
 
     writer.writeStartElement("solver");
-    writer.writeAttribute("type","quick");
-    writer.writeAttribute("dt","0.001");
-    writer.writeAttribute("iters","10");
-    writer.writeAttribute("sor","1.3");
+    writer.writeTextElement("type","quick");
+    writer.writeTextElement("dt","0.001");
+    writer.writeTextElement("iters","10");
+    writer.writeTextElement("sor","1.3");
     writer.writeEndElement();
 
     writer.writeStartElement("constraints");
-    writer.writeAttribute("cfm","0.0");
-    writer.writeAttribute("erp","0.2");
-    writer.writeAttribute("contact_max_correcting_vel","10");
-    writer.writeAttribute("contact_surface_layer","0.001");
+    writer.writeTextElement("cfm","0.0");
+    writer.writeTextElement("erp","0.2");
+    writer.writeTextElement("contact_max_correcting_vel","100.0");
+    writer.writeTextElement("contact_surface_layer","0.001");
     writer.writeEndElement();
 
-    writer.writeEndElement();
+    writer.writeEndElement(); // ode
+    writer.writeTextElement("update_rate", "1000");
 
-    writer.writeEndElement();
+    writer.writeEndElement(); // physics
 
     writer.writeStartElement("light");
     writer.writeAttribute("type","directional");
     writer.writeAttribute("name","directional_light_1");
-    writer.writeAttribute("cast_shadows","false");
+    writer.writeTextElement("cast_shadows","false");
 
-    writer.writeStartElement("origin");
-    writer.writeAttribute("pose","0 0 30 0.1 0.1 0");
-    writer.writeEndElement();
-
-    writer.writeStartElement("diffuse");
-    writer.writeAttribute("rgba",".5 .5 .5 1");
-    writer.writeEndElement();
-
-    writer.writeStartElement("specular");
-    writer.writeAttribute("rgba",".1 .1 .1 1");
-    writer.writeEndElement();
+    writer.writeTextElement("pose","0 0 30 0.1 0.1 0");
+    writer.writeTextElement("diffuse", ".5 .5 .5 1");
+    writer.writeTextElement("specular", ".1 .1 .1 1");
 
     writer.writeStartElement("attenuation");
-    writer.writeAttribute("range","300");
+    writer.writeTextElement("range", "300");
     writer.writeEndElement();
 
-    writer.writeStartElement("direction");
-    writer.writeAttribute("xyz","0.1 0.1 -1");
-    writer.writeEndElement();
-
-    writer.writeEndElement();
+    writer.writeTextElement("direction", "0.1 0.1 -1");
+    writer.writeEndElement(); // light
 
     writer.writeStartElement("model");
-
     writer.writeAttribute("name", "plane_model");
-    writer.writeAttribute("static", "true");
+    writer.writeTextElement("static", "true");
 
     writer.writeStartElement("link");
     writer.writeAttribute("name","plane_model_link");
@@ -360,7 +338,7 @@ void Arena::saveWorldSdf(const QString& filename)
     writer.writeStartElement("geometry");
 
     writer.writeStartElement("plane");
-    writer.writeAttribute("normal","0 0 1");
+    writer.writeTextElement("normal", "0 0 1");
     writer.writeEndElement();
 
     writer.writeEndElement(); //geometry
@@ -370,29 +348,29 @@ void Arena::saveWorldSdf(const QString& filename)
     writer.writeStartElement("friction");
 
     writer.writeStartElement("ode");
-    writer.writeAttribute("mu","10.0");
-    writer.writeAttribute("mu2","10.0");
-    writer.writeAttribute("fdir1","0 0 0");
-    writer.writeAttribute("slip1","0");
-    writer.writeAttribute("slip2","0");
+    writer.writeTextElement("mu","10.0");
+    writer.writeTextElement("mu2","10.0");
+    writer.writeTextElement("fdir1","0 0 0");
+    writer.writeTextElement("slip1","0");
+    writer.writeTextElement("slip2","0");
     writer.writeEndElement(); //ode
 
     writer.writeEndElement(); //friction
 
     writer.writeStartElement("bounce");
-    writer.writeAttribute("restitution_coefficient","0");
-    writer.writeAttribute("threshold","1000000.0");
+    writer.writeTextElement("restitution_coefficient","0");
+    writer.writeTextElement("threshold","1000000.0");
     writer.writeEndElement(); //bounce
 
     writer.writeStartElement("contact");
 
     writer.writeStartElement("ode");
-    writer.writeAttribute("soft_cfm","0");
-    writer.writeAttribute("soft_erp","0.2");
-    writer.writeAttribute("kp","1e10");
-    writer.writeAttribute("kd","1");
-    writer.writeAttribute("max_vel","100.0");
-    writer.writeAttribute("min_depth","0.0001");
+    writer.writeTextElement("soft_cfm","0");
+    writer.writeTextElement("soft_erp","0.2");
+    writer.writeTextElement("kp","1e10");
+    writer.writeTextElement("kd","1");
+    writer.writeTextElement("max_vel","100.0");
+    writer.writeTextElement("min_depth","0.0001");
     writer.writeEndElement(); //ode
 
     writer.writeEndElement(); //contact
@@ -403,18 +381,18 @@ void Arena::saveWorldSdf(const QString& filename)
 
     writer.writeStartElement("visual");
     writer.writeAttribute("name","plane_model_visual");
-    writer.writeAttribute("cast_shadows","false");
+    writer.writeTextElement("cast_shadows","false");
 
     writer.writeStartElement("geometry");
 
     writer.writeStartElement("plane");
-    writer.writeAttribute("normal","0 0 1");
+    writer.writeTextElement("normal","0 0 1");
     writer.writeEndElement();
 
     writer.writeEndElement(); //geometry
 
     writer.writeStartElement("material");
-    writer.writeAttribute("script","Gazebo/Grey");
+    writer.writeTextElement("script","Gazebo/Grey");
     writer.writeEndElement();
 
 
@@ -422,11 +400,11 @@ void Arena::saveWorldSdf(const QString& filename)
 
     //writer.writeEndElement();
 
-    writer.writeEndElement();
+    writer.writeEndElement(); //visual
 
-    writer.writeEndElement();
+    writer.writeEndElement(); //link
 
-    writer.writeEndElement();
+    writer.writeEndElement(); //model
 
 
 

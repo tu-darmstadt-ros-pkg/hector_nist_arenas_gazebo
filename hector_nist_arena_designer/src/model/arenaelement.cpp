@@ -211,7 +211,7 @@ void ArenaElement::saveWorldSdf(QXmlStreamWriter& writer)
     QString name;
     QTextStream(&name) << m_type->name() << "_" << m_instanceId;
     writer.writeAttribute("name", name);
-    writer.writeAttribute("static", "true");
+    writer.writeTextElement("static", "true");
 
     ArenaElement *context = m_arena->contextElement(this);
     QList<ItemMountPoint> contextItemMountPoints;
@@ -261,9 +261,7 @@ void ArenaElement::saveWorldSdf(QXmlStreamWriter& writer)
     writer.writeStartElement("link");
     writer.writeAttribute("name",name+"_link");
 
-    writer.writeStartElement("origin");
-    writer.writeAttribute("pose",xyz + " " + rpy);
-    writer.writeEndElement();
+    writer.writeTextElement("pose", xyz + " " + rpy);
 
     writer.writeStartElement("collision");
     writer.writeAttribute("name",name+"_collision");
@@ -271,32 +269,32 @@ void ArenaElement::saveWorldSdf(QXmlStreamWriter& writer)
     writer.writeStartElement("geometry");
 
     writer.writeStartElement("mesh");
-    writer.writeAttribute("filename",m_type->mesh());
-    writer.writeAttribute("scale","1 1 1");
-    writer.writeEndElement();
+    writer.writeTextElement("uri", "file://" + m_type->mesh());
+    writer.writeTextElement("scale", "1 1 1");
+    writer.writeEndElement(); // mesh
 
-    writer.writeEndElement();
+    writer.writeEndElement(); // geometry
 
-    writer.writeEndElement();
+    writer.writeEndElement(); // collision
 
     writer.writeStartElement("visual");
     writer.writeAttribute("name",name+"_visual");
-    writer.writeAttribute("cast_shadows","false");
+    writer.writeTextElement("cast_shadows","false");
 
     writer.writeStartElement("geometry");
 
     writer.writeStartElement("mesh");
-    writer.writeAttribute("filename",m_type->mesh());
-    writer.writeAttribute("scale","1 1 1");
+    writer.writeTextElement("uri", "file://" + m_type->mesh());
+    writer.writeTextElement("scale", "1 1 1");
     writer.writeEndElement();
 
-    writer.writeEndElement();
+    writer.writeEndElement(); // geometry
 
-    writer.writeEndElement();
+    writer.writeEndElement(); // visual
 
-    writer.writeEndElement();
+    writer.writeEndElement(); // link
 
-    writer.writeEndElement();
+    writer.writeEndElement(); // model
 
 }
 
