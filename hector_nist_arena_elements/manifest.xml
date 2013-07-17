@@ -9,10 +9,10 @@
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/hector_nist_arena_elements</url>
   
-  <depend package="gazebo"/>
+  <depend package="gazebo_ros"/>
   
   <export>
-    <gazebo gazebo_media_path="${prefix}" />
+    <gazebo_ros gazebo_media_path="${prefix}" />
   </export>
 
 
