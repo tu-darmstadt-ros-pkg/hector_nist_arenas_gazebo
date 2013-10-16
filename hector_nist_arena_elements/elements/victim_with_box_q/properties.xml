@@ -1,0 +1,9 @@
+<properties>
+    <type>mountable-item</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>victim_with_box_q.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Victim with box and QR</mi>
+        <mi desc="Height">0.3 m</mi>
+    </meta-info>
+</properties>
