@@ -1,0 +1,27 @@
+# ROS #
+######################
+build/
+devel/
+bin/
+lib/
+msg_gen/
+srv_gen/
+ROS_NOBUILD
+CATKIN_IGNORE
+bags/
+
+*Action.msg
+*Feedback.msg
+*Goal.msg
+*Result.msg
+
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.o
+*.so
+*.pyc
+

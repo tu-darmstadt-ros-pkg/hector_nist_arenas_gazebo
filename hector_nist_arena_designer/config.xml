@@ -3,6 +3,9 @@
  <!-- Default rotation is 0 -->
  <arena-elements>
   <element type="small_wall"/>
+  
+  <element type="small_wall_qr"/>
+  
   <element type="tall_wall"/>
   <element type="fiducial_barrel"/>
   <element type="fiducial_barrel_high"/>
@@ -10,6 +13,17 @@
   <element type="full_ramp"/>
   <element type="half_ramp"/>
   <element type="victim_with_box1"/>
+  
+  <element type="victim_with_box_t"/>
+  <element type="victim_with_box_s"/>
+  <element type="victim_with_box_c"/>
+  <element type="victim_with_box_sc"/>
+  <element type="victim_with_box_tc"/>
+  <element type="victim_with_box_ts"/>
+  <element type="victim_with_box_tsc"/>
+  <element type="victim_with_box_v"/>
+  <element type="victim_with_box_q"/>
+  
   <element type="victim_1"/>
   <element type="stepfield_red_diagonal"/>
   <element type="simple_elev_ramp"/>
