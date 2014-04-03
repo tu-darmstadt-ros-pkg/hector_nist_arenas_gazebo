@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elements>
+    <element type="small_wall" rotation="270" x="0" y="0"/>
+    <element type="small_wall" rotation="180" x="0" y="1"/>
+    <element type="small_wall" rotation="180" x="1" y="0"/>
+    <element type="small_wall" rotation="90" x="2" y="-1"/>
+    <element type="small_wall" rotation="180" x="3" y="0"/>
+    <element type="small_wall" rotation="180" x="2" y="1"/>
+    <element type="small_wall" rotation="90" x="3" y="1"/>
+    <element type="small_wall" rotation="0" x="3" y="1"/>
+    <element type="small_wall" rotation="270" x="2" y="1"/>
+    <element type="small_wall" rotation="180" x="1" y="2"/>
+    <element type="small_wall" rotation="180" x="0" y="2"/>
+    <element type="small_wall" rotation="270" x="-1" y="1"/>
+    <element type="small_wall" rotation="90" x="-2" y="0"/>
+    <element type="small_wall" rotation="180" x="1" y="3"/>
+    <element type="small_wall" rotation="0" x="2" y="3"/>
+    <element type="small_wall" rotation="0" x="4" y="2"/>
+    <element type="small_wall" rotation="0" x="4" y="3"/>
+    <element type="small_wall" rotation="90" x="4" y="2"/>
+    <element type="small_wall" rotation="90" x="4" y="1"/>
+    <element type="small_wall" rotation="180" x="4" y="1"/>
+    <element type="small_wall" rotation="270" x="0" y="-2"/>
+    <element type="small_wall" rotation="90" x="0" y="-2"/>
+    <element type="small_wall" rotation="180" x="2" y="-2"/>
+    <element type="small_wall" rotation="270" x="3" y="-3"/>
+    <element type="small_wall" rotation="0" x="4" y="-1"/>
+    <element type="small_wall" rotation="90" x="4" y="-1"/>
+    <element type="small_wall" rotation="180" x="4" y="-2"/>
+    <element type="small_wall" rotation="180" x="5" y="4"/>
+    <element type="small_wall" rotation="90" x="5" y="3"/>
+    <element type="small_wall" rotation="90" x="5" y="1"/>
+    <element type="small_wall" rotation="90" x="5" y="0"/>
+    <element type="small_wall" rotation="180" x="5" y="0"/>
+    <element type="small_wall" rotation="180" x="-1" y="3"/>
+    <element type="small_wall" rotation="90" x="-1" y="3"/>
+    <element type="small_wall" rotation="180" x="0" y="4"/>
+    <element type="small_wall" rotation="180" x="1" y="4"/>
+    <element type="small_wall" rotation="90" x="3" y="-3"/>
+    <element type="small_wall" rotation="180" x="4" y="-4"/>
+    <element type="small_wall" rotation="90" x="4" y="-4"/>
+    <element type="small_wall" rotation="0" x="-1" y="-4"/>
+    <element type="small_wall" rotation="180" x="2" y="-4"/>
+    <element type="small_wall" rotation="270" x="2" y="-4"/>
+    <element type="small_wall" rotation="180" x="2" y="-3"/>
+    <element type="small_wall" rotation="270" x="1" y="-3"/>
+    <element type="small_wall" rotation="0" x="0" y="-5"/>
+    <element type="small_wall" rotation="180" x="1" y="-4"/>
+    <element type="small_wall" rotation="0" x="-2" y="2"/>
+    <element type="small_wall" rotation="270" x="-3" y="3"/>
+    <element type="small_wall" rotation="270" x="-3" y="4"/>
+    <element type="small_wall" rotation="0" x="-3" y="4"/>
+    <element type="small_wall" rotation="0" x="-2" y="4"/>
+    <element type="small_wall" rotation="90" x="-2" y="4"/>
+    <element type="small_wall" rotation="0" x="-1" y="4"/>
+    <element type="small_wall" rotation="0" x="0" y="4"/>
+    <element type="small_wall" rotation="90" x="-4" y="2"/>
+    <element type="small_wall" rotation="90" x="-4" y="1"/>
+    <element type="small_wall" rotation="180" x="-3" y="2"/>
+    <element type="small_wall" rotation="270" x="-3" y="0"/>
+    <element type="small_wall" rotation="0" x="-2" y="0"/>
+    <element type="small_wall" rotation="180" x="-3" y="0"/>
+    <element type="small_wall" rotation="180" x="-2" y="-1"/>
+    <element type="small_wall" rotation="270" x="-3" y="-1"/>
+    <element type="small_wall" rotation="270" x="-3" y="-2"/>
+    <element type="small_wall" rotation="0" x="1" y="4"/>
+    <element type="small_wall" rotation="0" x="2" y="4"/>
+    <element type="small_wall" rotation="270" x="4" y="4"/>
+    <element type="small_wall" rotation="90" x="2" y="5"/>
+    <element type="small_wall" rotation="0" x="3" y="5"/>
+    <element type="small_wall" rotation="0" x="4" y="5"/>
+    <element type="small_wall" rotation="90" x="4" y="5"/>
+    <element type="small_wall" rotation="90" x="4" y="4"/>
+    <element type="small_wall" rotation="180" x="-2" y="-2"/>
+    <element type="small_wall" rotation="180" x="-1" y="-2"/>
+    <element type="small_wall" rotation="180" x="-2" y="-3"/>
+    <element type="small_wall" rotation="270" x="-3" y="-3"/>
+    <element type="small_wall" rotation="270" x="-3" y="-4"/>
+    <element type="small_wall" rotation="0" x="-3" y="-5"/>
+    <element type="small_wall" rotation="180" x="-2" y="-4"/>
+    <element type="small_wall" rotation="270" x="-1" y="-5"/>
+    <element type="small_wall" rotation="180" x="-1" y="-5"/>
+    <element type="small_wall" rotation="270" x="1" y="-5"/>
+    <element type="small_wall" rotation="90" x="-1" y="-6"/>
+    <element type="small_wall" rotation="180" x="0" y="-6"/>
+    <element type="small_wall" rotation="180" x="1" y="-6"/>
+    <element type="small_wall" rotation="180" x="2" y="-5"/>
+    <element type="small_wall" rotation="180" x="2" y="-6"/>
+    <element type="small_wall" rotation="270" x="3" y="-6"/>
+    <element type="small_wall" rotation="0" x="3" y="-6"/>
+    <element type="small_wall" rotation="0" x="3" y="-7"/>
+    <element type="small_wall" rotation="180" x="4" y="-6"/>
+    <element type="small_wall" rotation="270" x="5" y="-6"/>
+    <element type="small_wall" rotation="180" x="5" y="-5"/>
+    <element type="small_wall" rotation="90" x="5" y="-5"/>
+    <element type="small_wall" rotation="0" x="5" y="-3"/>
+    <element type="small_wall" rotation="90" x="5" y="-4"/>
+    <element type="small_wall" rotation="90" x="5" y="-3"/>
+    <element type="wall_holes1" rotation="180" x="1" y="1"/>
+    <element type="wall_holes1" rotation="180" x="0" y="0"/>
+    <element type="wall_holes1" rotation="90" x="1" y="-1"/>
+    <element type="wall_holes1" rotation="180" x="1" y="-2"/>
+    <element type="wall_holes1" rotation="270" x="-1" y="-1"/>
+    <element type="wall_holes1" rotation="180" x="-1" y="2"/>
+    <element type="wall_holes1" rotation="270" x="4" y="0"/>
+    <element type="wall_holes1" rotation="270" x="5" y="-2"/>
+    <element type="wall_holes1" rotation="0" x="3" y="-4"/>
+    <element type="wall_holes1" rotation="270" x="0" y="-4"/>
+    <element type="wall_holes1" rotation="180" x="-3" y="-2"/>
+    <element type="wall_holes1" rotation="90" x="-3" y="3"/>
+    <element type="wall_holes1" rotation="270" x="2" y="3"/>
+    <element type="wall_holes1" rotation="180" x="3" y="4"/>
+    <element type="wall_holes1" rotation="270" x="6" y="2"/>
+    <element type="wall_holes1" rotation="90" x="2" y="2"/>
+    <element type="wall_holes1" rotation="180" x="3" y="-1"/>
+    <element type="victim_with_box1" rotation="180" x="-1" y="2" mount-point="1"/>
+    <element type="victim_with_box1" rotation="180" x="1" y="1" mount-point="1"/>
+    <element type="victim_with_box1" rotation="90" x="1" y="-1" mount-point="1"/>
+    <element type="victim_with_box1" rotation="180" x="0" y="0" mount-point="1"/>
+    <element type="victim_with_box1" rotation="270" x="-1" y="-1" mount-point="1"/>
+    <element type="victim_with_box1" rotation="180" x="3" y="-1" mount-point="1"/>
+    <element type="victim_with_box1" rotation="270" x="5" y="-2" mount-point="1"/>
+    <element type="victim_with_box1" rotation="0" x="3" y="-4" mount-point="1"/>
+    <element type="victim_with_box1" rotation="270" x="0" y="-4" mount-point="1"/>
+    <element type="victim_with_box1" rotation="180" x="1" y="-2" mount-point="1"/>
+    <element type="victim_with_box1" rotation="180" x="-3" y="-2" mount-point="1"/>
+    <element type="victim_with_box1" rotation="90" x="-3" y="3" mount-point="1"/>
+    <element type="victim_with_box1" rotation="270" x="2" y="3" mount-point="1"/>
+    <element type="victim_with_box1" rotation="180" x="3" y="4"/>
+    <element type="victim_with_box1" rotation="270" x="6" y="2" mount-point="1"/>
+    <element type="victim_with_box1" rotation="90" x="2" y="2" mount-point="1"/>
+</elements>
