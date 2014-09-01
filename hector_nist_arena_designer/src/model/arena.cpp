@@ -268,11 +268,12 @@ void Arena::saveWorldSdf(const QString& filename)
     QXmlStreamWriter writer(&out);
     // Insert line-breaks for readability
     writer.setAutoFormatting(true);
+    writer.setAutoFormattingIndent(2);
 
     writer.writeStartDocument();
 
     writer.writeStartElement("sdf");
-    writer.writeAttribute("version", "1.3");
+    writer.writeAttribute("version", "1.4");
 
     writer.writeStartElement("world");
     writer.writeAttribute("name", "default");
@@ -292,7 +293,6 @@ void Arena::saveWorldSdf(const QString& filename)
 
     writer.writeStartElement("solver");
     writer.writeTextElement("type","quick");
-    writer.writeTextElement("dt","0.001");
     writer.writeTextElement("iters","10");
     writer.writeTextElement("sor","1.3");
     writer.writeEndElement();
@@ -305,7 +305,8 @@ void Arena::saveWorldSdf(const QString& filename)
     writer.writeEndElement();
 
     writer.writeEndElement(); // ode
-    writer.writeTextElement("update_rate", "1000");
+    writer.writeTextElement("real_time_update_rate", "1000");
+    writer.writeTextElement("max_step_size", "0.001");
 
     writer.writeEndElement(); // physics
 
