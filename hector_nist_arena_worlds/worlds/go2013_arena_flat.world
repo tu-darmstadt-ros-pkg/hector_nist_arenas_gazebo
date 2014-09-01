@@ -1,16 +1,15 @@
-<sdf version='1.3'>
-  <world name='default'>
+<sdf version="1.4">
+  <world name="default">
     <scene>
       <ambient>0.500000 0.500000 0.500000 1.000000</ambient>
       <background>0.500000 0.500000 0.500000 1.000000</background>
       <shadows>0</shadows>
     </scene>
-    <physics type='ode'>
+    <physics type="ode">
       <gravity>0.000000 0.000000 -9.810000</gravity>
       <ode>
         <solver>
           <type>quick</type>
-          <dt>0.001000</dt>
           <iters>10</iters>
           <sor>1.300000</sor>
         </solver>
@@ -21,9 +20,10 @@
           <contact_surface_layer>0.001000</contact_surface_layer>
         </constraints>
       </ode>
-      <update_rate>1000.000000</update_rate>
+      <real_time_update_rate>1000.000000</real_time_update_rate>
+      <max_step_size>0.001000</max_step_size>
     </physics>
-    <light name='directional_light_1' type='directional'>
+    <light name="directional_light_1" type="directional">
       <cast_shadows>0</cast_shadows>
       <pose>0.000000 0.000000 30.000000 0.100000 0.100000 0.000000</pose>
       <diffuse>0.500000 0.500000 0.500000 1.000000</diffuse>
@@ -33,10 +33,10 @@
       </attenuation>
       <direction>0.100000 0.100000 -1.000000</direction>
     </light>
-    <model name='plane_model'>
+    <model name="plane_model">
       <static>1</static>
-      <link name='plane_model_link'>
-        <collision name='plane_model_collision'>
+      <link name="plane_model_link">
+        <collision name="plane_model_collision">
           <geometry>
             <plane>
               <normal>0.000000 0.000000 1.000000</normal>
@@ -69,7 +69,7 @@
             </contact>
           </surface>
         </collision>
-        <visual name='plane_model_visual'>
+        <visual name="plane_model_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <plane>
@@ -93,11 +93,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_1'>
+    <model name="small_wall_1">
       <static>1</static>
-      <link name='small_wall_1_link'>
+      <link name="small_wall_1_link">
         <pose>0.000000 0.000000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='small_wall_1_collision'>
+        <collision name="small_wall_1_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -105,16 +105,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_1_visual'>
+        <visual name="small_wall_1_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -132,11 +132,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_2'>
+    <model name="small_wall_2">
       <static>1</static>
-      <link name='small_wall_2_link'>
+      <link name="small_wall_2_link">
         <pose>0.000000 1.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_2_collision'>
+        <collision name="small_wall_2_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -144,16 +144,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_2_visual'>
+        <visual name="small_wall_2_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -171,11 +171,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_3'>
+    <model name="small_wall_3">
       <static>1</static>
-      <link name='small_wall_3_link'>
+      <link name="small_wall_3_link">
         <pose>0.000000 -1.200000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='small_wall_3_collision'>
+        <collision name="small_wall_3_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -183,16 +183,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_3_visual'>
+        <visual name="small_wall_3_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -210,11 +210,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_4'>
+    <model name="small_wall_4">
       <static>1</static>
-      <link name='small_wall_4_link'>
+      <link name="small_wall_4_link">
         <pose>0.000000 -2.400000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_4_collision'>
+        <collision name="small_wall_4_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -222,16 +222,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_4_visual'>
+        <visual name="small_wall_4_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -249,11 +249,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_5'>
+    <model name="small_wall_5">
       <static>1</static>
-      <link name='small_wall_5_link'>
+      <link name="small_wall_5_link">
         <pose>0.000000 0.000000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_5_collision'>
+        <collision name="small_wall_5_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -261,16 +261,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_5_visual'>
+        <visual name="small_wall_5_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -288,11 +288,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_6'>
+    <model name="small_wall_6">
       <static>1</static>
-      <link name='small_wall_6_link'>
+      <link name="small_wall_6_link">
         <pose>-1.200000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_6_collision'>
+        <collision name="small_wall_6_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -300,16 +300,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_6_visual'>
+        <visual name="small_wall_6_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -327,11 +327,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_7'>
+    <model name="small_wall_7">
       <static>1</static>
-      <link name='small_wall_7_link'>
+      <link name="small_wall_7_link">
         <pose>-2.400000 1.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_7_collision'>
+        <collision name="small_wall_7_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -339,16 +339,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_7_visual'>
+        <visual name="small_wall_7_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -366,11 +366,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_8'>
+    <model name="small_wall_8">
       <static>1</static>
-      <link name='small_wall_8_link'>
+      <link name="small_wall_8_link">
         <pose>-3.600000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_8_collision'>
+        <collision name="small_wall_8_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -378,16 +378,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_8_visual'>
+        <visual name="small_wall_8_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -405,11 +405,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_9'>
+    <model name="small_wall_9">
       <static>1</static>
-      <link name='small_wall_9_link'>
+      <link name="small_wall_9_link">
         <pose>-1.200000 -2.400000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_9_collision'>
+        <collision name="small_wall_9_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -417,16 +417,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_9_visual'>
+        <visual name="small_wall_9_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -444,11 +444,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_10'>
+    <model name="small_wall_10">
       <static>1</static>
-      <link name='small_wall_10_link'>
+      <link name="small_wall_10_link">
         <pose>-1.200000 -1.200000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_10_collision'>
+        <collision name="small_wall_10_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -456,16 +456,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_10_visual'>
+        <visual name="small_wall_10_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -483,11 +483,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_11'>
+    <model name="small_wall_11">
       <static>1</static>
-      <link name='small_wall_11_link'>
+      <link name="small_wall_11_link">
         <pose>-2.400000 -2.400000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_11_collision'>
+        <collision name="small_wall_11_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -495,16 +495,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_11_visual'>
+        <visual name="small_wall_11_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -522,11 +522,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_12'>
+    <model name="small_wall_12">
       <static>1</static>
-      <link name='small_wall_12_link'>
+      <link name="small_wall_12_link">
         <pose>-3.600000 -2.400000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_12_collision'>
+        <collision name="small_wall_12_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -534,16 +534,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_12_visual'>
+        <visual name="small_wall_12_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -561,11 +561,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_13'>
+    <model name="small_wall_13">
       <static>1</static>
-      <link name='small_wall_13_link'>
+      <link name="small_wall_13_link">
         <pose>-2.400000 0.000000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_13_collision'>
+        <collision name="small_wall_13_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -573,16 +573,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_13_visual'>
+        <visual name="small_wall_13_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -600,11 +600,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_14'>
+    <model name="small_wall_14">
       <static>1</static>
-      <link name='small_wall_14_link'>
+      <link name="small_wall_14_link">
         <pose>-4.800000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_14_collision'>
+        <collision name="small_wall_14_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -612,16 +612,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_14_visual'>
+        <visual name="small_wall_14_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -639,11 +639,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_15'>
+    <model name="small_wall_15">
       <static>1</static>
-      <link name='small_wall_15_link'>
+      <link name="small_wall_15_link">
         <pose>-6.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_15_collision'>
+        <collision name="small_wall_15_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -651,16 +651,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_15_visual'>
+        <visual name="small_wall_15_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -678,11 +678,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_16'>
+    <model name="small_wall_16">
       <static>1</static>
-      <link name='small_wall_16_link'>
+      <link name="small_wall_16_link">
         <pose>-4.800000 -1.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_16_collision'>
+        <collision name="small_wall_16_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -690,16 +690,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_16_visual'>
+        <visual name="small_wall_16_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -717,11 +717,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_17'>
+    <model name="small_wall_17">
       <static>1</static>
-      <link name='small_wall_17_link'>
+      <link name="small_wall_17_link">
         <pose>-6.000000 -1.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_17_collision'>
+        <collision name="small_wall_17_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -729,16 +729,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_17_visual'>
+        <visual name="small_wall_17_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -756,11 +756,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_19'>
+    <model name="small_wall_19">
       <static>1</static>
-      <link name='small_wall_19_link'>
+      <link name="small_wall_19_link">
         <pose>-7.200000 -2.400000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_19_collision'>
+        <collision name="small_wall_19_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -768,16 +768,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_19_visual'>
+        <visual name="small_wall_19_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -795,11 +795,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_1'>
+    <model name="tall_wall_1">
       <static>1</static>
-      <link name='tall_wall_1_link'>
+      <link name="tall_wall_1_link">
         <pose>-7.200000 1.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='tall_wall_1_collision'>
+        <collision name="tall_wall_1_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -807,16 +807,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_1_visual'>
+        <visual name="tall_wall_1_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -834,11 +834,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_2'>
+    <model name="tall_wall_2">
       <static>1</static>
-      <link name='tall_wall_2_link'>
+      <link name="tall_wall_2_link">
         <pose>-8.400000 0.000000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='tall_wall_2_collision'>
+        <collision name="tall_wall_2_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -846,16 +846,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_2_visual'>
+        <visual name="tall_wall_2_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -873,11 +873,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_21'>
+    <model name="small_wall_21">
       <static>1</static>
-      <link name='small_wall_21_link'>
+      <link name="small_wall_21_link">
         <pose>-8.400000 -1.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_21_collision'>
+        <collision name="small_wall_21_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -885,16 +885,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_21_visual'>
+        <visual name="small_wall_21_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -912,11 +912,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_23'>
+    <model name="small_wall_23">
       <static>1</static>
-      <link name='small_wall_23_link'>
+      <link name="small_wall_23_link">
         <pose>-8.400000 1.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_23_collision'>
+        <collision name="small_wall_23_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -924,16 +924,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_23_visual'>
+        <visual name="small_wall_23_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -951,11 +951,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_24'>
+    <model name="small_wall_24">
       <static>1</static>
-      <link name='small_wall_24_link'>
+      <link name="small_wall_24_link">
         <pose>-9.600000 1.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_24_collision'>
+        <collision name="small_wall_24_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -963,16 +963,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_24_visual'>
+        <visual name="small_wall_24_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -990,11 +990,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_25'>
+    <model name="small_wall_25">
       <static>1</static>
-      <link name='small_wall_25_link'>
+      <link name="small_wall_25_link">
         <pose>-10.800000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_25_collision'>
+        <collision name="small_wall_25_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -1002,16 +1002,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_25_visual'>
+        <visual name="small_wall_25_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1029,11 +1029,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_26'>
+    <model name="small_wall_26">
       <static>1</static>
-      <link name='small_wall_26_link'>
+      <link name="small_wall_26_link">
         <pose>-9.600000 -1.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_26_collision'>
+        <collision name="small_wall_26_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -1041,16 +1041,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_26_visual'>
+        <visual name="small_wall_26_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1068,11 +1068,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_27'>
+    <model name="small_wall_27">
       <static>1</static>
-      <link name='small_wall_27_link'>
+      <link name="small_wall_27_link">
         <pose>-10.800000 -2.400000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_27_collision'>
+        <collision name="small_wall_27_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -1080,16 +1080,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_27_visual'>
+        <visual name="small_wall_27_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1107,11 +1107,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_1'>
+    <model name="fiducial_barrel_1">
       <static>1</static>
-      <link name='fiducial_barrel_1_link'>
+      <link name="fiducial_barrel_1_link">
         <pose>-2.400000 -1.200000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='fiducial_barrel_1_collision'>
+        <collision name="fiducial_barrel_1_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -1119,16 +1119,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_1_visual'>
+        <visual name="fiducial_barrel_1_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1146,11 +1146,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_2'>
+    <model name="fiducial_barrel_2">
       <static>1</static>
-      <link name='fiducial_barrel_2_link'>
+      <link name="fiducial_barrel_2_link">
         <pose>-1.200000 -1.200000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='fiducial_barrel_2_collision'>
+        <collision name="fiducial_barrel_2_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -1158,16 +1158,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_2_visual'>
+        <visual name="fiducial_barrel_2_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1185,11 +1185,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='victim_with_box1_1'>
+    <model name="victim_with_box1_1">
       <static>1</static>
-      <link name='victim_with_box1_1_link'>
+      <link name="victim_with_box1_1_link">
         <pose>-4.800000 -0.900000 0.900000 0.000000 0.000000 -1.570800</pose>
-        <collision name='victim_with_box1_1_collision'>
+        <collision name="victim_with_box1_1_collision">
           <geometry>
             <mesh>
               <uri>file://victim-with-box1.dae</uri>
@@ -1197,16 +1197,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='victim_with_box1_1_visual'>
+        <visual name="victim_with_box1_1_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1224,11 +1224,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='victim_with_box1_2'>
+    <model name="victim_with_box1_2">
       <static>1</static>
-      <link name='victim_with_box1_2_link'>
+      <link name="victim_with_box1_2_link">
         <pose>-9.600000 0.000000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='victim_with_box1_2_collision'>
+        <collision name="victim_with_box1_2_collision">
           <geometry>
             <mesh>
               <uri>file://victim-with-box1.dae</uri>
@@ -1236,16 +1236,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='victim_with_box1_2_visual'>
+        <visual name="victim_with_box1_2_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1263,11 +1263,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_holes1_1'>
+    <model name="wall_holes1_1">
       <static>1</static>
-      <link name='wall_holes1_1_link'>
+      <link name="wall_holes1_1_link">
         <pose>-4.800000 -1.200000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='wall_holes1_1_collision'>
+        <collision name="wall_holes1_1_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall_holes1.dae</uri>
@@ -1275,16 +1275,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_holes1_1_visual'>
+        <visual name="wall_holes1_1_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1302,11 +1302,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='stairs_120_1'>
+    <model name="stairs_120_1">
       <static>1</static>
-      <link name='stairs_120_1_link'>
+      <link name="stairs_120_1_link">
         <pose>-8.400000 -3.600000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='stairs_120_1_collision'>
+        <collision name="stairs_120_1_collision">
           <geometry>
             <mesh>
               <uri>file://stairs_120.dae</uri>
@@ -1314,16 +1314,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='stairs_120_1_visual'>
+        <visual name="stairs_120_1_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1341,11 +1341,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='simple_elev_ramp_1'>
+    <model name="simple_elev_ramp_1">
       <static>1</static>
-      <link name='simple_elev_ramp_1_link'>
+      <link name="simple_elev_ramp_1_link">
         <pose>-9.600000 -3.600000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='simple_elev_ramp_1_collision'>
+        <collision name="simple_elev_ramp_1_collision">
           <geometry>
             <mesh>
               <uri>file://simple_elev_ramp.dae</uri>
@@ -1353,16 +1353,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='simple_elev_ramp_1_visual'>
+        <visual name="simple_elev_ramp_1_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1380,11 +1380,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='elevated_floor_120_2'>
+    <model name="elevated_floor_120_2">
       <static>1</static>
-      <link name='elevated_floor_120_2_link'>
+      <link name="elevated_floor_120_2_link">
         <pose>-8.400000 -4.800000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='elevated_floor_120_2_collision'>
+        <collision name="elevated_floor_120_2_collision">
           <geometry>
             <mesh>
               <uri>file://elevated_floor_120.dae</uri>
@@ -1392,16 +1392,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='elevated_floor_120_2_visual'>
+        <visual name="elevated_floor_120_2_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1419,11 +1419,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_3'>
+    <model name="tall_wall_3">
       <static>1</static>
-      <link name='tall_wall_3_link'>
+      <link name="tall_wall_3_link">
         <pose>-8.400000 -6.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='tall_wall_3_collision'>
+        <collision name="tall_wall_3_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -1431,16 +1431,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_3_visual'>
+        <visual name="tall_wall_3_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1458,11 +1458,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_4'>
+    <model name="tall_wall_4">
       <static>1</static>
-      <link name='tall_wall_4_link'>
+      <link name="tall_wall_4_link">
         <pose>-9.600000 -6.000000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='tall_wall_4_collision'>
+        <collision name="tall_wall_4_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -1470,16 +1470,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_4_visual'>
+        <visual name="tall_wall_4_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1497,11 +1497,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_5'>
+    <model name="tall_wall_5">
       <static>1</static>
-      <link name='tall_wall_5_link'>
+      <link name="tall_wall_5_link">
         <pose>-9.600000 -7.200000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='tall_wall_5_collision'>
+        <collision name="tall_wall_5_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -1509,16 +1509,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_5_visual'>
+        <visual name="tall_wall_5_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1536,11 +1536,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_6'>
+    <model name="tall_wall_6">
       <static>1</static>
-      <link name='tall_wall_6_link'>
+      <link name="tall_wall_6_link">
         <pose>-10.800000 -6.000000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='tall_wall_6_collision'>
+        <collision name="tall_wall_6_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -1548,16 +1548,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_6_visual'>
+        <visual name="tall_wall_6_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1575,11 +1575,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_7'>
+    <model name="tall_wall_7">
       <static>1</static>
-      <link name='tall_wall_7_link'>
+      <link name="tall_wall_7_link">
         <pose>-10.800000 -4.800000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='tall_wall_7_collision'>
+        <collision name="tall_wall_7_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -1587,16 +1587,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_7_visual'>
+        <visual name="tall_wall_7_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1614,11 +1614,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_8'>
+    <model name="tall_wall_8">
       <static>1</static>
-      <link name='tall_wall_8_link'>
+      <link name="tall_wall_8_link">
         <pose>-6.000000 -6.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='tall_wall_8_collision'>
+        <collision name="tall_wall_8_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -1626,16 +1626,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_8_visual'>
+        <visual name="tall_wall_8_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1653,11 +1653,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_9'>
+    <model name="tall_wall_9">
       <static>1</static>
-      <link name='tall_wall_9_link'>
+      <link name="tall_wall_9_link">
         <pose>-6.000000 -6.000000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='tall_wall_9_collision'>
+        <collision name="tall_wall_9_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -1665,16 +1665,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_9_visual'>
+        <visual name="tall_wall_9_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1692,11 +1692,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_29'>
+    <model name="small_wall_29">
       <static>1</static>
-      <link name='small_wall_29_link'>
+      <link name="small_wall_29_link">
         <pose>-4.800000 -6.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_29_collision'>
+        <collision name="small_wall_29_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -1704,16 +1704,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_29_visual'>
+        <visual name="small_wall_29_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1731,11 +1731,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_31'>
+    <model name="small_wall_31">
       <static>1</static>
-      <link name='small_wall_31_link'>
+      <link name="small_wall_31_link">
         <pose>-3.600000 -6.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_31_collision'>
+        <collision name="small_wall_31_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -1743,16 +1743,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_31_visual'>
+        <visual name="small_wall_31_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1770,11 +1770,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_32'>
+    <model name="small_wall_32">
       <static>1</static>
-      <link name='small_wall_32_link'>
+      <link name="small_wall_32_link">
         <pose>-2.400000 -4.800000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_32_collision'>
+        <collision name="small_wall_32_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -1782,16 +1782,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_32_visual'>
+        <visual name="small_wall_32_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1809,11 +1809,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_33'>
+    <model name="small_wall_33">
       <static>1</static>
-      <link name='small_wall_33_link'>
+      <link name="small_wall_33_link">
         <pose>-1.200000 -4.800000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_33_collision'>
+        <collision name="small_wall_33_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -1821,16 +1821,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_33_visual'>
+        <visual name="small_wall_33_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1848,11 +1848,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_34'>
+    <model name="small_wall_34">
       <static>1</static>
-      <link name='small_wall_34_link'>
+      <link name="small_wall_34_link">
         <pose>0.000000 -4.800000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_34_collision'>
+        <collision name="small_wall_34_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -1860,16 +1860,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_34_visual'>
+        <visual name="small_wall_34_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1887,11 +1887,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_35'>
+    <model name="small_wall_35">
       <static>1</static>
-      <link name='small_wall_35_link'>
+      <link name="small_wall_35_link">
         <pose>0.000000 -6.000000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='small_wall_35_collision'>
+        <collision name="small_wall_35_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -1899,16 +1899,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_35_visual'>
+        <visual name="small_wall_35_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1926,11 +1926,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_36'>
+    <model name="small_wall_36">
       <static>1</static>
-      <link name='small_wall_36_link'>
+      <link name="small_wall_36_link">
         <pose>1.200000 -7.200000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_36_collision'>
+        <collision name="small_wall_36_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -1938,16 +1938,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_36_visual'>
+        <visual name="small_wall_36_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -1965,11 +1965,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_37'>
+    <model name="small_wall_37">
       <static>1</static>
-      <link name='small_wall_37_link'>
+      <link name="small_wall_37_link">
         <pose>0.000000 -7.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_37_collision'>
+        <collision name="small_wall_37_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -1977,16 +1977,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_37_visual'>
+        <visual name="small_wall_37_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2004,11 +2004,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_38'>
+    <model name="small_wall_38">
       <static>1</static>
-      <link name='small_wall_38_link'>
+      <link name="small_wall_38_link">
         <pose>0.000000 -7.200000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_38_collision'>
+        <collision name="small_wall_38_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2016,16 +2016,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_38_visual'>
+        <visual name="small_wall_38_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2043,11 +2043,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_39'>
+    <model name="small_wall_39">
       <static>1</static>
-      <link name='small_wall_39_link'>
+      <link name="small_wall_39_link">
         <pose>-1.200000 -7.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_39_collision'>
+        <collision name="small_wall_39_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2055,16 +2055,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_39_visual'>
+        <visual name="small_wall_39_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2082,11 +2082,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_10'>
+    <model name="tall_wall_10">
       <static>1</static>
-      <link name='tall_wall_10_link'>
+      <link name="tall_wall_10_link">
         <pose>-2.400000 -8.400000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='tall_wall_10_collision'>
+        <collision name="tall_wall_10_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -2094,16 +2094,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_10_visual'>
+        <visual name="tall_wall_10_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2121,11 +2121,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_11'>
+    <model name="tall_wall_11">
       <static>1</static>
-      <link name='tall_wall_11_link'>
+      <link name="tall_wall_11_link">
         <pose>-3.600000 -7.200000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='tall_wall_11_collision'>
+        <collision name="tall_wall_11_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -2133,16 +2133,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_11_visual'>
+        <visual name="tall_wall_11_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2160,11 +2160,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_40'>
+    <model name="small_wall_40">
       <static>1</static>
-      <link name='small_wall_40_link'>
+      <link name="small_wall_40_link">
         <pose>-3.600000 -8.400000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_40_collision'>
+        <collision name="small_wall_40_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2172,16 +2172,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_40_visual'>
+        <visual name="small_wall_40_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2199,11 +2199,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_41'>
+    <model name="small_wall_41">
       <static>1</static>
-      <link name='small_wall_41_link'>
+      <link name="small_wall_41_link">
         <pose>-4.800000 -7.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_41_collision'>
+        <collision name="small_wall_41_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2211,16 +2211,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_41_visual'>
+        <visual name="small_wall_41_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2238,11 +2238,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_42'>
+    <model name="small_wall_42">
       <static>1</static>
-      <link name='small_wall_42_link'>
+      <link name="small_wall_42_link">
         <pose>-6.000000 -7.200000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='small_wall_42_collision'>
+        <collision name="small_wall_42_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2250,16 +2250,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_42_visual'>
+        <visual name="small_wall_42_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2277,11 +2277,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_43'>
+    <model name="small_wall_43">
       <static>1</static>
-      <link name='small_wall_43_link'>
+      <link name="small_wall_43_link">
         <pose>-6.000000 -8.400000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_43_collision'>
+        <collision name="small_wall_43_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2289,16 +2289,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_43_visual'>
+        <visual name="small_wall_43_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2316,11 +2316,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_44'>
+    <model name="small_wall_44">
       <static>1</static>
-      <link name='small_wall_44_link'>
+      <link name="small_wall_44_link">
         <pose>-7.200000 -7.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_44_collision'>
+        <collision name="small_wall_44_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2328,16 +2328,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_44_visual'>
+        <visual name="small_wall_44_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2355,11 +2355,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_45'>
+    <model name="small_wall_45">
       <static>1</static>
-      <link name='small_wall_45_link'>
+      <link name="small_wall_45_link">
         <pose>-8.400000 -7.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_45_collision'>
+        <collision name="small_wall_45_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2367,16 +2367,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_45_visual'>
+        <visual name="small_wall_45_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2394,11 +2394,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_12'>
+    <model name="tall_wall_12">
       <static>1</static>
-      <link name='tall_wall_12_link'>
+      <link name="tall_wall_12_link">
         <pose>-10.800000 -7.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='tall_wall_12_collision'>
+        <collision name="tall_wall_12_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -2406,16 +2406,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_12_visual'>
+        <visual name="tall_wall_12_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2433,11 +2433,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_13'>
+    <model name="tall_wall_13">
       <static>1</static>
-      <link name='tall_wall_13_link'>
+      <link name="tall_wall_13_link">
         <pose>-12.000000 -7.200000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='tall_wall_13_collision'>
+        <collision name="tall_wall_13_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -2445,16 +2445,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_13_visual'>
+        <visual name="tall_wall_13_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2472,11 +2472,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_46'>
+    <model name="small_wall_46">
       <static>1</static>
-      <link name='small_wall_46_link'>
+      <link name="small_wall_46_link">
         <pose>-9.600000 -7.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_46_collision'>
+        <collision name="small_wall_46_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2484,16 +2484,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_46_visual'>
+        <visual name="small_wall_46_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2511,11 +2511,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_48'>
+    <model name="small_wall_48">
       <static>1</static>
-      <link name='small_wall_48_link'>
+      <link name="small_wall_48_link">
         <pose>-12.000000 -6.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='small_wall_48_collision'>
+        <collision name="small_wall_48_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2523,16 +2523,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_48_visual'>
+        <visual name="small_wall_48_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2550,11 +2550,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_49'>
+    <model name="small_wall_49">
       <static>1</static>
-      <link name='small_wall_49_link'>
+      <link name="small_wall_49_link">
         <pose>-12.000000 -6.000000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_49_collision'>
+        <collision name="small_wall_49_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2562,16 +2562,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_49_visual'>
+        <visual name="small_wall_49_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2589,11 +2589,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_14'>
+    <model name="tall_wall_14">
       <static>1</static>
-      <link name='tall_wall_14_link'>
+      <link name="tall_wall_14_link">
         <pose>-14.400000 -6.000000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='tall_wall_14_collision'>
+        <collision name="tall_wall_14_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -2601,16 +2601,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_14_visual'>
+        <visual name="tall_wall_14_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2628,11 +2628,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_15'>
+    <model name="tall_wall_15">
       <static>1</static>
-      <link name='tall_wall_15_link'>
+      <link name="tall_wall_15_link">
         <pose>-14.400000 -6.000000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='tall_wall_15_collision'>
+        <collision name="tall_wall_15_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -2640,16 +2640,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_15_visual'>
+        <visual name="tall_wall_15_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2667,11 +2667,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_50'>
+    <model name="small_wall_50">
       <static>1</static>
-      <link name='small_wall_50_link'>
+      <link name="small_wall_50_link">
         <pose>-13.200000 -6.000000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_50_collision'>
+        <collision name="small_wall_50_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2679,16 +2679,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_50_visual'>
+        <visual name="small_wall_50_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2706,11 +2706,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_51'>
+    <model name="small_wall_51">
       <static>1</static>
-      <link name='small_wall_51_link'>
+      <link name="small_wall_51_link">
         <pose>-13.200000 -4.800000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_51_collision'>
+        <collision name="small_wall_51_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2718,16 +2718,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_51_visual'>
+        <visual name="small_wall_51_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2745,11 +2745,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_52'>
+    <model name="small_wall_52">
       <static>1</static>
-      <link name='small_wall_52_link'>
+      <link name="small_wall_52_link">
         <pose>-13.200000 -3.600000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_52_collision'>
+        <collision name="small_wall_52_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2757,16 +2757,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_52_visual'>
+        <visual name="small_wall_52_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2784,11 +2784,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_53'>
+    <model name="small_wall_53">
       <static>1</static>
-      <link name='small_wall_53_link'>
+      <link name="small_wall_53_link">
         <pose>-12.000000 -3.600000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_53_collision'>
+        <collision name="small_wall_53_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2796,16 +2796,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_53_visual'>
+        <visual name="small_wall_53_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2823,11 +2823,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_54'>
+    <model name="small_wall_54">
       <static>1</static>
-      <link name='small_wall_54_link'>
+      <link name="small_wall_54_link">
         <pose>-10.800000 -3.600000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_54_collision'>
+        <collision name="small_wall_54_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -2835,16 +2835,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_54_visual'>
+        <visual name="small_wall_54_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2862,11 +2862,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_16'>
+    <model name="tall_wall_16">
       <static>1</static>
-      <link name='tall_wall_16_link'>
+      <link name="tall_wall_16_link">
         <pose>-13.200000 -2.400000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='tall_wall_16_collision'>
+        <collision name="tall_wall_16_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -2874,16 +2874,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_16_visual'>
+        <visual name="tall_wall_16_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2901,11 +2901,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_17'>
+    <model name="tall_wall_17">
       <static>1</static>
-      <link name='tall_wall_17_link'>
+      <link name="tall_wall_17_link">
         <pose>-13.200000 -3.600000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='tall_wall_17_collision'>
+        <collision name="tall_wall_17_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -2913,16 +2913,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_17_visual'>
+        <visual name="tall_wall_17_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2940,11 +2940,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_1'>
+    <model name="wall_diag_120_1">
       <static>1</static>
-      <link name='wall_diag_120_1_link'>
+      <link name="wall_diag_120_1_link">
         <pose>-12.000000 1.200000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='wall_diag_120_1_collision'>
+        <collision name="wall_diag_120_1_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -2952,16 +2952,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_1_visual'>
+        <visual name="wall_diag_120_1_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -2979,11 +2979,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_2'>
+    <model name="wall_diag_120_2">
       <static>1</static>
-      <link name='wall_diag_120_2_link'>
+      <link name="wall_diag_120_2_link">
         <pose>-18.000000 -6.000000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='wall_diag_120_2_collision'>
+        <collision name="wall_diag_120_2_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -2991,16 +2991,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_2_visual'>
+        <visual name="wall_diag_120_2_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3018,11 +3018,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_60'>
+    <model name="small_wall_60">
       <static>1</static>
-      <link name='small_wall_60_link'>
+      <link name="small_wall_60_link">
         <pose>1.200000 -2.400000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_60_collision'>
+        <collision name="small_wall_60_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -3030,16 +3030,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_60_visual'>
+        <visual name="small_wall_60_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3057,11 +3057,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_61'>
+    <model name="small_wall_61">
       <static>1</static>
-      <link name='small_wall_61_link'>
+      <link name="small_wall_61_link">
         <pose>0.000000 -3.600000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='small_wall_61_collision'>
+        <collision name="small_wall_61_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -3069,16 +3069,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_61_visual'>
+        <visual name="small_wall_61_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3096,11 +3096,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_62'>
+    <model name="small_wall_62">
       <static>1</static>
-      <link name='small_wall_62_link'>
+      <link name="small_wall_62_link">
         <pose>0.000000 -4.800000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='small_wall_62_collision'>
+        <collision name="small_wall_62_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -3108,16 +3108,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_62_visual'>
+        <visual name="small_wall_62_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3135,11 +3135,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_3'>
+    <model name="wall_diag_120_3">
       <static>1</static>
-      <link name='wall_diag_120_3_link'>
+      <link name="wall_diag_120_3_link">
         <pose>-13.200000 1.200000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='wall_diag_120_3_collision'>
+        <collision name="wall_diag_120_3_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -3147,16 +3147,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_3_visual'>
+        <visual name="wall_diag_120_3_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3174,11 +3174,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_4'>
+    <model name="wall_diag_120_4">
       <static>1</static>
-      <link name='wall_diag_120_4_link'>
+      <link name="wall_diag_120_4_link">
         <pose>-15.600000 1.200000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='wall_diag_120_4_collision'>
+        <collision name="wall_diag_120_4_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -3186,16 +3186,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_4_visual'>
+        <visual name="wall_diag_120_4_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3213,11 +3213,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_5'>
+    <model name="wall_diag_120_5">
       <static>1</static>
-      <link name='wall_diag_120_5_link'>
+      <link name="wall_diag_120_5_link">
         <pose>-14.400000 1.200000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='wall_diag_120_5_collision'>
+        <collision name="wall_diag_120_5_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -3225,16 +3225,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_5_visual'>
+        <visual name="wall_diag_120_5_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3252,11 +3252,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_6'>
+    <model name="wall_diag_120_6">
       <static>1</static>
-      <link name='wall_diag_120_6_link'>
+      <link name="wall_diag_120_6_link">
         <pose>-18.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='wall_diag_120_6_collision'>
+        <collision name="wall_diag_120_6_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -3264,16 +3264,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_6_visual'>
+        <visual name="wall_diag_120_6_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3291,11 +3291,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_7'>
+    <model name="wall_diag_120_7">
       <static>1</static>
-      <link name='wall_diag_120_7_link'>
+      <link name="wall_diag_120_7_link">
         <pose>-18.000000 -1.200000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='wall_diag_120_7_collision'>
+        <collision name="wall_diag_120_7_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -3303,16 +3303,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_7_visual'>
+        <visual name="wall_diag_120_7_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3330,11 +3330,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_8'>
+    <model name="wall_diag_120_8">
       <static>1</static>
-      <link name='wall_diag_120_8_link'>
+      <link name="wall_diag_120_8_link">
         <pose>-18.000000 -4.800000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='wall_diag_120_8_collision'>
+        <collision name="wall_diag_120_8_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -3342,16 +3342,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_8_visual'>
+        <visual name="wall_diag_120_8_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3369,11 +3369,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_9'>
+    <model name="wall_diag_120_9">
       <static>1</static>
-      <link name='wall_diag_120_9_link'>
+      <link name="wall_diag_120_9_link">
         <pose>-18.000000 -2.400000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='wall_diag_120_9_collision'>
+        <collision name="wall_diag_120_9_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -3381,16 +3381,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_9_visual'>
+        <visual name="wall_diag_120_9_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3408,11 +3408,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_10'>
+    <model name="wall_diag_120_10">
       <static>1</static>
-      <link name='wall_diag_120_10_link'>
+      <link name="wall_diag_120_10_link">
         <pose>-18.000000 -3.600000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='wall_diag_120_10_collision'>
+        <collision name="wall_diag_120_10_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -3420,16 +3420,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_10_visual'>
+        <visual name="wall_diag_120_10_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3447,11 +3447,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_11'>
+    <model name="wall_diag_120_11">
       <static>1</static>
-      <link name='wall_diag_120_11_link'>
+      <link name="wall_diag_120_11_link">
         <pose>-15.600000 -8.400000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='wall_diag_120_11_collision'>
+        <collision name="wall_diag_120_11_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -3459,16 +3459,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_11_visual'>
+        <visual name="wall_diag_120_11_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3486,11 +3486,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_12'>
+    <model name="wall_diag_120_12">
       <static>1</static>
-      <link name='wall_diag_120_12_link'>
+      <link name="wall_diag_120_12_link">
         <pose>-14.400000 -8.400000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='wall_diag_120_12_collision'>
+        <collision name="wall_diag_120_12_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -3498,16 +3498,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_12_visual'>
+        <visual name="wall_diag_120_12_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3525,11 +3525,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_13'>
+    <model name="wall_diag_120_13">
       <static>1</static>
-      <link name='wall_diag_120_13_link'>
+      <link name="wall_diag_120_13_link">
         <pose>-12.000000 -8.400000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='wall_diag_120_13_collision'>
+        <collision name="wall_diag_120_13_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -3537,16 +3537,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_13_visual'>
+        <visual name="wall_diag_120_13_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3564,11 +3564,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_14'>
+    <model name="wall_diag_120_14">
       <static>1</static>
-      <link name='wall_diag_120_14_link'>
+      <link name="wall_diag_120_14_link">
         <pose>-13.200000 -8.400000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='wall_diag_120_14_collision'>
+        <collision name="wall_diag_120_14_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -3576,16 +3576,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_14_visual'>
+        <visual name="wall_diag_120_14_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3603,11 +3603,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='corner_diag_120_1'>
+    <model name="corner_diag_120_1">
       <static>1</static>
-      <link name='corner_diag_120_1_link'>
+      <link name="corner_diag_120_1_link">
         <pose>-16.800000 1.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='corner_diag_120_1_collision'>
+        <collision name="corner_diag_120_1_collision">
           <geometry>
             <mesh>
               <uri>file://corner_diag_120.dae</uri>
@@ -3615,16 +3615,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='corner_diag_120_1_visual'>
+        <visual name="corner_diag_120_1_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3642,11 +3642,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_20'>
+    <model name="tall_wall_20">
       <static>1</static>
-      <link name='tall_wall_20_link'>
+      <link name="tall_wall_20_link">
         <pose>-16.800000 -7.200000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='tall_wall_20_collision'>
+        <collision name="tall_wall_20_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -3654,16 +3654,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_20_visual'>
+        <visual name="tall_wall_20_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3681,11 +3681,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_21'>
+    <model name="tall_wall_21">
       <static>1</static>
-      <link name='tall_wall_21_link'>
+      <link name="tall_wall_21_link">
         <pose>-16.800000 -7.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='tall_wall_21_collision'>
+        <collision name="tall_wall_21_collision">
           <geometry>
             <mesh>
               <uri>file://tall_wall.dae</uri>
@@ -3693,16 +3693,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='tall_wall_21_visual'>
+        <visual name="tall_wall_21_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3720,11 +3720,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_holes1_2'>
+    <model name="wall_holes1_2">
       <static>1</static>
-      <link name='wall_holes1_2_link'>
+      <link name="wall_holes1_2_link">
         <pose>-10.800000 0.000000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='wall_holes1_2_collision'>
+        <collision name="wall_holes1_2_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall_holes1.dae</uri>
@@ -3732,16 +3732,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_holes1_2_visual'>
+        <visual name="wall_holes1_2_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3759,11 +3759,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_3'>
+    <model name="fiducial_barrel_3">
       <static>1</static>
-      <link name='fiducial_barrel_3_link'>
+      <link name="fiducial_barrel_3_link">
         <pose>-6.000000 0.000000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='fiducial_barrel_3_collision'>
+        <collision name="fiducial_barrel_3_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -3771,16 +3771,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_3_visual'>
+        <visual name="fiducial_barrel_3_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3798,11 +3798,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_4'>
+    <model name="fiducial_barrel_4">
       <static>1</static>
-      <link name='fiducial_barrel_4_link'>
+      <link name="fiducial_barrel_4_link">
         <pose>-4.800000 0.000000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='fiducial_barrel_4_collision'>
+        <collision name="fiducial_barrel_4_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -3810,16 +3810,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_4_visual'>
+        <visual name="fiducial_barrel_4_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3837,11 +3837,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_holes1_3'>
+    <model name="wall_holes1_3">
       <static>1</static>
-      <link name='wall_holes1_3_link'>
+      <link name="wall_holes1_3_link">
         <pose>-6.000000 -1.200000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='wall_holes1_3_collision'>
+        <collision name="wall_holes1_3_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall_holes1.dae</uri>
@@ -3849,16 +3849,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_holes1_3_visual'>
+        <visual name="wall_holes1_3_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3876,11 +3876,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='victim_with_box1_3'>
+    <model name="victim_with_box1_3">
       <static>1</static>
-      <link name='victim_with_box1_3_link'>
+      <link name="victim_with_box1_3_link">
         <pose>-7.200000 -1.200000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='victim_with_box1_3_collision'>
+        <collision name="victim_with_box1_3_collision">
           <geometry>
             <mesh>
               <uri>file://victim-with-box1.dae</uri>
@@ -3888,16 +3888,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='victim_with_box1_3_visual'>
+        <visual name="victim_with_box1_3_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3915,11 +3915,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_5'>
+    <model name="fiducial_barrel_5">
       <static>1</static>
-      <link name='fiducial_barrel_5_link'>
+      <link name="fiducial_barrel_5_link">
         <pose>-7.200000 -2.400000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='fiducial_barrel_5_collision'>
+        <collision name="fiducial_barrel_5_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -3927,16 +3927,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_5_visual'>
+        <visual name="fiducial_barrel_5_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3954,11 +3954,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_6'>
+    <model name="fiducial_barrel_6">
       <static>1</static>
-      <link name='fiducial_barrel_6_link'>
+      <link name="fiducial_barrel_6_link">
         <pose>-7.200000 -1.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='fiducial_barrel_6_collision'>
+        <collision name="fiducial_barrel_6_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -3966,16 +3966,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_6_visual'>
+        <visual name="fiducial_barrel_6_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -3993,11 +3993,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_1'>
+    <model name="fiducial_barrel_high_1">
       <static>1</static>
-      <link name='fiducial_barrel_high_1_link'>
+      <link name="fiducial_barrel_high_1_link">
         <pose>-7.200000 0.000000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='fiducial_barrel_high_1_collision'>
+        <collision name="fiducial_barrel_high_1_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -4005,16 +4005,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_1_visual'>
+        <visual name="fiducial_barrel_high_1_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4032,11 +4032,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_2'>
+    <model name="fiducial_barrel_high_2">
       <static>1</static>
-      <link name='fiducial_barrel_high_2_link'>
+      <link name="fiducial_barrel_high_2_link">
         <pose>-8.400000 0.000000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='fiducial_barrel_high_2_collision'>
+        <collision name="fiducial_barrel_high_2_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -4044,16 +4044,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_2_visual'>
+        <visual name="fiducial_barrel_high_2_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4071,11 +4071,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_holes1_4'>
+    <model name="wall_holes1_4">
       <static>1</static>
-      <link name='wall_holes1_4_link'>
+      <link name="wall_holes1_4_link">
         <pose>-9.600000 0.000000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='wall_holes1_4_collision'>
+        <collision name="wall_holes1_4_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall_holes1.dae</uri>
@@ -4083,16 +4083,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_holes1_4_visual'>
+        <visual name="wall_holes1_4_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4110,11 +4110,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='victim_with_box1_4'>
+    <model name="victim_with_box1_4">
       <static>1</static>
-      <link name='victim_with_box1_4_link'>
+      <link name="victim_with_box1_4_link">
         <pose>-9.600000 0.300000 0.900000 0.000000 0.000000 -1.570800</pose>
-        <collision name='victim_with_box1_4_collision'>
+        <collision name="victim_with_box1_4_collision">
           <geometry>
             <mesh>
               <uri>file://victim-with-box1.dae</uri>
@@ -4122,16 +4122,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='victim_with_box1_4_visual'>
+        <visual name="victim_with_box1_4_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4149,11 +4149,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_64'>
+    <model name="small_wall_64">
       <static>1</static>
-      <link name='small_wall_64_link'>
+      <link name="small_wall_64_link">
         <pose>-9.600000 0.000000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='small_wall_64_collision'>
+        <collision name="small_wall_64_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -4161,16 +4161,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_64_visual'>
+        <visual name="small_wall_64_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4188,11 +4188,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_65'>
+    <model name="small_wall_65">
       <static>1</static>
-      <link name='small_wall_65_link'>
+      <link name="small_wall_65_link">
         <pose>-10.800000 -1.200000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_65_collision'>
+        <collision name="small_wall_65_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -4200,16 +4200,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_65_visual'>
+        <visual name="small_wall_65_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4227,11 +4227,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_7'>
+    <model name="fiducial_barrel_7">
       <static>1</static>
-      <link name='fiducial_barrel_7_link'>
+      <link name="fiducial_barrel_7_link">
         <pose>-12.000000 -4.800000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='fiducial_barrel_7_collision'>
+        <collision name="fiducial_barrel_7_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -4239,16 +4239,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_7_visual'>
+        <visual name="fiducial_barrel_7_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4266,11 +4266,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_8'>
+    <model name="fiducial_barrel_8">
       <static>1</static>
-      <link name='fiducial_barrel_8_link'>
+      <link name="fiducial_barrel_8_link">
         <pose>-12.000000 -3.600000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='fiducial_barrel_8_collision'>
+        <collision name="fiducial_barrel_8_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -4278,16 +4278,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_8_visual'>
+        <visual name="fiducial_barrel_8_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4305,11 +4305,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_3'>
+    <model name="fiducial_barrel_high_3">
       <static>1</static>
-      <link name='fiducial_barrel_high_3_link'>
+      <link name="fiducial_barrel_high_3_link">
         <pose>-13.200000 -2.400000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='fiducial_barrel_high_3_collision'>
+        <collision name="fiducial_barrel_high_3_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -4317,16 +4317,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_3_visual'>
+        <visual name="fiducial_barrel_high_3_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4344,11 +4344,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_4'>
+    <model name="fiducial_barrel_high_4">
       <static>1</static>
-      <link name='fiducial_barrel_high_4_link'>
+      <link name="fiducial_barrel_high_4_link">
         <pose>-12.000000 -2.400000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='fiducial_barrel_high_4_collision'>
+        <collision name="fiducial_barrel_high_4_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -4356,16 +4356,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_4_visual'>
+        <visual name="fiducial_barrel_high_4_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4383,11 +4383,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_15'>
+    <model name="wall_diag_120_15">
       <static>1</static>
-      <link name='wall_diag_120_15_link'>
+      <link name="wall_diag_120_15_link">
         <pose>-15.600000 -1.200000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='wall_diag_120_15_collision'>
+        <collision name="wall_diag_120_15_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -4395,16 +4395,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_15_visual'>
+        <visual name="wall_diag_120_15_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4422,11 +4422,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_16'>
+    <model name="wall_diag_120_16">
       <static>1</static>
-      <link name='wall_diag_120_16_link'>
+      <link name="wall_diag_120_16_link">
         <pose>-16.800000 -1.200000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='wall_diag_120_16_collision'>
+        <collision name="wall_diag_120_16_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -4434,16 +4434,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_16_visual'>
+        <visual name="wall_diag_120_16_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4461,11 +4461,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_17'>
+    <model name="wall_diag_120_17">
       <static>1</static>
-      <link name='wall_diag_120_17_link'>
+      <link name="wall_diag_120_17_link">
         <pose>-14.400000 -1.200000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='wall_diag_120_17_collision'>
+        <collision name="wall_diag_120_17_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -4473,16 +4473,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_17_visual'>
+        <visual name="wall_diag_120_17_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4500,11 +4500,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_6'>
+    <model name="fiducial_barrel_high_6">
       <static>1</static>
-      <link name='fiducial_barrel_high_6_link'>
+      <link name="fiducial_barrel_high_6_link">
         <pose>-12.000000 -7.200000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='fiducial_barrel_high_6_collision'>
+        <collision name="fiducial_barrel_high_6_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -4512,16 +4512,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_6_visual'>
+        <visual name="fiducial_barrel_high_6_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4539,11 +4539,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_7'>
+    <model name="fiducial_barrel_high_7">
       <static>1</static>
-      <link name='fiducial_barrel_high_7_link'>
+      <link name="fiducial_barrel_high_7_link">
         <pose>-10.800000 -7.200000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='fiducial_barrel_high_7_collision'>
+        <collision name="fiducial_barrel_high_7_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -4551,16 +4551,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_7_visual'>
+        <visual name="fiducial_barrel_high_7_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4578,11 +4578,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_8'>
+    <model name="fiducial_barrel_high_8">
       <static>1</static>
-      <link name='fiducial_barrel_high_8_link'>
+      <link name="fiducial_barrel_high_8_link">
         <pose>-10.800000 -4.800000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='fiducial_barrel_high_8_collision'>
+        <collision name="fiducial_barrel_high_8_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -4590,16 +4590,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_8_visual'>
+        <visual name="fiducial_barrel_high_8_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4617,11 +4617,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_9'>
+    <model name="fiducial_barrel_high_9">
       <static>1</static>
-      <link name='fiducial_barrel_high_9_link'>
+      <link name="fiducial_barrel_high_9_link">
         <pose>-9.600000 -4.800000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='fiducial_barrel_high_9_collision'>
+        <collision name="fiducial_barrel_high_9_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -4629,16 +4629,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_9_visual'>
+        <visual name="fiducial_barrel_high_9_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4656,11 +4656,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_9'>
+    <model name="fiducial_barrel_9">
       <static>1</static>
-      <link name='fiducial_barrel_9_link'>
+      <link name="fiducial_barrel_9_link">
         <pose>-13.200000 -6.000000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='fiducial_barrel_9_collision'>
+        <collision name="fiducial_barrel_9_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -4668,16 +4668,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_9_visual'>
+        <visual name="fiducial_barrel_9_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4695,11 +4695,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_10'>
+    <model name="fiducial_barrel_10">
       <static>1</static>
-      <link name='fiducial_barrel_10_link'>
+      <link name="fiducial_barrel_10_link">
         <pose>-13.200000 -7.200000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='fiducial_barrel_10_collision'>
+        <collision name="fiducial_barrel_10_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -4707,16 +4707,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_10_visual'>
+        <visual name="fiducial_barrel_10_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4734,11 +4734,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_10'>
+    <model name="fiducial_barrel_high_10">
       <static>1</static>
-      <link name='fiducial_barrel_high_10_link'>
+      <link name="fiducial_barrel_high_10_link">
         <pose>-14.400000 -6.000000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='fiducial_barrel_high_10_collision'>
+        <collision name="fiducial_barrel_high_10_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -4746,16 +4746,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_10_visual'>
+        <visual name="fiducial_barrel_high_10_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4773,11 +4773,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_11'>
+    <model name="fiducial_barrel_high_11">
       <static>1</static>
-      <link name='fiducial_barrel_high_11_link'>
+      <link name="fiducial_barrel_high_11_link">
         <pose>-15.600000 -6.000000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='fiducial_barrel_high_11_collision'>
+        <collision name="fiducial_barrel_high_11_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -4785,16 +4785,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_11_visual'>
+        <visual name="fiducial_barrel_high_11_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4812,11 +4812,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_19'>
+    <model name="wall_diag_120_19">
       <static>1</static>
-      <link name='wall_diag_120_19_link'>
+      <link name="wall_diag_120_19_link">
         <pose>-15.600000 -4.800000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='wall_diag_120_19_collision'>
+        <collision name="wall_diag_120_19_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -4824,16 +4824,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_19_visual'>
+        <visual name="wall_diag_120_19_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4851,11 +4851,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_diag_120_20'>
+    <model name="wall_diag_120_20">
       <static>1</static>
-      <link name='wall_diag_120_20_link'>
+      <link name="wall_diag_120_20_link">
         <pose>-15.600000 -3.600000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='wall_diag_120_20_collision'>
+        <collision name="wall_diag_120_20_collision">
           <geometry>
             <mesh>
               <uri>file://wall_diag_120.dae</uri>
@@ -4863,16 +4863,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_diag_120_20_visual'>
+        <visual name="wall_diag_120_20_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4890,11 +4890,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_66'>
+    <model name="small_wall_66">
       <static>1</static>
-      <link name='small_wall_66_link'>
+      <link name="small_wall_66_link">
         <pose>-10.800000 -6.000000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_66_collision'>
+        <collision name="small_wall_66_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -4902,16 +4902,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_66_visual'>
+        <visual name="small_wall_66_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4929,11 +4929,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='victim_1_2'>
+    <model name="victim_1_2">
       <static>1</static>
-      <link name='victim_1_2_link'>
+      <link name="victim_1_2_link">
         <pose>-11.696800 -5.709470 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='victim_1_2_collision'>
+        <collision name="victim_1_2_collision">
           <geometry>
             <mesh>
               <uri>file://victim-1.dae</uri>
@@ -4941,16 +4941,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='victim_1_2_visual'>
+        <visual name="victim_1_2_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -4968,11 +4968,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_11'>
+    <model name="fiducial_barrel_11">
       <static>1</static>
-      <link name='fiducial_barrel_11_link'>
+      <link name="fiducial_barrel_11_link">
         <pose>-3.600000 -4.800000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='fiducial_barrel_11_collision'>
+        <collision name="fiducial_barrel_11_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -4980,16 +4980,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_11_visual'>
+        <visual name="fiducial_barrel_11_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5007,11 +5007,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_12'>
+    <model name="fiducial_barrel_12">
       <static>1</static>
-      <link name='fiducial_barrel_12_link'>
+      <link name="fiducial_barrel_12_link">
         <pose>-3.600000 -4.800000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='fiducial_barrel_12_collision'>
+        <collision name="fiducial_barrel_12_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -5019,16 +5019,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_12_visual'>
+        <visual name="fiducial_barrel_12_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5046,11 +5046,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_68'>
+    <model name="small_wall_68">
       <static>1</static>
-      <link name='small_wall_68_link'>
+      <link name="small_wall_68_link">
         <pose>-8.400000 -3.600000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='small_wall_68_collision'>
+        <collision name="small_wall_68_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -5058,16 +5058,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_68_visual'>
+        <visual name="small_wall_68_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5085,11 +5085,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_69'>
+    <model name="small_wall_69">
       <static>1</static>
-      <link name='small_wall_69_link'>
+      <link name="small_wall_69_link">
         <pose>-8.400000 -3.600000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_69_collision'>
+        <collision name="small_wall_69_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -5097,16 +5097,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_69_visual'>
+        <visual name="small_wall_69_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5124,11 +5124,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_70'>
+    <model name="small_wall_70">
       <static>1</static>
-      <link name='small_wall_70_link'>
+      <link name="small_wall_70_link">
         <pose>-1.200000 -6.000000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_70_collision'>
+        <collision name="small_wall_70_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -5136,16 +5136,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_70_visual'>
+        <visual name="small_wall_70_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5163,11 +5163,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_13'>
+    <model name="fiducial_barrel_13">
       <static>1</static>
-      <link name='fiducial_barrel_13_link'>
+      <link name="fiducial_barrel_13_link">
         <pose>-2.400000 -6.000000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='fiducial_barrel_13_collision'>
+        <collision name="fiducial_barrel_13_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -5175,16 +5175,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_13_visual'>
+        <visual name="fiducial_barrel_13_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5202,11 +5202,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_14'>
+    <model name="fiducial_barrel_14">
       <static>1</static>
-      <link name='fiducial_barrel_14_link'>
+      <link name="fiducial_barrel_14_link">
         <pose>-1.200000 -6.000000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='fiducial_barrel_14_collision'>
+        <collision name="fiducial_barrel_14_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel.dae</uri>
@@ -5214,16 +5214,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_14_visual'>
+        <visual name="fiducial_barrel_14_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5241,11 +5241,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_12'>
+    <model name="fiducial_barrel_high_12">
       <static>1</static>
-      <link name='fiducial_barrel_high_12_link'>
+      <link name="fiducial_barrel_high_12_link">
         <pose>-1.200000 -7.200000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='fiducial_barrel_high_12_collision'>
+        <collision name="fiducial_barrel_high_12_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -5253,16 +5253,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_12_visual'>
+        <visual name="fiducial_barrel_high_12_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5280,11 +5280,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_13'>
+    <model name="fiducial_barrel_high_13">
       <static>1</static>
-      <link name='fiducial_barrel_high_13_link'>
+      <link name="fiducial_barrel_high_13_link">
         <pose>-1.200000 -8.400000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='fiducial_barrel_high_13_collision'>
+        <collision name="fiducial_barrel_high_13_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -5292,16 +5292,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_13_visual'>
+        <visual name="fiducial_barrel_high_13_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5319,11 +5319,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_14'>
+    <model name="fiducial_barrel_high_14">
       <static>1</static>
-      <link name='fiducial_barrel_high_14_link'>
+      <link name="fiducial_barrel_high_14_link">
         <pose>-9.600000 -7.200000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='fiducial_barrel_high_14_collision'>
+        <collision name="fiducial_barrel_high_14_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -5331,16 +5331,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_14_visual'>
+        <visual name="fiducial_barrel_high_14_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5358,11 +5358,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_15'>
+    <model name="fiducial_barrel_high_15">
       <static>1</static>
-      <link name='fiducial_barrel_high_15_link'>
+      <link name="fiducial_barrel_high_15_link">
         <pose>-9.600000 -6.000000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='fiducial_barrel_high_15_collision'>
+        <collision name="fiducial_barrel_high_15_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -5370,16 +5370,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_15_visual'>
+        <visual name="fiducial_barrel_high_15_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5397,11 +5397,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='small_wall_71'>
+    <model name="small_wall_71">
       <static>1</static>
-      <link name='small_wall_71_link'>
+      <link name="small_wall_71_link">
         <pose>-7.200000 -7.200000 0.000000 0.000000 0.000000 1.570795</pose>
-        <collision name='small_wall_71_collision'>
+        <collision name="small_wall_71_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -5409,16 +5409,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='small_wall_71_visual'>
+        <visual name="small_wall_71_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5436,11 +5436,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_16'>
+    <model name="fiducial_barrel_high_16">
       <static>1</static>
-      <link name='fiducial_barrel_high_16_link'>
+      <link name="fiducial_barrel_high_16_link">
         <pose>-6.000000 -6.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <collision name='fiducial_barrel_high_16_collision'>
+        <collision name="fiducial_barrel_high_16_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -5448,16 +5448,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_16_visual'>
+        <visual name="fiducial_barrel_high_16_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5475,11 +5475,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='fiducial_barrel_high_17'>
+    <model name="fiducial_barrel_high_17">
       <static>1</static>
-      <link name='fiducial_barrel_high_17_link'>
+      <link name="fiducial_barrel_high_17_link">
         <pose>-6.000000 -4.800000 0.000000 0.000000 0.000000 -3.141590</pose>
-        <collision name='fiducial_barrel_high_17_collision'>
+        <collision name="fiducial_barrel_high_17_collision">
           <geometry>
             <mesh>
               <uri>file://fiducial_barrel_high.dae</uri>
@@ -5487,16 +5487,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='fiducial_barrel_high_17_visual'>
+        <visual name="fiducial_barrel_high_17_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5514,11 +5514,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='wall_holes1_6'>
+    <model name="wall_holes1_6">
       <static>1</static>
-      <link name='wall_holes1_6_link'>
+      <link name="wall_holes1_6_link">
         <pose>-4.800000 -6.000000 0.000000 0.000000 0.000000 -1.570800</pose>
-        <collision name='wall_holes1_6_collision'>
+        <collision name="wall_holes1_6_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall_holes1.dae</uri>
@@ -5526,16 +5526,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='wall_holes1_6_visual'>
+        <visual name="wall_holes1_6_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5553,11 +5553,11 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='victim_with_box1_6'>
+    <model name="victim_with_box1_6">
       <static>1</static>
-      <link name='victim_with_box1_6_link'>
+      <link name="victim_with_box1_6_link">
         <pose>-4.800000 -5.700000 0.900000 0.000000 0.000000 -1.570800</pose>
-        <collision name='victim_with_box1_6_collision'>
+        <collision name="victim_with_box1_6_collision">
           <geometry>
             <mesh>
               <uri>file://victim-with-box1.dae</uri>
@@ -5565,16 +5565,16 @@
             </mesh>
           </geometry>
           <surface>
-            <bounce/>
+            <bounce />
             <friction>
-              <ode/>
+              <ode />
             </friction>
             <contact>
-              <ode/>
+              <ode />
             </contact>
           </surface>
         </collision>
-        <visual name='victim_with_box1_6_visual'>
+        <visual name="victim_with_box1_6_visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -5592,13 +5592,13 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <state world_name='default'>
+    <state world_name="default">
       <sim_time>0 0</sim_time>
       <real_time>0 0</real_time>
       <wall_time>1371729418 366932342</wall_time>
     </state>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
+    <gui fullscreen="0">
+      <camera name="user_camera">
         <pose>-3.522940 -3.096290 11.711400 0.000000 1.405800 0.612196</pose>
         <view_controller>orbit</view_controller>
       </camera>
