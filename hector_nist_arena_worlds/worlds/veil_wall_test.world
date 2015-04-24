@@ -86,14 +86,14 @@
       <static>true</static>
       <link name="veil_wall_1_link">
         <pose>0 1.2 0 0 0 0</pose>
-        <collision name="veil_wall_1_collision">
+        <!--<collision name="veil_wall_1_collision">
           <geometry>
             <mesh>
               <uri>file://veil_wall.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-        </collision>
+        </collision>-->
         <visual name="veil_wall_1_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
@@ -431,14 +431,14 @@
       <static>true</static>
       <link name="veil_wall_2_link">
         <pose>1.2 3.6 0 0 0 -4.71239</pose>
-        <collision name="veil_wall_2_collision">
+        <!--<collision name="veil_wall_2_collision">
           <geometry>
             <mesh>
               <uri>file://veil_wall.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-        </collision>
+        </collision>-->
         <visual name="veil_wall_2_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
