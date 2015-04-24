@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elements>
+    <element type="veil_wall" rotation="0" x="0" y="1"/>
+    <element type="small_wall" rotation="90" x="-1" y="1"/>
+    <element type="small_wall" rotation="90" x="-1" y="0"/>
+    <element type="small_wall" rotation="90" x="0" y="1"/>
+    <element type="small_wall" rotation="180" x="0" y="0"/>
+    <element type="small_wall" rotation="270" x="1" y="0"/>
+    <element type="small_wall" rotation="270" x="0" y="2"/>
+    <element type="small_wall" rotation="270" x="0" y="3"/>
+    <element type="small_wall" rotation="180" x="0" y="4"/>
+    <element type="small_wall" rotation="0" x="1" y="3"/>
+    <element type="small_wall" rotation="90" x="0" y="2"/>
+    <element type="small_wall" rotation="0" x="2" y="3"/>
+    <element type="small_wall" rotation="90" x="2" y="3"/>
+    <element type="small_wall" rotation="0" x="2" y="2"/>
+    <element type="small_wall" rotation="180" x="1" y="3"/>
+    <element type="veil_wall" rotation="270" x="1" y="3"/>
+</elements>
