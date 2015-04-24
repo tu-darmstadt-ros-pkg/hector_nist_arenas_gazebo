@@ -11,6 +11,7 @@
   <element type="half_ramp"/>
   <element type="victim_with_box1"/>
   <element type="victim_1"/>
+  <element type="veil_wall"/>
   <element type="stepfield_red_diagonal"/>
   <element type="simple_elev_ramp"/>
   <element type="elevated_floor_120"/>
@@ -22,6 +23,7 @@
   <element type="small_wall_gap_no_tex"/>
   <element type="spectator_120"/>
   <element type="small_wall_triple_holes"/>
+
   
   <!--
         <element type="floor"/>
