@@ -5738,6 +5738,52 @@
         <gravity>1</gravity>
       </link>
       <pose>1 -14.4228 0 0 -0 0</pose>
+    </model>
+    <model name="stepfield_red_diagonal_1">
+      <static>true</static>
+      <link name="stepfield_red_diagonal_1_link">
+        <pose>-1.2 -2.4 0 0 0 0</pose>
+        <collision name="stepfield_red_diagonal_1_collision">
+          <geometry>
+            <mesh>
+              <uri>file://stepfield_red_diagonal.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="stepfield_red_diagonal_1_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://stepfield_red_diagonal.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="veil_wall_1">
+      <static>true</static>
+      <link name="veil_wall_1_link">
+        <pose>1.2 -2.4 0 0 0 -3.14159</pose>
+<!--        <collision name="veil_wall_1_collision">
+          <geometry>
+            <mesh>
+              <uri>file://veil_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>-->
+        <visual name="veil_wall_1_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://veil_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
     </model>   
   </world>
 </sdf>
