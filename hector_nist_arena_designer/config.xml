@@ -13,17 +13,7 @@
   <element type="full_ramp"/>
   <element type="half_ramp"/>
   <element type="victim_with_box1"/>
-  
-  <element type="victim_with_box_t"/>
-  <element type="victim_with_box_s"/>
-  <element type="victim_with_box_c"/>
-  <element type="victim_with_box_sc"/>
-  <element type="victim_with_box_tc"/>
-  <element type="victim_with_box_ts"/>
-  <element type="victim_with_box_tsc"/>
-  <element type="victim_with_box_v"/>
-  <element type="victim_with_box_q"/>
-  
+    
   <element type="victim_1"/>
   <element type="veil_wall"/>
   <element type="stepfield_red_diagonal"/>
@@ -42,7 +32,17 @@
   <element type="victim_doll_qr_with_box"/>
   
   
-
+  <!--
+  <element type="victim_with_box_t"/>
+  <element type="victim_with_box_s"/>
+  <element type="victim_with_box_c"/>
+  <element type="victim_with_box_sc"/>
+  <element type="victim_with_box_tc"/>
+  <element type="victim_with_box_ts"/>
+  <element type="victim_with_box_tsc"/>
+  <element type="victim_with_box_v"/>
+  <element type="victim_with_box_q"/>
+  -->
   
   <!--
         <element type="floor"/>
