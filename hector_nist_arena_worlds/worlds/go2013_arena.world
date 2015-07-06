@@ -72,13 +72,14 @@
         <visual name="plane_model_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-            </plane>
+            <mesh>
+              <uri>file://ground_plane.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
           </geometry>
-          <material>
+<!--          <material>
             <script>Gazebo/Grey</script>
-          </material>
+          </material>-->
         </visual>
       </link>
     </model>

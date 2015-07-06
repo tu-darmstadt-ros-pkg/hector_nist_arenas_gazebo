@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <sdf version="1.4">
   <world name="default">
     <scene>
@@ -70,19 +71,16 @@
           </surface>
         </collision>
         <visual name="plane_model_visual">
-          <cast_shadows>0</cast_shadows>
+          <cast_shadows>false</cast_shadows>
           <geometry>
-            <plane>
-              <normal>0.000000 0.000000 1.000000</normal>
-              <size>1.000000 1.000000</size>
-            </plane>
+            <mesh>
+              <uri>file://ground_plane.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
           </geometry>
-          <material>
-            <script>
-              <uri>__default__</uri>
-              <name>__default__</name>
-            </script>
-          </material>
+<!--          <material>
+            <script>Gazebo/Grey</script>
+          </material>-->
         </visual>
         <velocity_decay>
           <linear>0.000000</linear>
