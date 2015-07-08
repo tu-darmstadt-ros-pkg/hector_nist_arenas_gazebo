@@ -29,7 +29,7 @@
     <light name='directional_light_1' type='directional'>
       <cast_shadows>0</cast_shadows>
       <pose>0 0 30 0.1 0.1 0</pose>
-      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <diffuse>1.0 1.0 1.0 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
         <range>300</range>
