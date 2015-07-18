@@ -16,7 +16,7 @@
         <technique sid="common">
           <lambert>
             <emission>
-              <color sid="emission">0 0 0 1</color>
+              <color sid="emission">0.1 0.1 0.1 1</color>
             </emission>
             <ambient>
               <color sid="ambient">4.13115e-4 0 0.287066 1</color>
