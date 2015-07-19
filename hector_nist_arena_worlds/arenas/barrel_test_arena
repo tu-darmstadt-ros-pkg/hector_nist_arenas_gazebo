@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elements>
+    <element type="small_wall" rotation="0" x="0" y="1"/>
+    <element type="small_wall" rotation="0" x="1" y="1"/>
+    <element type="small_wall" rotation="0" x="-1" y="1"/>
+    <element type="small_wall" rotation="270" x="-1" y="1"/>
+    <element type="small_wall" rotation="270" x="-1" y="-1"/>
+    <element type="small_wall" rotation="180" x="-1" y="-1"/>
+    <element type="small_wall" rotation="180" x="0" y="-1"/>
+    <element type="small_wall" rotation="180" x="1" y="-1"/>
+    <element type="small_wall" rotation="90" x="1" y="-1"/>
+    <element type="small_wall" rotation="90" x="1" y="1"/>
+    <element type="small_wall" rotation="0" x="2" y="0"/>
+    <element type="small_wall" rotation="180" x="2" y="0"/>
+    <element type="small_wall" rotation="270" x="3" y="-1"/>
+    <element type="small_wall" rotation="90" x="3" y="-1"/>
+    <element type="small_wall" rotation="90" x="3" y="0"/>
+    <element type="small_wall" rotation="180" x="3" y="-1"/>
+    <element type="fiducial_barrel" rotation="90" x="1" y="1"/>
+    <element type="fiducial_barrel_high" rotation="270" x="-1" y="0"/>
+    <element type="fiducial_barrel" rotation="180" x="0" y="-1"/>
+    <element type="fiducial_barrel" rotation="180" x="3" y="-1"/>
+    <element type="fiducial_barrel_high" rotation="0" x="3" y="0"/>
+    <element type="tall_wall" rotation="270" x="-1" y="0"/>
+    <element type="tall_wall" rotation="0" x="3" y="0"/>
+</elements>
