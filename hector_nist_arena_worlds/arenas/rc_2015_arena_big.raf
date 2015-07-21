@@ -91,7 +91,7 @@
     <element type="tall_wall" rotation="270" x="-7" y="12"/>
     <element type="tall_wall" rotation="180" x="-7" y="12"/>
     <element type="tall_wall" rotation="90" x="-7" y="12"/>
-    <element type="small_wall" rotation="270" x="-3" y="5"/>
+    <element type="small_wall" rotation="90" x="-4" y="6"/>
     <element type="small_wall" rotation="90" x="-4" y="4"/>
     <element type="small_wall" rotation="90" x="-2" y="4"/>
     <element type="small_wall" rotation="270" x="-1" y="5"/>
@@ -175,7 +175,7 @@
     <element type="fiducial_barrel" rotation="270" x="3" y="12"/>
     <element type="fiducial_barrel" rotation="90" x="2" y="12"/>
     <element type="small_wall" rotation="90" x="7" y="11"/>
-    <element type="small_wall" rotation="180" x="7" y="12"/>
+    <element type="small_wall" rotation="270" x="7" y="10"/>
     <element type="small_wall" rotation="90" x="7" y="12"/>
     <element type="small_wall" rotation="270" x="8" y="13"/>
     <element type="small_wall" rotation="0" x="7" y="13"/>
@@ -204,10 +204,8 @@
     <element type="small_wall" rotation="180" x="1" y="4"/>
     <element type="small_wall" rotation="270" x="2" y="4"/>
     <element type="small_wall" rotation="270" x="2" y="5"/>
-    <element type="small_wall" rotation="0" x="1" y="6"/>
     <element type="small_wall" rotation="90" x="1" y="7"/>
     <element type="small_wall" rotation="270" x="2" y="8"/>
-    <element type="small_wall" rotation="180" x="2" y="9"/>
     <element type="corner_diag_120" rotation="270" x="-7" y="2"/>
     <element type="small_wall" rotation="180" x="-7" y="3"/>
     <element type="small_wall" rotation="0" x="-6" y="3"/>
@@ -227,10 +225,63 @@
     <element type="small_wall" rotation="90" x="7" y="5"/>
     <element type="small_wall" rotation="270" x="8" y="4"/>
     <element type="small_wall" rotation="270" x="8" y="3"/>
-    <element type="small_wall" rotation="90" x="1" y="13"/>
+    <element type="small_wall" rotation="0" x="1" y="13"/>
     <element type="small_wall" rotation="270" x="2" y="12"/>
     <element type="small_wall" rotation="270" x="2" y="11"/>
     <element type="small_wall" rotation="90" x="-8" y="11"/>
     <element type="small_wall" rotation="270" x="-4" y="0"/>
     <element type="small_wall" rotation="180" x="2" y="0"/>
+    <element type="half_ramp" rotation="270" x="-3" y="5"/>
+    <element type="half_ramp" rotation="90" x="-3" y="5"/>
+    <element type="half_ramp" rotation="90" x="-2" y="5"/>
+    <element type="half_ramp" rotation="270" x="-2" y="5"/>
+    <element type="half_ramp" rotation="90" x="-3" y="8"/>
+    <element type="half_ramp" rotation="270" x="-3" y="8"/>
+    <element type="half_ramp" rotation="90" x="-2" y="8"/>
+    <element type="half_ramp" rotation="270" x="-2" y="8"/>
+    <element type="small_wall" rotation="0" x="-3" y="8"/>
+    <element type="small_wall" rotation="180" x="-2" y="9"/>
+    <element type="fiducial_barrel" rotation="0" x="-3" y="8"/>
+    <element type="fiducial_barrel" rotation="180" x="-3" y="9"/>
+    <element type="stairs_120" rotation="180" x="1" y="7"/>
+    <element type="tall_wall" rotation="0" x="2" y="8"/>
+    <element type="victim_1" rotation="0" x="1" y="7" offset-x="-0.368421" offset-y="0.0736842"/>
+    <element type="stepfield_red_diagonal" rotation="0" x="5" y="11"/>
+    <element type="small_wall" rotation="180" x="6" y="12"/>
+    <element type="small_wall" rotation="270" x="7" y="11"/>
+    <element type="small_wall" rotation="90" x="6" y="12"/>
+    <element type="small_wall" rotation="90" x="6" y="13"/>
+    <element type="small_wall" rotation="180" x="4" y="13"/>
+    <element type="small_wall" rotation="180" x="3" y="13"/>
+    <element type="stepfield_red_diagonal" rotation="0" x="-6" y="10"/>
+    <element type="stepfield_red_diagonal" rotation="0" x="-7" y="10"/>
+    <element type="stepfield_red_diagonal" rotation="0" x="-7" y="11"/>
+    <element type="stepfield_red_diagonal" rotation="0" x="-6" y="11"/>
+    <element type="stepfield_red_diagonal" rotation="0" x="-7" y="9"/>
+    <element type="stepfield_red_diagonal" rotation="0" x="-6" y="9"/>
+    <element type="stepfield_red_diagonal" rotation="0" x="-7" y="8"/>
+    <element type="stepfield_red_diagonal" rotation="0" x="-6" y="8"/>
+    <element type="stepfield_red_diagonal" rotation="0" x="-7" y="7"/>
+    <element type="stepfield_red_diagonal" rotation="0" x="-6" y="7"/>
+    <element type="stepfield_red_diagonal" rotation="0" x="-7" y="6"/>
+    <element type="stepfield_red_diagonal" rotation="0" x="-6" y="6"/>
+    <element type="manip_storage" rotation="0" x="-5" y="11"/>
+    <element type="manip_storage" rotation="0" x="-4" y="11"/>
+    <element type="manip_storage" rotation="0" x="-5" y="12"/>
+    <element type="manip_storage" rotation="0" x="-4" y="12"/>
+    <element type="manip_storage" rotation="0" x="-3" y="11"/>
+    <element type="manip_storage" rotation="0" x="-2" y="11"/>
+    <element type="manip_storage" rotation="0" x="-1" y="11"/>
+    <element type="manip_storage" rotation="0" x="0" y="11"/>
+    <element type="manip_storage" rotation="0" x="1" y="11"/>
+    <element type="small_wall" rotation="90" x="-4" y="12"/>
+    <element type="small_wall" rotation="180" x="-3" y="12"/>
+    <element type="small_wall" rotation="0" x="-2" y="11"/>
+    <element type="small_wall" rotation="180" x="-1" y="12"/>
+    <element type="small_wall" rotation="0" x="0" y="11"/>
+    <element type="small_wall" rotation="270" x="1" y="12"/>
+    <element type="small_wall" rotation="270" x="1" y="13"/>
+    <element type="small_wall" rotation="270" x="-5" y="12"/>
+    <element type="small_wall" rotation="0" x="-5" y="12"/>
+    <element type="small_wall" rotation="0" x="-4" y="12"/>
 </elements>
