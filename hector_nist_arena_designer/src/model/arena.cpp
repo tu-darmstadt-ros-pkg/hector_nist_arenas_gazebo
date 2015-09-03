@@ -316,7 +316,7 @@ void Arena::saveWorldSdf(const QString& filename)
     writer.writeTextElement("cast_shadows","false");
 
     writer.writeTextElement("pose","0 0 30 0.1 0.1 0");
-    writer.writeTextElement("diffuse", ".5 .5 .5 1");
+    writer.writeTextElement("diffuse", "1.0 1.0 1.0 1");
     writer.writeTextElement("specular", ".1 .1 .1 1");
 
     writer.writeStartElement("attenuation");
@@ -386,10 +386,19 @@ void Arena::saveWorldSdf(const QString& filename)
 
     writer.writeStartElement("geometry");
 
-    writer.writeStartElement("plane");
-    writer.writeTextElement("normal","0 0 1");
-    writer.writeEndElement();
-
+    bool use_textured_ground_plane = true;
+    
+    if (!use_textured_ground_plane){
+      writer.writeStartElement("plane");
+      writer.writeTextElement("normal","0 0 1");
+      writer.writeEndElement();
+    }else{
+      writer.writeStartElement("mesh");
+      writer.writeTextElement("uri","file://ground_plane.dae");
+      writer.writeTextElement("scale","1 1 1");
+      writer.writeEndElement();
+    }
+    
     writer.writeEndElement(); //geometry
 
     writer.writeStartElement("material");
