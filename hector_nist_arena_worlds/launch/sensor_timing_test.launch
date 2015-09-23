@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="gui" default="true"/>
+
+  <include file="$(find hector_nist_arena_worlds)/launch/start.launch">
+   <arg name="world" value="sensor_timing_test.world"/>
+   <arg name="gui" value="$(arg gui)"/> 
+  </include>
+  <!--
+  <node name="gazebo_spawn_angular_parts" pkg="gazebo_ros" type="spawn_model" args="-model arena_angular_parts -file  $(find hector_nist_arena_worlds)/worlds/go2015_arena_angled_parts_standalone.world -sdf" respawn="false" output="screen"/>
+  -->
+</launch>
