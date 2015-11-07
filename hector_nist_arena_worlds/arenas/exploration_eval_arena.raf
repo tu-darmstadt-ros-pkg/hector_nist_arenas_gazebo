@@ -65,7 +65,6 @@
     <element type="half_ramp" rotation="180" x="-5" y="-1"/>
     <element type="half_ramp" rotation="180" x="-3" y="-1"/>
     <element type="half_ramp" rotation="180" x="-4" y="-1"/>
-    <element type="stairs_120" rotation="180" x="-7" y="-3"/>
     <element type="simple_elev_ramp" rotation="180" x="-8" y="-3"/>
     <element type="elevated_floor_120" rotation="0" x="-8" y="-4"/>
     <element type="elevated_floor_120" rotation="0" x="-7" y="-4"/>
@@ -220,4 +219,5 @@
     <element type="victim_with_box1" rotation="90" x="-9" y="-5" mount-point="1"/>
     <element type="half_ramp" rotation="0" x="-10" y="0"/>
     <element type="half_ramp" rotation="180" x="-10" y="0"/>
+    <element type="simple_elev_ramp" rotation="180" x="-7" y="-3"/>
 </elements>
