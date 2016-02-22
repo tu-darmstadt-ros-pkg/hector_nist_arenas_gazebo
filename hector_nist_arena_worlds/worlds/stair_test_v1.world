@@ -574,7 +574,7 @@
           <geometry>
             <mesh>
               <uri>file://stairs_120.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -583,7 +583,7 @@
           <geometry>
             <mesh>
               <uri>file://stairs_120.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -727,7 +727,7 @@
         </visual>
       </link>
     </model>
-    <model name="elevated_floor_120_5">
+<!--    <model name="elevated_floor_120_5">
       <static>true</static>
       <link name="elevated_floor_120_5_link">
         <pose>0 6 0 0 0 0</pose>
@@ -749,16 +749,16 @@
           </geometry>
         </visual>
       </link>
-    </model>
+    </model>-->
     <model name="stairs_120_5">
       <static>true</static>
       <link name="stairs_120_5_link">
-        <pose>0 6 0 0 0 0</pose>
+        <pose>0 6 0.5 0 0 0</pose>
         <collision name="stairs_120_5_collision">
           <geometry>
             <mesh>
               <uri>file://stairs_120.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -767,7 +767,7 @@
           <geometry>
             <mesh>
               <uri>file://stairs_120.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -891,7 +891,7 @@
     <model name="elevated_floor_120_6">
       <static>true</static>
       <link name="elevated_floor_120_6_link">
-        <pose>0 7.2 0 0 0 0</pose>
+        <pose>0 7.2 -0.1 0 0 0</pose>
         <collision name="elevated_floor_120_6_collision">
           <geometry>
             <mesh>
