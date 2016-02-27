@@ -1,9 +1,0 @@
-<stack>
-  <description brief="hector_nist_arenas_gazebo">hector_nist_arenas_gazebo provides means for the fast and convenient creation of test scenarios involving parts like those used for NIST standard test methods for response robots</description>
-  <author>Johannes Simon and Stefan Kohlbrecher</author>
-  <license>BSD</license>  
-  <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/hector_nist_arenas_gazebo</url>
-  <depend stack="ros" />
-
-</stack>

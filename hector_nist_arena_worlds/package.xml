@@ -1,0 +1,27 @@
+<package>
+  <name>hector_nist_arena_worlds</name>
+  <version>0.1.0</version>
+  <description>hector_nist_arena_worlds by default contains NIST standard test arena scenarios created using the hector_nist_arena_designer GUI.</description>
+  
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/wiki/hector_nist_arena_worlds</url>
+  <!-- <url type="bugtracker"></url> -->
+
+  <maintainer email="kohlbrecher@sim.tu-darmstadt.de">Stefan Kohlbrecher</maintainer>
+  <author email="kohlbrecher@sim.tu-darmstadt.de">Stefan Kohlbrecher</author>
+  <author email="not_available@this.time">Johannes Simon</author>
+
+  <!-- Dependencies which this package needs to build itself. -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Dependencies needed to compile this package. -->
+  <build_depend>hector_nist_arena_elements</build_depend>
+
+  <!-- Dependencies needed after this package is compiled. -->
+  <run_depend>hector_nist_arena_elements</run_depend>
+
+  <!-- Dependencies needed only for running tests. -->
+  <!-- <test_depend>hector_nist_arena_elements</test_depend> -->
+
+</package>
