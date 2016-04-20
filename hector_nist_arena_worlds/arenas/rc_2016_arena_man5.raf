@@ -32,4 +32,5 @@
     <element type="small_wall" rotation="180" x="5" y="1"/>
     <element type="half_ramp_shifted" rotation="270" x="5" y="1"/>
     <element type="half_ramp_shifted" rotation="90" x="5" y="1"/>
+    <element type="start_check" rotation="270" x="0" y="0"/>
 </elements>
