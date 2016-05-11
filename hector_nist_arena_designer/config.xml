@@ -32,6 +32,7 @@
   <element type="victim_doll_heat_with_box"/>
   <element type="victim_doll_qr_with_box"/>
   <element type="start_check"/>
+  <element type="hazmat"/>
   
   
   <!--

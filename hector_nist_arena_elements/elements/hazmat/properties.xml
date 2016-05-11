@@ -1,0 +1,8 @@
+<properties>
+    <type>wall</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>hazmat.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Hazmat Sign</mi>
+    </meta-info>
+</properties>
