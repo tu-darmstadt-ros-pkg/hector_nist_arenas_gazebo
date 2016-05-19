@@ -1,0 +1,9 @@
+<properties>
+    <type>wall</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>Fireextinguisher_BI.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Fire Extinguisher</mi>
+        <mi desc="Height">1.2 m</mi>
+    </meta-info>
+</properties>

@@ -1,0 +1,9 @@
+<properties>
+    <type>wall</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>red_barrel.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Red Barrel</mi>
+        <mi desc="Height">1.2 m</mi>
+    </meta-info>
+</properties>

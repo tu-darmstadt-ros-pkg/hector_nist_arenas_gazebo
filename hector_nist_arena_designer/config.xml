@@ -33,7 +33,8 @@
   <element type="victim_doll_qr_with_box"/>
   <element type="start_check"/>
   <element type="hazmat"/>
-  
+  <element type="fire_extinguisher"/> 
+  <element type="red_barrel"/>
   
   <!--
   <element type="victim_with_box_t"/>
