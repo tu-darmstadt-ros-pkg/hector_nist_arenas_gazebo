@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elements>
+    <element type="small_wall" rotation="180" x="-2" y="0"/>
+    <element type="small_wall" rotation="180" x="-1" y="0"/>
+    <element type="small_wall" rotation="180" x="0" y="0"/>
+    <element type="small_wall" rotation="270" x="-2" y="0"/>
+    <element type="small_wall" rotation="270" x="-2" y="1"/>
+    <element type="small_wall" rotation="270" x="-2" y="2"/>
+    <element type="small_wall" rotation="0" x="-2" y="2"/>
+    <element type="small_wall" rotation="0" x="0" y="2"/>
+    <element type="small_wall" rotation="0" x="1" y="2"/>
+    <element type="small_wall" rotation="90" x="1" y="2"/>
+    <element type="small_wall" rotation="90" x="1" y="1"/>
+    <element type="small_wall" rotation="90" x="1" y="0"/>
+    <element type="small_wall" rotation="180" x="1" y="0"/>
+    <element type="fire_extinguisher" rotation="90" x="1" y="0"/>
+    <element type="fiducial_barrel" rotation="270" x="-2" y="0"/>
+    <element type="small_wall" rotation="0" x="-1" y="2"/>
+    <element type="red_barrel" rotation="0" x="-1" y="2"/>
+    <element type="fire_extinguisher" rotation="0" x="1" y="2"/>
+</elements>
