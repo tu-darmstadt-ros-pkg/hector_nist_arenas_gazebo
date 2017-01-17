@@ -2,10 +2,12 @@
 
 <launch>
   <arg name="gui" default="true"/>
+  <arg name="gazebo_args" default=""/>
 
   <include file="$(find hector_nist_arena_worlds)/launch/start.launch">
    <arg name="world" value="rc_2016_door.world"/>
    <arg name="gui" value="$(arg gui)"/>
+   <arg name="gazebo_args" value="$(arg gazebo_args)"/>   
   </include>
 
 </launch>
