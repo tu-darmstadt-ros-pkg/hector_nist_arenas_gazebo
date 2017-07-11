@@ -83,29 +83,6 @@
         </visual>
       </link>
     </model>
-    <model name="small_wall_1">
-      <static>true</static>
-      <link name="small_wall_1_link">
-        <pose>0 0 0 0 0 -4.71239</pose>
-        <collision name="small_wall_1_collision">
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name="small_wall_1_visual">
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
     <model name="small_wall_2">
       <static>true</static>
       <link name="small_wall_2_link">
@@ -175,10 +152,33 @@
         </visual>
       </link>
     </model>
+    <model name="small_wall_5">
+      <static>true</static>
+      <link name="small_wall_5_link">
+        <pose>0 1.2 0 0 0 -1.5708</pose>
+        <collision name="small_wall_5_collision">
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="small_wall_5_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
     <model name="small_wall_6">
       <static>true</static>
       <link name="small_wall_6_link">
-        <pose>0 1.2 0 0 0 -1.5708</pose>
+        <pose>1.2 1.2 0 0 0 0</pose>
         <collision name="small_wall_6_collision">
           <geometry>
             <mesh>
@@ -201,7 +201,7 @@
     <model name="small_wall_7">
       <static>true</static>
       <link name="small_wall_7_link">
-        <pose>1.2 1.2 0 0 0 0</pose>
+        <pose>2.4 0 0 0 0 -4.71239</pose>
         <collision name="small_wall_7_collision">
           <geometry>
             <mesh>
@@ -221,10 +221,33 @@
         </visual>
       </link>
     </model>
+    <model name="small_wall_8">
+      <static>true</static>
+      <link name="small_wall_8_link">
+        <pose>3.6 1.2 0 0 0 0</pose>
+        <collision name="small_wall_8_collision">
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="small_wall_8_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
     <model name="small_wall_9">
       <static>true</static>
       <link name="small_wall_9_link">
-        <pose>2.4 0 0 0 0 -4.71239</pose>
+        <pose>2.4 1.2 0 0 0 -1.5708</pose>
         <collision name="small_wall_9_collision">
           <geometry>
             <mesh>
@@ -247,7 +270,7 @@
     <model name="small_wall_10">
       <static>true</static>
       <link name="small_wall_10_link">
-        <pose>3.6 1.2 0 0 0 0</pose>
+        <pose>4.8 2.4 0 0 0 -3.14159</pose>
         <collision name="small_wall_10_collision">
           <geometry>
             <mesh>
@@ -270,7 +293,7 @@
     <model name="small_wall_11">
       <static>true</static>
       <link name="small_wall_11_link">
-        <pose>2.4 1.2 0 0 0 -1.5708</pose>
+        <pose>4.8 0 0 0 0 -4.71239</pose>
         <collision name="small_wall_11_collision">
           <geometry>
             <mesh>
@@ -293,7 +316,7 @@
     <model name="small_wall_12">
       <static>true</static>
       <link name="small_wall_12_link">
-        <pose>4.8 2.4 0 0 0 -3.14159</pose>
+        <pose>7.2 0 0 0 0 -3.14159</pose>
         <collision name="small_wall_12_collision">
           <geometry>
             <mesh>
@@ -303,52 +326,6 @@
           </geometry>
         </collision>
         <visual name="small_wall_12_visual">
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
-    <model name="small_wall_13">
-      <static>true</static>
-      <link name="small_wall_13_link">
-        <pose>4.8 0 0 0 0 -4.71239</pose>
-        <collision name="small_wall_13_collision">
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name="small_wall_13_visual">
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
-    <model name="small_wall_14">
-      <static>true</static>
-      <link name="small_wall_14_link">
-        <pose>7.2 0 0 0 0 -3.14159</pose>
-        <collision name="small_wall_14_collision">
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name="small_wall_14_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
             <mesh>
@@ -543,11 +520,11 @@
         </visual>
       </link>
     </model>
-    <model name="small_wall_15">
+    <model name="small_wall_13">
       <static>true</static>
-      <link name="small_wall_15_link">
+      <link name="small_wall_13_link">
         <pose>6 1.2 0 0 0 0</pose>
-        <collision name="small_wall_15_collision">
+        <collision name="small_wall_13_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -555,7 +532,7 @@
             </mesh>
           </geometry>
         </collision>
-        <visual name="small_wall_15_visual">
+        <visual name="small_wall_13_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
             <mesh>
@@ -566,11 +543,11 @@
         </visual>
       </link>
     </model>
-    <model name="small_wall_16">
+    <model name="small_wall_14">
       <static>true</static>
-      <link name="small_wall_16_link">
+      <link name="small_wall_14_link">
         <pose>4.8 1.2 0 0 0 -1.5708</pose>
-        <collision name="small_wall_16_collision">
+        <collision name="small_wall_14_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -578,7 +555,7 @@
             </mesh>
           </geometry>
         </collision>
-        <visual name="small_wall_16_visual">
+        <visual name="small_wall_14_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
             <mesh>
@@ -612,10 +589,56 @@
         </visual>
       </link>
     </model>
+    <model name="small_wall_15">
+      <static>true</static>
+      <link name="small_wall_15_link">
+        <pose>3.6 -1.2 0 0 0 0</pose>
+        <collision name="small_wall_15_collision">
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="small_wall_15_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="small_wall_16">
+      <static>true</static>
+      <link name="small_wall_16_link">
+        <pose>4.8 0 0 0 0 -3.14159</pose>
+        <collision name="small_wall_16_collision">
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="small_wall_16_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
     <model name="small_wall_17">
       <static>true</static>
       <link name="small_wall_17_link">
-        <pose>3.6 -1.2 0 0 0 0</pose>
+        <pose>8.4 0 0 0 0 -3.14159</pose>
         <collision name="small_wall_17_collision">
           <geometry>
             <mesh>
@@ -625,52 +648,6 @@
           </geometry>
         </collision>
         <visual name="small_wall_17_visual">
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
-    <model name="small_wall_18">
-      <static>true</static>
-      <link name="small_wall_18_link">
-        <pose>4.8 0 0 0 0 -3.14159</pose>
-        <collision name="small_wall_18_collision">
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name="small_wall_18_visual">
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
-    <model name="small_wall_21">
-      <static>true</static>
-      <link name="small_wall_21_link">
-        <pose>8.4 0 0 0 0 -3.14159</pose>
-        <collision name="small_wall_21_collision">
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name="small_wall_21_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
             <mesh>
@@ -819,11 +796,11 @@
         </visual>
       </link>
     </model>
-    <model name="small_wall_22">
+    <model name="small_wall_18">
       <static>true</static>
-      <link name="small_wall_22_link">
+      <link name="small_wall_18_link">
         <pose>7.2 1.2 0 0 0 0</pose>
-        <collision name="small_wall_22_collision">
+        <collision name="small_wall_18_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -831,7 +808,7 @@
             </mesh>
           </geometry>
         </collision>
-        <visual name="small_wall_22_visual">
+        <visual name="small_wall_18_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
             <mesh>
@@ -842,11 +819,11 @@
         </visual>
       </link>
     </model>
-    <model name="small_wall_24">
+    <model name="small_wall_19">
       <static>true</static>
-      <link name="small_wall_24_link">
+      <link name="small_wall_19_link">
         <pose>7.2 0 0 0 0 -4.71239</pose>
-        <collision name="small_wall_24_collision">
+        <collision name="small_wall_19_collision">
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
@@ -854,7 +831,7 @@
             </mesh>
           </geometry>
         </collision>
-        <visual name="small_wall_24_visual">
+        <visual name="small_wall_19_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
             <mesh>
@@ -980,10 +957,125 @@
         </visual>
       </link>
     </model>
+    <model name="small_wall_20">
+      <static>true</static>
+      <link name="small_wall_20_link">
+        <pose>8.4 1.2 0 0 0 -4.71239</pose>
+        <collision name="small_wall_20_collision">
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="small_wall_20_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="small_wall_21">
+      <static>true</static>
+      <link name="small_wall_21_link">
+        <pose>8.4 0 0 0 0 -1.5708</pose>
+        <collision name="small_wall_21_collision">
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="small_wall_21_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="small_wall_22">
+      <static>true</static>
+      <link name="small_wall_22_link">
+        <pose>8.4 1.2 0 0 0 0</pose>
+        <collision name="small_wall_22_collision">
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="small_wall_22_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="small_wall_23">
+      <static>true</static>
+      <link name="small_wall_23_link">
+        <pose>9.6 2.4 0 0 0 -3.14159</pose>
+        <collision name="small_wall_23_collision">
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="small_wall_23_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="small_wall_24">
+      <static>true</static>
+      <link name="small_wall_24_link">
+        <pose>9.6 1.2 0 0 0 -1.5708</pose>
+        <collision name="small_wall_24_collision">
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="small_wall_24_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
     <model name="small_wall_25">
       <static>true</static>
       <link name="small_wall_25_link">
-        <pose>8.4 1.2 0 0 0 -4.71239</pose>
+        <pose>9.6 -1.2 0 0 0 0</pose>
         <collision name="small_wall_25_collision">
           <geometry>
             <mesh>
@@ -1006,7 +1098,7 @@
     <model name="small_wall_26">
       <static>true</static>
       <link name="small_wall_26_link">
-        <pose>8.4 0 0 0 0 -1.5708</pose>
+        <pose>10.8 0 0 0 0 -3.14159</pose>
         <collision name="small_wall_26_collision">
           <geometry>
             <mesh>
@@ -1029,7 +1121,7 @@
     <model name="small_wall_27">
       <static>true</static>
       <link name="small_wall_27_link">
-        <pose>8.4 1.2 0 0 0 0</pose>
+        <pose>10.8 0 0 0 0 -1.5708</pose>
         <collision name="small_wall_27_collision">
           <geometry>
             <mesh>
@@ -1052,7 +1144,7 @@
     <model name="small_wall_28">
       <static>true</static>
       <link name="small_wall_28_link">
-        <pose>9.6 2.4 0 0 0 -3.14159</pose>
+        <pose>10.8 1.2 0 0 0 0</pose>
         <collision name="small_wall_28_collision">
           <geometry>
             <mesh>
@@ -1062,121 +1154,6 @@
           </geometry>
         </collision>
         <visual name="small_wall_28_visual">
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
-    <model name="small_wall_29">
-      <static>true</static>
-      <link name="small_wall_29_link">
-        <pose>9.6 1.2 0 0 0 -1.5708</pose>
-        <collision name="small_wall_29_collision">
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name="small_wall_29_visual">
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
-    <model name="small_wall_30">
-      <static>true</static>
-      <link name="small_wall_30_link">
-        <pose>9.6 -1.2 0 0 0 0</pose>
-        <collision name="small_wall_30_collision">
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name="small_wall_30_visual">
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
-    <model name="small_wall_31">
-      <static>true</static>
-      <link name="small_wall_31_link">
-        <pose>10.8 0 0 0 0 -3.14159</pose>
-        <collision name="small_wall_31_collision">
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name="small_wall_31_visual">
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
-    <model name="small_wall_32">
-      <static>true</static>
-      <link name="small_wall_32_link">
-        <pose>10.8 0 0 0 0 -1.5708</pose>
-        <collision name="small_wall_32_collision">
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name="small_wall_32_visual">
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
-    <model name="small_wall_33">
-      <static>true</static>
-      <link name="small_wall_33_link">
-        <pose>10.8 1.2 0 0 0 0</pose>
-        <collision name="small_wall_33_collision">
-          <geometry>
-            <mesh>
-              <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name="small_wall_33_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
             <mesh>
@@ -1233,10 +1210,79 @@
         </visual>
       </link>
     </model>
+    <model name="half_ramp_11">
+      <static>true</static>
+      <link name="half_ramp_11_link">
+        <pose>2.4 1.2 0 0 0 -4.71239</pose>
+        <collision name="half_ramp_11_collision">
+          <geometry>
+            <mesh>
+              <uri>file://half_ramp.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="half_ramp_11_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://half_ramp.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="half_ramp_12">
+      <static>true</static>
+      <link name="half_ramp_12_link">
+        <pose>2.4 1.2 0 0 0 -1.5708</pose>
+        <collision name="half_ramp_12_collision">
+          <geometry>
+            <mesh>
+              <uri>file://half_ramp.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="half_ramp_12_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://half_ramp.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="half_ramp_13">
+      <static>true</static>
+      <link name="half_ramp_13_link">
+        <pose>3.6 1.2 0 0 0 -1.5708</pose>
+        <collision name="half_ramp_13_collision">
+          <geometry>
+            <mesh>
+              <uri>file://half_ramp.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="half_ramp_13_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://half_ramp.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
     <model name="half_ramp_14">
       <static>true</static>
       <link name="half_ramp_14_link">
-        <pose>2.4 1.2 0 0 0 -4.71239</pose>
+        <pose>3.6 1.2 0 0 0 -4.71239</pose>
         <collision name="half_ramp_14_collision">
           <geometry>
             <mesh>
@@ -1259,7 +1305,7 @@
     <model name="half_ramp_15">
       <static>true</static>
       <link name="half_ramp_15_link">
-        <pose>2.4 1.2 0 0 0 -1.5708</pose>
+        <pose>4.8 1.2 0 0 0 -1.5708</pose>
         <collision name="half_ramp_15_collision">
           <geometry>
             <mesh>
@@ -1282,7 +1328,7 @@
     <model name="half_ramp_16">
       <static>true</static>
       <link name="half_ramp_16_link">
-        <pose>3.6 1.2 0 0 0 -1.5708</pose>
+        <pose>4.8 1.2 0 0 0 -4.71239</pose>
         <collision name="half_ramp_16_collision">
           <geometry>
             <mesh>
@@ -1305,7 +1351,7 @@
     <model name="half_ramp_17">
       <static>true</static>
       <link name="half_ramp_17_link">
-        <pose>3.6 1.2 0 0 0 -4.71239</pose>
+        <pose>4.8 0 0 0 0 -4.71239</pose>
         <collision name="half_ramp_17_collision">
           <geometry>
             <mesh>
@@ -1328,7 +1374,7 @@
     <model name="half_ramp_18">
       <static>true</static>
       <link name="half_ramp_18_link">
-        <pose>4.8 1.2 0 0 0 -1.5708</pose>
+        <pose>4.8 0 0 0 0 -1.5708</pose>
         <collision name="half_ramp_18_collision">
           <geometry>
             <mesh>
@@ -1351,7 +1397,7 @@
     <model name="half_ramp_19">
       <static>true</static>
       <link name="half_ramp_19_link">
-        <pose>4.8 1.2 0 0 0 -4.71239</pose>
+        <pose>6 0 0 0 0 -4.71239</pose>
         <collision name="half_ramp_19_collision">
           <geometry>
             <mesh>
@@ -1374,7 +1420,7 @@
     <model name="half_ramp_20">
       <static>true</static>
       <link name="half_ramp_20_link">
-        <pose>4.8 0 0 0 0 -4.71239</pose>
+        <pose>6 0 0 0 0 -1.5708</pose>
         <collision name="half_ramp_20_collision">
           <geometry>
             <mesh>
@@ -1397,7 +1443,7 @@
     <model name="half_ramp_21">
       <static>true</static>
       <link name="half_ramp_21_link">
-        <pose>4.8 0 0 0 0 -1.5708</pose>
+        <pose>6 1.2 0 0 0 -1.5708</pose>
         <collision name="half_ramp_21_collision">
           <geometry>
             <mesh>
@@ -1420,7 +1466,7 @@
     <model name="half_ramp_22">
       <static>true</static>
       <link name="half_ramp_22_link">
-        <pose>6 0 0 0 0 -4.71239</pose>
+        <pose>6 1.2 0 0 0 -4.71239</pose>
         <collision name="half_ramp_22_collision">
           <geometry>
             <mesh>
@@ -1443,7 +1489,7 @@
     <model name="half_ramp_23">
       <static>true</static>
       <link name="half_ramp_23_link">
-        <pose>6 0 0 0 0 -1.5708</pose>
+        <pose>7.2 1.2 0 0 0 -1.5708</pose>
         <collision name="half_ramp_23_collision">
           <geometry>
             <mesh>
@@ -1466,7 +1512,7 @@
     <model name="half_ramp_24">
       <static>true</static>
       <link name="half_ramp_24_link">
-        <pose>6 1.2 0 0 0 -1.5708</pose>
+        <pose>7.2 1.2 0 0 0 -4.71239</pose>
         <collision name="half_ramp_24_collision">
           <geometry>
             <mesh>
@@ -1489,7 +1535,7 @@
     <model name="half_ramp_25">
       <static>true</static>
       <link name="half_ramp_25_link">
-        <pose>6 1.2 0 0 0 -4.71239</pose>
+        <pose>7.2 0 0 0 0 -1.5708</pose>
         <collision name="half_ramp_25_collision">
           <geometry>
             <mesh>
@@ -1512,7 +1558,7 @@
     <model name="half_ramp_26">
       <static>true</static>
       <link name="half_ramp_26_link">
-        <pose>7.2 1.2 0 0 0 -1.5708</pose>
+        <pose>7.2 0 0 0 0 -4.71239</pose>
         <collision name="half_ramp_26_collision">
           <geometry>
             <mesh>
@@ -1535,7 +1581,7 @@
     <model name="half_ramp_27">
       <static>true</static>
       <link name="half_ramp_27_link">
-        <pose>7.2 1.2 0 0 0 -4.71239</pose>
+        <pose>8.4 1.2 0 0 0 -1.5708</pose>
         <collision name="half_ramp_27_collision">
           <geometry>
             <mesh>
@@ -1558,7 +1604,7 @@
     <model name="half_ramp_28">
       <static>true</static>
       <link name="half_ramp_28_link">
-        <pose>7.2 0 0 0 0 -1.5708</pose>
+        <pose>8.4 1.2 0 0 0 -4.71239</pose>
         <collision name="half_ramp_28_collision">
           <geometry>
             <mesh>
@@ -1581,7 +1627,7 @@
     <model name="half_ramp_29">
       <static>true</static>
       <link name="half_ramp_29_link">
-        <pose>7.2 0 0 0 0 -4.71239</pose>
+        <pose>8.4 0 0 0 0 -4.71239</pose>
         <collision name="half_ramp_29_collision">
           <geometry>
             <mesh>
@@ -1604,7 +1650,7 @@
     <model name="half_ramp_30">
       <static>true</static>
       <link name="half_ramp_30_link">
-        <pose>8.4 1.2 0 0 0 -1.5708</pose>
+        <pose>8.4 0 0 0 0 -1.5708</pose>
         <collision name="half_ramp_30_collision">
           <geometry>
             <mesh>
@@ -1627,7 +1673,7 @@
     <model name="half_ramp_31">
       <static>true</static>
       <link name="half_ramp_31_link">
-        <pose>8.4 1.2 0 0 0 -4.71239</pose>
+        <pose>9.6 1.2 0 0 0 -1.5708</pose>
         <collision name="half_ramp_31_collision">
           <geometry>
             <mesh>
@@ -1650,7 +1696,7 @@
     <model name="half_ramp_32">
       <static>true</static>
       <link name="half_ramp_32_link">
-        <pose>8.4 0 0 0 0 -4.71239</pose>
+        <pose>9.6 1.2 0 0 0 -4.71239</pose>
         <collision name="half_ramp_32_collision">
           <geometry>
             <mesh>
@@ -1673,7 +1719,7 @@
     <model name="half_ramp_33">
       <static>true</static>
       <link name="half_ramp_33_link">
-        <pose>8.4 0 0 0 0 -1.5708</pose>
+        <pose>9.6 0 0 0 0 -1.5708</pose>
         <collision name="half_ramp_33_collision">
           <geometry>
             <mesh>
@@ -1696,7 +1742,7 @@
     <model name="half_ramp_34">
       <static>true</static>
       <link name="half_ramp_34_link">
-        <pose>9.6 1.2 0 0 0 -1.5708</pose>
+        <pose>9.6 0 0 0 0 -4.71239</pose>
         <collision name="half_ramp_34_collision">
           <geometry>
             <mesh>
@@ -1719,7 +1765,7 @@
     <model name="half_ramp_35">
       <static>true</static>
       <link name="half_ramp_35_link">
-        <pose>9.6 1.2 0 0 0 -4.71239</pose>
+        <pose>10.8 1.2 0 0 0 -4.71239</pose>
         <collision name="half_ramp_35_collision">
           <geometry>
             <mesh>
@@ -1742,7 +1788,7 @@
     <model name="half_ramp_36">
       <static>true</static>
       <link name="half_ramp_36_link">
-        <pose>9.6 0 0 0 0 -1.5708</pose>
+        <pose>10.8 1.2 0 0 0 -1.5708</pose>
         <collision name="half_ramp_36_collision">
           <geometry>
             <mesh>
@@ -1765,7 +1811,7 @@
     <model name="half_ramp_37">
       <static>true</static>
       <link name="half_ramp_37_link">
-        <pose>9.6 0 0 0 0 -4.71239</pose>
+        <pose>10.8 0 0 0 0 -1.5708</pose>
         <collision name="half_ramp_37_collision">
           <geometry>
             <mesh>
@@ -1788,7 +1834,7 @@
     <model name="half_ramp_38">
       <static>true</static>
       <link name="half_ramp_38_link">
-        <pose>10.8 1.2 0 0 0 -4.71239</pose>
+        <pose>10.8 0 0 0 0 -4.71239</pose>
         <collision name="half_ramp_38_collision">
           <geometry>
             <mesh>
@@ -1808,69 +1854,46 @@
         </visual>
       </link>
     </model>
-    <model name="half_ramp_39">
+    <model name="small_wall_start_check_2">
       <static>true</static>
-      <link name="half_ramp_39_link">
-        <pose>10.8 1.2 0 0 0 -1.5708</pose>
-        <collision name="half_ramp_39_collision">
+      <link name="small_wall_start_check_2_link">
+        <pose>-1.2 0 0 0 0 -1.5708</pose>
+        <collision name="small_wall_start_check_2_collision">
           <geometry>
             <mesh>
-              <uri>file://half_ramp.dae</uri>
+              <uri>file://small_wall.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
         </collision>
-        <visual name="half_ramp_39_visual">
+        <visual name="small_wall_start_check_2_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
             <mesh>
-              <uri>file://half_ramp.dae</uri>
+              <uri>file://small_wall.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
         </visual>
       </link>
     </model>
-    <model name="half_ramp_40">
+    <model name="start_check_board_2">
       <static>true</static>
-      <link name="half_ramp_40_link">
-        <pose>10.8 0 0 0 0 -1.5708</pose>
-        <collision name="half_ramp_40_collision">
+      <link name="start_check_board_2_link">
+        <pose>-1.2 -0.3 0.6 0 0 -1.5708</pose>
+        <collision name="start_check_board_2_collision">
           <geometry>
             <mesh>
-              <uri>file://half_ramp.dae</uri>
+              <uri>file://start_check_board.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
         </collision>
-        <visual name="half_ramp_40_visual">
+        <visual name="start_check_board_2_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
             <mesh>
-              <uri>file://half_ramp.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
-    <model name="half_ramp_41">
-      <static>true</static>
-      <link name="half_ramp_41_link">
-        <pose>10.8 0 0 0 0 -4.71239</pose>
-        <collision name="half_ramp_41_collision">
-          <geometry>
-            <mesh>
-              <uri>file://half_ramp.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </collision>
-        <visual name="half_ramp_41_visual">
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <mesh>
-              <uri>file://half_ramp.dae</uri>
+              <uri>file://start_check_board.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>

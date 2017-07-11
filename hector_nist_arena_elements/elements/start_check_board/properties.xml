@@ -1,0 +1,9 @@
+<properties>
+    <type>mountable-item</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>start_check_board.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Start Check Board</mi>
+        <mi desc="Height">1.2 m</mi>
+    </meta-info>
+</properties>
