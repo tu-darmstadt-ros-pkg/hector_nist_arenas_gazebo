@@ -5,7 +5,8 @@
 
   <include file="$(find hector_nist_arena_worlds)/launch/start.launch">
    <arg name="world" value="rc_2016_rails_small.world"/>
-   <arg name="gui" value="$(arg gui)"/> 
+   <arg name="gui" value="$(arg gui)"/>
+   <arg name="gazebo_args" value="-u"/>
   </include>
 
 </launch>
