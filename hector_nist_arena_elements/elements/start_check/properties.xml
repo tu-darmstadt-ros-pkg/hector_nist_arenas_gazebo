@@ -1,5 +1,5 @@
 <properties>
-    <type>wall</type>
+    <type>mountable-item</type>
     <pixmap>icon.png</pixmap>
     <mesh>start_check.dae</mesh>
     <meta-info>

@@ -502,7 +502,7 @@
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
       <node id="Cylinder" name="Cylinder" type="NODE">
-        <matrix sid="transform">4.65264e-8 0.6162603 -2.69376e-8 6.46491e-4 0 -2.69376e-8 -0.6162603 0.590291 -0.6162603 4.65264e-8 -2.03373e-15 0.5996768 0 0 0 1</matrix>
+        <matrix sid="transform">4.65264e-8 0.6162603 -2.69376e-8 6.46491e-4 0 -2.69376e-8 -0.6162603 0.590291 -0.6162603 4.65264e-8 -2.03373e-15 0.0 0 0 0 1</matrix>
         <instance_geometry url="#Cylinder-mesh" name="Cylinder">
           <bind_material>
             <technique_common>
@@ -513,7 +513,7 @@
         </instance_geometry>
       </node>
       <node id="Circle" name="Circle" type="NODE">
-        <matrix sid="transform">7.54979e-8 1 -4.37114e-8 6.46491e-4 0 -4.37114e-8 -1 0.590291 -1 7.54979e-8 -3.30012e-15 0.5996768 0 0 0 1</matrix>
+        <matrix sid="transform">7.54979e-8 1 -4.37114e-8 6.46491e-4 0 -4.37114e-8 -1 0.590291 -1 7.54979e-8 -3.30012e-15 0.0 0 0 0 1</matrix>
         <instance_geometry url="#Circle-mesh" name="Circle">
           <bind_material>
             <technique_common>
@@ -525,7 +525,7 @@
         </instance_geometry>
       </node>
       <node id="Circle_001" name="Circle_001" type="NODE">
-        <matrix sid="transform">7.54979e-8 1 -4.37114e-8 0.0737004 0 -4.37114e-8 -1 0.5902911 -1 7.54979e-8 -3.30012e-15 0.6740237 0 0 0 1</matrix>
+        <matrix sid="transform">7.54979e-8 1 -4.37114e-8 0.0737004 0 -4.37114e-8 -1 0.5902911 -1 7.54979e-8 -3.30012e-15 0.074347 0 0 0 1</matrix>
         <instance_geometry url="#Circle_001-mesh" name="Circle_001">
           <bind_material>
             <technique_common>
@@ -537,7 +537,7 @@
         </instance_geometry>
       </node>
       <node id="Cylinder_001" name="Cylinder_001" type="NODE">
-        <matrix sid="transform">4.65264e-8 0.6162603 -2.69376e-8 0.0737004 0 -2.69376e-8 -0.6162603 0.5902911 -0.6162603 4.65264e-8 -2.03373e-15 0.6740237 0 0 0 1</matrix>
+        <matrix sid="transform">4.65264e-8 0.6162603 -2.69376e-8 0.0737004 0 -2.69376e-8 -0.6162603 0.5902911 -0.6162603 4.65264e-8 -2.03373e-15 0.074347 0 0 0 1</matrix>
         <instance_geometry url="#Cylinder_001-mesh" name="Cylinder_001">
           <bind_material>
             <technique_common>
@@ -548,7 +548,7 @@
         </instance_geometry>
       </node>
       <node id="Cylinder_002" name="Cylinder_002" type="NODE">
-        <matrix sid="transform">4.65264e-8 0.6162603 -2.69376e-8 -0.0743469 0 -2.69376e-8 -0.6162603 0.5902911 -0.6162603 4.65264e-8 -2.03373e-15 0.6740237 0 0 0 1</matrix>
+        <matrix sid="transform">4.65264e-8 0.6162603 -2.69376e-8 -0.0743469 0 -2.69376e-8 -0.6162603 0.5902911 -0.6162603 4.65264e-8 -2.03373e-15 0.074347 0 0 0 1</matrix>
         <instance_geometry url="#Cylinder_002-mesh" name="Cylinder_002">
           <bind_material>
             <technique_common>
@@ -559,7 +559,7 @@
         </instance_geometry>
       </node>
       <node id="Circle_002" name="Circle_002" type="NODE">
-        <matrix sid="transform">7.54979e-8 1 -4.37114e-8 -0.0743469 0 -4.37114e-8 -1 0.5902911 -1 7.54979e-8 -3.30012e-15 0.6740237 0 0 0 1</matrix>
+        <matrix sid="transform">7.54979e-8 1 -4.37114e-8 -0.0743469 0 -4.37114e-8 -1 0.5902911 -1 7.54979e-8 -3.30012e-15 0.074347 0 0 0 1</matrix>
         <instance_geometry url="#Circle_002-mesh" name="Circle_002">
           <bind_material>
             <technique_common>
@@ -571,7 +571,7 @@
         </instance_geometry>
       </node>
       <node id="Circle_003" name="Circle_003" type="NODE">
-        <matrix sid="transform">7.54979e-8 1 -4.37114e-8 -0.0743469 0 -4.37114e-8 -1 0.5902911 -1 7.54979e-8 -3.30012e-15 0.5266229 0 0 0 1</matrix>
+        <matrix sid="transform">7.54979e-8 1 -4.37114e-8 -0.0743469 0 -4.37114e-8 -1 0.5902911 -1 7.54979e-8 -3.30012e-15 -0.073054 0 0 0 1</matrix>
         <instance_geometry url="#Circle_003-mesh" name="Circle_003">
           <bind_material>
             <technique_common>
@@ -583,7 +583,7 @@
         </instance_geometry>
       </node>
       <node id="Cylinder_003" name="Cylinder_003" type="NODE">
-        <matrix sid="transform">4.65264e-8 0.6162603 -2.69376e-8 -0.0743469 0 -2.69376e-8 -0.6162603 0.5902911 -0.6162603 4.65264e-8 -2.03373e-15 0.5266229 0 0 0 1</matrix>
+        <matrix sid="transform">4.65264e-8 0.6162603 -2.69376e-8 -0.0743469 0 -2.69376e-8 -0.6162603 0.5902911 -0.6162603 4.65264e-8 -2.03373e-15 -0.073054 0 0 0 1</matrix>
         <instance_geometry url="#Cylinder_003-mesh" name="Cylinder_003">
           <bind_material>
             <technique_common>
@@ -594,7 +594,7 @@
         </instance_geometry>
       </node>
       <node id="Cylinder_004" name="Cylinder_004" type="NODE">
-        <matrix sid="transform">4.65264e-8 0.6162603 -2.69376e-8 0.0737004 0 -2.69376e-8 -0.6162603 0.590291 -0.6162603 4.65264e-8 -2.03373e-15 0.5259764 0 0 0 1</matrix>
+        <matrix sid="transform">4.65264e-8 0.6162603 -2.69376e-8 0.0737004 0 -2.69376e-8 -0.6162603 0.590291 -0.6162603 4.65264e-8 -2.03373e-15 -0.073054 0 0 0 1</matrix>
         <instance_geometry url="#Cylinder_004-mesh" name="Cylinder_004">
           <bind_material>
             <technique_common>
@@ -605,7 +605,7 @@
         </instance_geometry>
       </node>
       <node id="Circle_004" name="Circle_004" type="NODE">
-        <matrix sid="transform">7.54979e-8 1 -4.37114e-8 0.0737004 0 -4.37114e-8 -1 0.590291 -1 7.54979e-8 -3.30012e-15 0.5259764 0 0 0 1</matrix>
+        <matrix sid="transform">7.54979e-8 1 -4.37114e-8 0.0737004 0 -4.37114e-8 -1 0.590291 -1 7.54979e-8 -3.30012e-15 -0.073054 0 0 0 1</matrix>
         <instance_geometry url="#Circle_004-mesh" name="Circle_004">
           <bind_material>
             <technique_common>
