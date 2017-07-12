@@ -975,7 +975,6 @@
         <gravity>1</gravity>
       </link>
     </model>
-    
     <model name="start_check_2">
       <static>true</static>
       <link name="start_check_2_link">
@@ -999,8 +998,7 @@
         </visual>
       </link>
     </model>
-    
-        <model name="small_wall_start_check_2">
+    <model name="small_wall_start_check_2">
       <static>true</static>
       <link name="small_wall_start_check_2_link">
         <pose>0 0 0 0 0 -4.71239</pose>
@@ -1023,8 +1021,7 @@
         </visual>
       </link>
     </model>
-    
-        <model name="start_check_board_2">
+    <model name="start_check_board_2">
       <static>true</static>
       <link name="start_check_board_2_link">
         <pose>0 2.38419e-08 0.6 0 0 -4.71239</pose>
@@ -1047,7 +1044,6 @@
         </visual>
       </link>
     </model>
-
     <model name='tall_wall_6'>
       <static>1</static>
       <link name='tall_wall_6_link'>
