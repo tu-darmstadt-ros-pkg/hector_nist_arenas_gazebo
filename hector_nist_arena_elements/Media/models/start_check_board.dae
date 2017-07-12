@@ -62,7 +62,7 @@
     <geometry id="Cube-mesh" name="Cube">
       <mesh>
         <source id="Cube-mesh-positions">
-          <float_array id="Cube-mesh-positions-array" count="12">1 -1 -1 1 -1 0.9999997 1 0.9999997 -0.9999997 0.9999993 0.9999996 1</float_array>
+          <float_array id="Cube-mesh-positions-array" count="12">1 -0.2 -0.2 1 -0.2 0.2 1 0.2 -0.2 1 0.2 0.2</float_array>
           <technique_common>
             <accessor source="#Cube-mesh-positions-array" count="4" stride="3">
               <param name="X" type="float"/>
