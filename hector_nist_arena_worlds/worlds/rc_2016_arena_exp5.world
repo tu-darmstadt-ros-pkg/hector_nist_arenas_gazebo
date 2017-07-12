@@ -975,46 +975,79 @@
         <gravity>1</gravity>
       </link>
     </model>
-    <model name='tall_wall_4'>
-      <static>1</static>
-      <link name='tall_wall_4_link'>
-        <pose>-1.2 0 0 0 0 -1.5708</pose>
-        <collision name='tall_wall_4_collision'>
+    
+    <model name="start_check_2">
+      <static>true</static>
+      <link name="start_check_2_link">
+        <pose>0 0.3 0.6 0 0 -4.71239</pose>
+        <collision name="start_check_2_collision">
           <geometry>
             <mesh>
-              <uri>file://tall_wall.dae</uri>
+              <uri>file://start_check.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <bounce/>
-            <friction>
-              <ode/>
-            </friction>
-            <contact>
-              <ode/>
-            </contact>
-          </surface>
         </collision>
-        <visual name='tall_wall_4_visual'>
-          <cast_shadows>0</cast_shadows>
+        <visual name="start_check_2_visual">
+          <cast_shadows>false</cast_shadows>
           <geometry>
             <mesh>
-              <uri>file://tall_wall.dae</uri>
+              <uri>file://start_check.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
         </visual>
-        <velocity_decay>
-          <linear>0</linear>
-          <angular>0</angular>
-        </velocity_decay>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
       </link>
     </model>
+    
+        <model name="small_wall_start_check_2">
+      <static>true</static>
+      <link name="small_wall_start_check_2_link">
+        <pose>0 0 0 0 0 -4.71239</pose>
+        <collision name="small_wall_start_check_2_collision">
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="small_wall_start_check_2_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://small_wall.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    
+        <model name="start_check_board_2">
+      <static>true</static>
+      <link name="start_check_board_2_link">
+        <pose>0 2.38419e-08 0.6 0 0 -4.71239</pose>
+        <collision name="start_check_board_2_collision">
+          <geometry>
+            <mesh>
+              <uri>file://start_check_board.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="start_check_board_2_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://start_check_board.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
     <model name='tall_wall_6'>
       <static>1</static>
       <link name='tall_wall_6_link'>
