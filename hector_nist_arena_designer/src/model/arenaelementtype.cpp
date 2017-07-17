@@ -113,6 +113,7 @@ bool ArenaElementType::load(const QDir &folderDir)
             }
         }
     }
+    return true;
 }
 
 QString ArenaElementType::humanReadableName() const
