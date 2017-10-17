@@ -37,6 +37,7 @@
   <element type="hazmat"/>
   <element type="fire_extinguisher"/> 
   <element type="red_barrel"/>
+  <element type="floor_tile_black"/>
   
   <!--
   <element type="victim_with_box_t"/>
