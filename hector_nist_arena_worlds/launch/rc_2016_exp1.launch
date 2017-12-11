@@ -2,6 +2,7 @@
 
 <launch>
   <arg name="gui" default="true"/>
+  <arg name="gazebo_args" default="-u"/>
 
   <include file="$(find hector_nist_arena_worlds)/launch/start.launch">
    <arg name="world" value="rc_2016_arena_exp1.world"/>
