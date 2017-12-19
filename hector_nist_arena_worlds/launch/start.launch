@@ -3,7 +3,7 @@
 <launch>
   <arg name="world"/>
   <arg name="gui" default="true"/>
-  <arg name="gazebo_args" default=""/>
+  <arg name="gazebo_args" default="-u"/>
   
   <param name="/use_sim_time" value="true" />
 

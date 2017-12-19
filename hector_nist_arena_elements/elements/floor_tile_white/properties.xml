@@ -1,0 +1,8 @@
+<properties>
+    <type>floor</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>floor_tile_white.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Floor White</mi>
+    </meta-info>
+</properties>
