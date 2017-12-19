@@ -2,7 +2,7 @@
   <world name='default'>
     <light name='sun' type='directional'>
       <cast_shadows>1</cast_shadows>
-      <pose frame=''>0 0 10 0 -0 0</pose>
+      <pose frame=''>-10 -10 10 0 -0 0</pose>
       <diffuse>0.8 0.8 0.8 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
@@ -135,10 +135,10 @@
       <wall_time>1507020902 513988509</wall_time>
       <iterations>299002</iterations>
       <model name='Gas Station'>
-        <pose frame=''>-0.104037 8.52224 0 0 0 -0.356799</pose>
+        <pose frame=''>-0.104037 8.52224 0 0 0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>-0.104037 8.52224 0 0 0 -0.356799</pose>
+          <pose frame=''>-0.104037 8.52224 0 0 0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -155,7 +155,7 @@
         </link>
       </model>
       <light name='sun'>
-        <pose frame=''>0 0 10 0 -0 0</pose>
+        <pose frame=''>-10 -10 10 0 -0 0</pose>
       </light>
     </state>
     <gui fullscreen='0'>
