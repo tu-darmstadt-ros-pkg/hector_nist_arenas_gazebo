@@ -39,6 +39,7 @@
   <element type="red_barrel"/>
   <element type="floor_tile_black"/>
   <element type="floor_tile_white"/>
+  <element type="stairs_120_solid"/>
   
   <!--
   <element type="victim_with_box_t"/>
