@@ -1,0 +1,9 @@
+<properties>
+    <type>floor</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>stairs_120_solid.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Stairs w/ solid steps</mi>
+        <mi desc="Height">1200 mm</mi>
+    </meta-info>
+</properties>
