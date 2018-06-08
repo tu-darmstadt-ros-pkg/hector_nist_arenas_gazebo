@@ -1,0 +1,9 @@
+<properties>
+    <type>mountable-item</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>start_check_manipulation.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Start Check Manipulation</mi>
+        <mi desc="Height">0.4 m</mi>
+    </meta-info>
+</properties>

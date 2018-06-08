@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elements>
+    <element type="small_wall" rotation="0" x="-1" y="0"/>
+    <element type="small_wall" rotation="180" x="-1" y="0"/>
+    <element type="small_wall" rotation="0" x="0" y="0"/>
+    <element type="small_wall" rotation="180" x="0" y="0"/>
+    <element type="small_wall_start_check" rotation="90" x="0" y="0"/>
+    <element type="small_wall_start_check" rotation="270" x="-1" y="0"/>
+    <element type="floor_tile_white" rotation="0" x="-1" y="0"/>
+    <element type="floor_tile_white" rotation="0" x="0" y="0"/>
+    <element type="start_check_board" rotation="90" x="0" y="0" mount-point="1"/>
+    <element type="start_check_manipulation" rotation="270" x="-1" y="0" mount-point="1"/>
+</elements>

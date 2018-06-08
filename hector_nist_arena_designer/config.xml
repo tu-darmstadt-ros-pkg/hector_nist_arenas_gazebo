@@ -33,6 +33,7 @@
   <element type="victim_doll_qr_with_box"/>
   <element type="small_wall_start_check"/>
   <element type="start_check"/>
+  <element type="start_check_manipulation"/>
   <element type="start_check_board"/>
   <element type="hazmat"/>
   <element type="fire_extinguisher"/> 
