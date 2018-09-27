@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="gui" default="true"/>
+  <arg name="gazebo_args" default="-u"/>
+
+  <include file="$(find hector_nist_arena_worlds)/launch/start.launch">
+   <arg name="world" value="vip_demo_oct_2018.world"/>
+   <arg name="gui" value="$(arg gui)"/>
+   <arg name="gazebo_args" value="$(arg gazebo_args)"/>
+  </include>
+
+</launch>
