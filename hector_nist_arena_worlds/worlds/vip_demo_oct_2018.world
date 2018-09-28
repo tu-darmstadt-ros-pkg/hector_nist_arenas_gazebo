@@ -91,7 +91,7 @@
           <geometry>
             <mesh>
               <uri>file://elevated_floor_120.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -100,7 +100,7 @@
           <geometry>
             <mesh>
               <uri>file://elevated_floor_120.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -109,12 +109,12 @@
     <model name="simple_elev_ramp_1">
       <static>true</static>
       <link name="simple_elev_ramp_1_link">
-        <pose>1.2 0 0.15 0 0 -4.71239</pose>
+        <pose>1.2 0 0.17 0 0 -4.71239</pose>
         <collision name="simple_elev_ramp_1_collision">
           <geometry>
             <mesh>
               <uri>file://simple_elev_ramp.dae</uri>
-              <scale>1 1 0.85</scale>
+              <scale>1 1 0.35</scale>
             </mesh>
           </geometry>
         </collision>
@@ -123,7 +123,7 @@
           <geometry>
             <mesh>
               <uri>file://simple_elev_ramp.dae</uri>
-              <scale>1 1 0.85</scale>
+              <scale>1 1 0.35</scale>
             </mesh>
           </geometry>
         </visual>
@@ -137,7 +137,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -146,7 +146,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -160,7 +160,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall_holes1.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -169,7 +169,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall_holes1.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -178,7 +178,7 @@
     <model name="victim_with_box1_1">
       <static>true</static>
       <link name="victim_with_box1_1_link">
-        <pose>-0.3 1.2 0.6 0 0 -3.14159</pose>
+        <pose>0 0 0.2 0 0 -3.14159</pose>
         <collision name="victim_with_box1_1_collision">
           <geometry>
             <mesh>
@@ -198,6 +198,29 @@
         </visual>
       </link>
     </model>
+    <model name="victim_with_box1_2">
+      <static>true</static>
+      <link name="victim_with_box1_2_link">
+        <pose>5.7 1.2 0.5 0. 0 1.57</pose>
+        <collision name="victim_with_box1_2_collision">
+          <geometry>
+            <mesh>
+              <uri>file://victim-with-box1.dae</uri>
+              <scale>0.5 1 0.5</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="victim_with_box1_2_visual">
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>file://victim-with-box1.dae</uri>
+              <scale>0.5 1 0.5</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
     <model name="small_wall_2">
       <static>true</static>
       <link name="small_wall_2_link">
@@ -206,7 +229,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -215,7 +238,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -229,7 +252,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -238,7 +261,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -252,7 +275,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -261,7 +284,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -275,7 +298,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -284,7 +307,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -298,7 +321,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -307,7 +330,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -321,7 +344,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -330,7 +353,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -344,7 +367,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -353,7 +376,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -367,7 +390,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -376,7 +399,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -574,7 +597,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -583,7 +606,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -597,7 +620,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </collision>
@@ -606,7 +629,7 @@
           <geometry>
             <mesh>
               <uri>file://small_wall.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>1 1 0.5</scale>
             </mesh>
           </geometry>
         </visual>
