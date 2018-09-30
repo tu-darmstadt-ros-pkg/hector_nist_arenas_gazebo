@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="gui" default="true"/>
+  <arg name="gazebo_args" default="-u"/>
+
+  <include file="$(find tuda_maschinenhaus_scenario_description)/launch/default.launch">
+  </include>
+
+</launch>
