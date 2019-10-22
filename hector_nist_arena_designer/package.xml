@@ -16,7 +16,7 @@
   <!-- Dependencies which this package needs to build itself. -->
   <buildtool_depend>catkin</buildtool_depend>
 
-  <depend>libqt5widgets5</depend>
-  <depend>libqt5xml5</depend>
+  <depend>libqt5-widgets</depend>
+  <depend>libqt5-xml</depend>
 
 </package>
