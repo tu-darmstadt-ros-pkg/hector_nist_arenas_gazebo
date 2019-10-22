@@ -9,6 +9,7 @@
 #include <QScrollBar>
 #include <QMouseEvent>
 #include <QMessageBox>
+#include <QMimeData>
 #include <QTimer>
 
 ArenaView::ArenaView(ArenaController *controller, QWidget *parent)

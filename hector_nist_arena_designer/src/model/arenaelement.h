@@ -28,7 +28,7 @@ public:
     void setRotation(int rotation);
 
     /// Deserializes this element from XML
-    void load(const QDomElement& node) throw (XmlLoadingException);
+    void load(const QDomElement& node);
     /// Serializes this element in XML
     void save(QXmlStreamWriter& writer);
     /// Writes .world format-compliant XML

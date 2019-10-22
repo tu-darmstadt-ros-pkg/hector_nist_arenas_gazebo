@@ -57,7 +57,7 @@ bool ArenaElementTypeScene::event(QEvent *event)
     QGraphicsSceneMouseEvent *_event = dynamic_cast<QGraphicsSceneMouseEvent*>(event);
     if (event->type() == QEvent::GraphicsSceneMouseMove)
     {
-        QGraphicsItem *item = itemAt(_event->scenePos());
+        QGraphicsItem *item = itemAt(_event->scenePos(), QTransform());
         if (item)
         {
             ArenaSceneElement *sceneElement = dynamic_cast<ArenaSceneElement*>(item);

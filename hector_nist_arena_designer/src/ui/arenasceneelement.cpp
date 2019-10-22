@@ -86,8 +86,8 @@ void ArenaSceneElement::mousePressEvent(QGraphicsSceneMouseEvent *event)
     if (m_isEditorSample)
     {
         QMimeData *data = new QMimeData;
-        data->setData("type", m_element->type()->name().toAscii());
-        data->setData("rotation", QString::number(m_element->rotation()).toAscii());
+        data->setData("type", m_element->type()->name().toLatin1());
+        data->setData("rotation", QString::number(m_element->rotation()).toLatin1());
         QDrag *drag = new QDrag(event->widget());
         drag->setMimeData(data);
         drag->start();

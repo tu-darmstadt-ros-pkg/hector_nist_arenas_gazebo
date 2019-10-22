@@ -71,7 +71,7 @@ void ArenaElement::setItemMountPoint(int mountPoint)
     emit modified(this);
 }
 
-void ArenaElement::load(const QDomElement& node) throw (XmlLoadingException)
+void ArenaElement::load(const QDomElement& node)
 {
     if (!node.hasAttribute("x"))
         throw XmlLoadingException("An arena element is missing an x coordinate.", node);

@@ -1,28 +1,21 @@
 # Catkin User Guide: http://www.ros.org/doc/groovy/api/catkin/html/user_guide/user_guide.html
 # Catkin CMake Standard: http://www.ros.org/doc/groovy/api/catkin/html/user_guide/standards.html
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 2.8.11)
 project(hector_nist_arena_designer)
 # Load catkin and all dependencies required for this package
 # TODO: remove all from COMPONENTS that are not catkin packages.
 find_package(catkin REQUIRED )
 
-# include_directories(include ${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS})
-# CATKIN_MIGRATION: removed during catkin migration
-# cmake_minimum_required(VERSION 2.4.6)
+find_package(Qt5 COMPONENTS Widgets Xml REQUIRED)
+
+set(CMAKE_AUTOMOC ON)
 
 catkin_package(
-    DEPENDS # TODO add dependencies
+    DEPENDS Qt5Widgets Qt5Xml
     CATKIN_DEPENDS # TODO
     INCLUDE_DIRS # TODO include
-    LIBRARIES # TODO
+    LIBRARIES
 )
-
-
-
-find_package(Qt4 4.6 COMPONENTS QtCore QtGui QtXml REQUIRED)
-include(${QT_USE_FILE})
-#add_definitions(-DQT_NO_KEYWORDS)
-add_definitions(${QT_DEFINITIONS})
 
 include_directories(src)
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -61,17 +54,9 @@ set(UI_FILES
     src/ui/editor.ui
 )
 
-include(${QT_USE_FILE})
+qt5_wrap_ui(HEADERS_UI_FILES ${UI_FILES})
+qt5_add_resources(RESOURCES_RCC resources.qrc)
 
-
-qt4_wrap_ui(HEADERS_UI_FILES ${UI_FILES})
-qt4_wrap_cpp(HEADERS_MOC ${HEADERS})
-qt4_add_resources(RESOURCES_RCC resources.qrc)
-
-if($ENV{ROS_ROOT})
-    add_executable(arena_designer ${SOURCES} ${HEADERS_MOC}  ${HEADERS_UI_FILES} ${RESOURCES_RCC})
-else()
-    add_executable(arena_designer ${SOURCES} ${HEADERS_MOC}  ${HEADERS_UI_FILES} ${RESOURCES_RCC})
-endif()
-target_link_libraries(arena_designer ${QT_LIBRARIES})
+add_executable(arena_designer ${SOURCES} ${HEADERS}  ${HEADERS_UI_FILES} ${RESOURCES_RCC})
+target_link_libraries(arena_designer Qt5::Widgets Qt5::Xml)
 

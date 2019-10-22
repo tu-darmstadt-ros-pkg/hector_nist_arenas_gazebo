@@ -1,4 +1,4 @@
-<package>
+<package format="2">
   <name>hector_nist_arena_designer</name>
   <version>0.1.0</version>
   <description>hector_nist_arena_designer is a simple GUI for the fast and easy creation of test scenarios involving NIST standard test methods for response robots.</description>
@@ -16,10 +16,7 @@
   <!-- Dependencies which this package needs to build itself. -->
   <buildtool_depend>catkin</buildtool_depend>
 
-  <!-- Dependencies needed to compile this package. -->
-
-  <!-- Dependencies needed after this package is compiled. -->
-
-  <!-- Dependencies needed only for running tests. -->
+  <depend>libqt5widgets5</depend>
+  <depend>libqt5xml5</depend>
 
 </package>

@@ -188,7 +188,7 @@ QString Editor::findRosPackage(const QString& name)
 bool Editor::parseRosPackageDirsFromCommandLineArguments()
 {
     // First check if any arguments were specified
-    if (qApp->argc() < 2)
+    if (qApp->arguments().size() < 2)
         return false;
 
     QString gui_dir, elements_dir;
