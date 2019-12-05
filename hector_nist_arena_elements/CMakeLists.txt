@@ -7,8 +7,10 @@ project(hector_nist_arena_elements)
 find_package(catkin REQUIRED COMPONENTS gazebo_ros)
 
 catkin_package(
-    DEPENDS gazebo_ros
-    CATKIN_DEPENDS # TODO
+    DEPENDS 
+    CATKIN_DEPENDS gazebo_ros
     INCLUDE_DIRS # TODO include
     LIBRARIES # TODO
 )
+
+install(DIRECTORY elements Media DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

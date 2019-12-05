@@ -7,8 +7,10 @@ project(hector_nist_arena_worlds)
 find_package(catkin REQUIRED COMPONENTS hector_nist_arena_elements)
 
 catkin_package(
-    DEPENDS hector_nist_arena_elements
-    CATKIN_DEPENDS # TODO
+    DEPENDS 
+    CATKIN_DEPENDS hector_nist_arena_elements
     INCLUDE_DIRS # TODO include
     LIBRARIES # TODO
 )
+
+install(DIRECTORY arenas launch worlds DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

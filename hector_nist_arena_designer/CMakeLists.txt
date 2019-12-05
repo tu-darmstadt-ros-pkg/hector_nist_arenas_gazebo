@@ -60,3 +60,5 @@ qt5_add_resources(RESOURCES_RCC resources.qrc)
 add_executable(arena_designer ${SOURCES} ${HEADERS}  ${HEADERS_UI_FILES} ${RESOURCES_RCC})
 target_link_libraries(arena_designer Qt5::Widgets Qt5::Xml)
 
+install(TARGETS arena_designer DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+install(DIRECTORY icons DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
