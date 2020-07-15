@@ -13,6 +13,7 @@
   <element type="full_ramp"/>
   <element type="half_ramp"/>
   <element type="half_ramp_shifted"/>
+  <element type="elevated_ramps"/>
   <element type="victim_with_box1"/>
     
   <element type="victim_1"/>
