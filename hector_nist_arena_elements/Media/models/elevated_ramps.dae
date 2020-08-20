@@ -105,14 +105,14 @@
     </effect>
     <effect id="Material_002-effect">
       <profile_COMMON>
-        <newparam sid="plywood256x256_jpg_001-surface">
+        <newparam sid="plywood256x256_jpg-surface">
           <surface type="2D">
-            <init_from>plywood256x256_jpg_001</init_from>
+            <init_from>plywood256x256_jpg</init_from>
           </surface>
         </newparam>
-        <newparam sid="plywood256x256_jpg_001-sampler">
+        <newparam sid="plywood256x256_jpg-sampler">
           <sampler2D>
-            <source>plywood256x256_jpg_001-surface</source>
+            <source>plywood256x256_jpg-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -121,7 +121,7 @@
               <color sid="emission">0.15 0.15 0.15 1</color>
             </emission>
             <diffuse>
-              <texture texture="plywood256x256_jpg_001-sampler" texcoord="Plane-mesh-map-0"/>
+              <texture texture="plywood256x256_jpg-sampler" texcoord="Plane-mesh-map-0"/>
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1</float>
@@ -134,9 +134,6 @@
   <library_images>
     <image id="plywood256x256_jpg" name="plywood256x256_jpg">
       <init_from>plywood256x256.jpg</init_from>
-    </image>
-    <image id="plywood256x256_jpg_001" name="plywood256x256_jpg_001">
-      <init_from>plywood256x256.jpg.001.jpg</init_from>
     </image>
   </library_images>
   <library_materials>
