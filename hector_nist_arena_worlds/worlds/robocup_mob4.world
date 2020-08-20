@@ -589,46 +589,46 @@
         </visual>
       </link>
     </model>
-    <model name="elevated_ramps_7">
+    <model name="floor_tile_white_1">
       <static>true</static>
-      <link name="elevated_ramps_7_link">
-        <pose>-6 -1.2 0 0 0 -1.5708</pose>
-        <collision name="elevated_ramps_7_collision">
+      <link name="floor_tile_white_1_link">
+        <pose>-6 -1.2 0 0 0 0</pose>
+        <collision name="floor_tile_white_1_collision">
           <geometry>
             <mesh>
-              <uri>file://elevated_ramps.dae</uri>
+              <uri>file://floor_tile_white.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
         </collision>
-        <visual name="elevated_ramps_7_visual">
+        <visual name="floor_tile_white_1_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
             <mesh>
-              <uri>file://elevated_ramps.dae</uri>
+              <uri>file://floor_tile_white.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
         </visual>
       </link>
     </model>
-    <model name="elevated_ramps_8">
+    <model name="floor_tile_black_1">
       <static>true</static>
-      <link name="elevated_ramps_8_link">
-        <pose>0 0 0 0 0 -1.5708</pose>
-        <collision name="elevated_ramps_8_collision">
+      <link name="floor_tile_black_1_link">
+        <pose>0 0 0 0 0 0</pose>
+        <collision name="floor_tile_black_1_collision">
           <geometry>
             <mesh>
-              <uri>file://elevated_ramps.dae</uri>
+              <uri>file://floor_tile_black.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
         </collision>
-        <visual name="elevated_ramps_8_visual">
+        <visual name="floor_tile_black_1_visual">
           <cast_shadows>false</cast_shadows>
           <geometry>
             <mesh>
-              <uri>file://elevated_ramps.dae</uri>
+              <uri>file://floor_tile_black.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
