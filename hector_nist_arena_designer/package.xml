@@ -18,5 +18,6 @@
 
   <depend>libqt5-widgets</depend>
   <depend>libqt5-xml</depend>
+  <depend>hector_nist_arena_worlds</depend>
 
 </package>
