@@ -42,6 +42,21 @@
   <element type="floor_tile_black"/>
   <element type="floor_tile_white"/>
   <element type="stairs_120_solid"/>
+  <element type="hazmat_blasting_agents"/>
+  <element type="hazmat_corrosive"/>
+  <element type="hazmat_dangerous-when-wet"/>
+  <element type="hazmat_explosives"/>
+  <element type="hazmat_flammable-gas"/>
+  <element type="hazmat_flammable-solid"/>
+  <element type="hazmat_fuel-oil"/>
+  <element type="hazmat_inhalation-hazard"/>
+  <element type="hazmat_non-flammable-gas"/>
+  <element type="hazmat_organic-peroxide"/>
+  <element type="hazmat_oxidizer"/>
+  <element type="hazmat_oxygen"/>
+  <element type="hazmat_poison"/>
+  <element type="hazmat_radioactive"/>
+  <element type="hazmat_spontaneously-combustible"/>
   
   <!--
   <element type="victim_with_box_t"/>

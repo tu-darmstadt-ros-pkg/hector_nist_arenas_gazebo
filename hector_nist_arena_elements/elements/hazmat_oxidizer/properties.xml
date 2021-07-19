@@ -1,0 +1,8 @@
+<properties>
+    <type>wall</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>hazmat_oxidizer.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Hazmat Sign 5.1 Oxidizer</mi>
+    </meta-info>
+</properties>

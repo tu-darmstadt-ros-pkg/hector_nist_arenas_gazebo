@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elements>
+    <element type="hazmat_blasting_agents" rotation="0" x="-1" y="1"/>
+    <element type="hazmat_corrosive" rotation="0" x="0" y="1"/>
+    <element type="hazmat_dangerous-when-wet" rotation="0" x="1" y="1"/>
+    <element type="hazmat_explosives" rotation="0" x="2" y="1"/>
+    <element type="hazmat_flammable-gas" rotation="0" x="3" y="1"/>
+    <element type="hazmat_flammable-solid" rotation="0" x="-1" y="0"/>
+    <element type="hazmat_fuel-oil" rotation="0" x="0" y="0"/>
+    <element type="hazmat_inhalation-hazard" rotation="0" x="1" y="0"/>
+    <element type="hazmat_non-flammable-gas" rotation="0" x="2" y="0"/>
+    <element type="hazmat_oxidizer" rotation="0" x="-1" y="-1"/>
+    <element type="hazmat_oxygen" rotation="0" x="0" y="-1"/>
+    <element type="hazmat_poison" rotation="0" x="1" y="-1"/>
+    <element type="hazmat_radioactive" rotation="0" x="2" y="-1"/>
+    <element type="hazmat_spontaneously-combustible" rotation="0" x="3" y="-1"/>
+    <element type="hazmat_organic-peroxide" rotation="0" x="3" y="0"/>
+</elements>
