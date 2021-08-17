@@ -1,0 +1,3 @@
+Hazmat sign textures are the offical textures from https://rrl.robocup.org/forms-guides-labels/
+
+rotated by 45 degrees and downscaled to 640x640

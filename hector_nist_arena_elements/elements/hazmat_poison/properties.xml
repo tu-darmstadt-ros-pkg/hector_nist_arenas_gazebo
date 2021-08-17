@@ -1,0 +1,8 @@
+<properties>
+    <type>wall</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>hazmat_poison.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Hazmat Sign 6 Poison</mi>
+    </meta-info>
+</properties>

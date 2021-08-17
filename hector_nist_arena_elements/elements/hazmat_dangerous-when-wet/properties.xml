@@ -1,0 +1,8 @@
+<properties>
+    <type>wall</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>hazmat_dangerous-when-wet.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Hazmat Sign 4 Dangerous When Wet</mi>
+    </meta-info>
+</properties>

@@ -1,0 +1,8 @@
+<properties>
+    <type>wall</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>hazmat_flammable-solid.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Hazmat Sign 4 Flammable Solid</mi>
+    </meta-info>
+</properties>
