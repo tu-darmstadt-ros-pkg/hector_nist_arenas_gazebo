@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elements>
+    <element type="floor_tile_white" rotation="0" x="0" y="-2"/>
+    <element type="small_wall" rotation="180" x="-1" y="-2"/>
+    <element type="small_wall" rotation="90" x="-2" y="-2"/>
+    <element type="small_wall" rotation="270" x="-1" y="-1"/>
+    <element type="small_wall" rotation="90" x="-2" y="0"/>
+    <element type="small_wall" rotation="270" x="0" y="-1"/>
+    <element type="small_wall" rotation="0" x="-1" y="0"/>
+    <element type="floor_tile_black" rotation="0" x="0" y="0"/>
+    <element type="small_wall" rotation="0" x="0" y="-3"/>
+    <element type="small_wall" rotation="270" x="1" y="-2"/>
+    <element type="small_wall" rotation="0" x="0" y="-2"/>
+    <element type="small_wall" rotation="90" x="0" y="0"/>
+    <element type="small_wall" rotation="0" x="0" y="-1"/>
+    <element type="small_wall" rotation="0" x="0" y="0"/>
+</elements>
