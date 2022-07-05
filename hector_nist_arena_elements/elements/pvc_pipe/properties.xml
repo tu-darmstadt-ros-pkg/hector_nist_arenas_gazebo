@@ -1,0 +1,9 @@
+<properties>
+    <type>item</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>pvc_pipe.dae</mesh>
+    <meta-info>
+        <mi desc="Name">PVC pipe</mi>
+        <mi desc="Height">0.6 m</mi>
+    </meta-info>
+</properties>

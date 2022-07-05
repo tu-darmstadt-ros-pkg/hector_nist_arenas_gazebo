@@ -57,7 +57,8 @@
   <element type="hazmat_poison"/>
   <element type="hazmat_radioactive"/>
   <element type="hazmat_spontaneously-combustible"/>
-  
+  <element type="wooden_block"/>
+  <element type="pvc_pipe"/>
   <!--
   <element type="victim_with_box_t"/>
   <element type="victim_with_box_s"/>

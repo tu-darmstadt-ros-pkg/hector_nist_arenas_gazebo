@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elements>
+    <element type="pvc_pipe" rotation="0" x="0" y="0" offset-x="-0.00526316" offset-y="0"/>
+    <element type="wooden_block" rotation="0" x="0" y="0" offset-x="-0.0973684" offset-y="0"/>
+    <element type="wooden_block" rotation="0" x="0" y="0" offset-x="0.0894737" offset-y="-0.00263158"/>
+    <element type="wooden_block" rotation="0" x="0" y="1" offset-x="-0.168421" offset-y="0.0894737"/>
+    <element type="wooden_block" rotation="0" x="0" y="1" offset-x="0.0578948" offset-y="0.0947364"/>
+    <element type="wooden_block" rotation="0" x="0" y="1" offset-x="0.28421" offset-y="0.0894739"/>
+    <element type="wooden_block" rotation="0" x="0" y="1" offset-x="-0.394737" offset-y="0.094737"/>
+    <element type="wooden_block" rotation="0" x="-1" y="1" offset-x="0.373684" offset-y="0.105263"/>
+    <element type="wooden_block" rotation="0" x="1" y="1" offset-x="-0.5" offset-y="0.0894739"/>
+    <element type="wooden_block" rotation="0" x="1" y="1" offset-x="-0.305263" offset-y="0.0894737"/>
+    <element type="wooden_block" rotation="0" x="0" y="-1" offset-x="-0.489473" offset-y="-0.128947"/>
+    <element type="wooden_block" rotation="0" x="0" y="-1" offset-x="-0.292105" offset-y="-0.131578"/>
+    <element type="wooden_block" rotation="0" x="0" y="-1" offset-x="-0.0868423" offset-y="-0.131578"/>
+    <element type="wooden_block" rotation="0" x="0" y="-1" offset-x="0.102632" offset-y="-0.126315"/>
+    <element type="wooden_block" rotation="0" x="0" y="-1" offset-x="0.292105" offset-y="-0.128947"/>
+    <element type="wooden_block" rotation="0" x="0" y="-1" offset-x="0.489473" offset-y="-0.126315"/>
+    <element type="wooden_block" rotation="0" x="1" y="-1" offset-x="-0.310526" offset-y="-0.126316"/>
+    <element type="wooden_block" rotation="90" x="-1" y="0" offset-x="-0.405263" offset-y="0.321053"/>
+    <element type="wooden_block" rotation="90" x="-1" y="0" offset-x="-0.410526" offset-y="0.115789"/>
+    <element type="wooden_block" rotation="90" x="-1" y="0" offset-x="-0.410526" offset-y="-0.0842106"/>
+    <element type="wooden_block" rotation="90" x="-1" y="0" offset-x="-0.410526" offset-y="-0.3"/>
+    <element type="wooden_block" rotation="90" x="-1" y="-1" offset-x="-0.410526" offset-y="0.48421"/>
+    <element type="small_wall" rotation="90" x="1" y="-3"/>
+    <element type="small_wall" rotation="90" x="1" y="3"/>
+    <element type="small_wall" rotation="270" x="2" y="2"/>
+    <element type="small_wall" rotation="270" x="2" y="1"/>
+    <element type="small_wall" rotation="90" x="1" y="0"/>
+    <element type="small_wall" rotation="270" x="2" y="-1"/>
+    <element type="small_wall" rotation="270" x="2" y="-2"/>
+    <element type="wooden_block" rotation="0" x="-1" y="1" offset-x="0.147368" offset-y="0.1"/>
+    <element type="wooden_block" rotation="0" x="-1" y="-1" offset-x="0.302632" offset-y="-0.126316"/>
+    <element type="small_wall" rotation="270" x="-4" y="0"/>
+    <element type="small_wall" rotation="90" x="-5" y="1"/>
+    <element type="small_wall" rotation="270" x="-4" y="-1"/>
+    <element type="small_wall" rotation="180" x="1" y="-3"/>
+</elements>

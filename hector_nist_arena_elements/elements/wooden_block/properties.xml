@@ -1,0 +1,9 @@
+<properties>
+    <type>item</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>wooden_block.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Wooden Block</mi>
+        <mi desc="Height">0.1 m</mi>
+    </meta-info>
+</properties>
