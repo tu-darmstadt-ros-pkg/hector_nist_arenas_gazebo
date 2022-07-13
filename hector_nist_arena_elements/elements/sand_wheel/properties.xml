@@ -1,0 +1,9 @@
+<properties>
+    <type>object</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>sand_wheel.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Sand Wheel</mi>
+        <mi desc="Height"> 50 mm</mi>
+    </meta-info>
+</properties>

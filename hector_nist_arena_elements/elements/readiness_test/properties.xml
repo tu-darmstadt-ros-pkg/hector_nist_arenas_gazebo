@@ -1,0 +1,9 @@
+<properties>
+    <type>object</type>
+    <pixmap>icon.png</pixmap>
+    <mesh>readiness_test.dae</mesh>
+    <meta-info>
+        <mi desc="Name">Readiness Test</mi>
+        <mi desc="Height">305 mm</mi>
+    </meta-info>
+</properties>
