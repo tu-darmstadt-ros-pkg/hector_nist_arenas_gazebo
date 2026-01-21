@@ -1,5 +1,5 @@
-#include "arenaelementtype.h"
-#include "arenaelement.h"
+#include <hector_nist_arena_designer/model/arenaelementtype.h>
+#include <hector_nist_arena_designer/model/arenaelement.h>
 
 #include <QDebug>
 

@@ -1,9 +1,9 @@
-#include "arenascene.h"
-#include "arenasceneelement.h"
+#include <hector_nist_arena_designer/ui/arenascene.h>
+#include <hector_nist_arena_designer/ui/arenasceneelement.h>
 
-#include "../model/arena.h"
-#include "../model/arenaelement.h"
-#include "../model/arenaelementtype.h"
+#include <hector_nist_arena_designer/model/arena.h>
+#include <hector_nist_arena_designer/model/arenaelement.h>
+#include <hector_nist_arena_designer/model/arenaelementtype.h>
 
 #include <QDebug>
 #include <QGraphicsPixmapItem>

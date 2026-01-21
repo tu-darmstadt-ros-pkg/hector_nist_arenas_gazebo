@@ -1,5 +1,5 @@
 #include <QApplication>
-#include "ui/editor.h"
+#include <hector_nist_arena_designer/ui/editor.h>
 
 int main(int argc, char *argv[])
 {

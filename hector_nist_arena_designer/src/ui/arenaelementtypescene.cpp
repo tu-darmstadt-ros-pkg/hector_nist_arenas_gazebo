@@ -1,9 +1,9 @@
-#include "arenaelementtypescene.h"
+#include <hector_nist_arena_designer/ui/arenaelementtypescene.h>
 
-#include "../model/arenaelementtype.h"
-#include "../model/arenaelement.h"
-#include "../model/arenaelementtyperegistry.h"
-#include "arenasceneelement.h"
+#include <hector_nist_arena_designer/model/arenaelementtype.h>
+#include <hector_nist_arena_designer/model/arenaelement.h>
+#include <hector_nist_arena_designer/model/arenaelementtyperegistry.h>
+#include <hector_nist_arena_designer/ui/arenasceneelement.h>
 
 #include <QGraphicsPixmapItem>
 #include <QGraphicsSceneMouseEvent>

@@ -8,7 +8,7 @@
 #include <QFileInfo>
 #include <QPair>
 
-#include "xmlloadingexception.h"
+#include <hector_nist_arena_designer/model/xmlloadingexception.h>
 
 typedef QPair<QString, QString> QStringPair;
 typedef QPair<QString, QPointF> ItemMountPoint;

@@ -7,7 +7,7 @@
 #include <QDragLeaveEvent>
 #include <QDropEvent>
 
-#include "arenacontroller.h"
+#include <hector_nist_arena_designer/ui/arenacontroller.h>
 
 class Arena;
 class ArenaScene;

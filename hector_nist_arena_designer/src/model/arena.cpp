@@ -1,9 +1,9 @@
-#include "arena.h"
+#include <hector_nist_arena_designer/model/arena.h>
 
-#include "arenaelement.h"
-#include "arenaelementtype.h"
-#include "arenaelementtyperegistry.h"
-#include "xmlloadingexception.h"
+#include <hector_nist_arena_designer/model/arenaelement.h>
+#include <hector_nist_arena_designer/model/arenaelementtype.h>
+#include <hector_nist_arena_designer/model/arenaelementtyperegistry.h>
+#include <hector_nist_arena_designer/model/xmlloadingexception.h>
 
 #include <QFile>
 #include <QDomDocument>

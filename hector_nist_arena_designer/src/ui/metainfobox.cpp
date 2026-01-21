@@ -1,4 +1,4 @@
-#include "metainfobox.h"
+#include <hector_nist_arena_designer/ui/metainfobox.h>
 
 #include <QLabel>
 #include <QGridLayout>

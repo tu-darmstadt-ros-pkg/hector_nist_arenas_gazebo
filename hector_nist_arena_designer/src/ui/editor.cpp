@@ -1,4 +1,4 @@
-#include "editor.h"
+#include <hector_nist_arena_designer/ui/editor.h>
 #include "ui_editor.h"
 
 #include <QGraphicsScene>
@@ -14,17 +14,19 @@
 #include <QDesktopServices>
 #include <QUrl>
 
-#include "../model/arena.h"
-#include "../model/arenaelement.h"
-#include "../model/arenaelementtype.h"
-#include "../model/arenaelementtyperegistry.h"
+#include <ament_index_cpp/get_package_share_directory.hpp>
 
-#include "arenascene.h"
-#include "arenaview.h"
-#include "arenasceneelement.h"
-#include "arenaelementtypescene.h"
+#include <hector_nist_arena_designer/model/arena.h>
+#include <hector_nist_arena_designer/model/arenaelement.h>
+#include <hector_nist_arena_designer/model/arenaelementtype.h>
+#include <hector_nist_arena_designer/model/arenaelementtyperegistry.h>
 
-#include "../global.h"
+#include <hector_nist_arena_designer/ui/arenascene.h>
+#include <hector_nist_arena_designer/ui/arenaview.h>
+#include <hector_nist_arena_designer/ui/arenasceneelement.h>
+#include <hector_nist_arena_designer/ui/arenaelementtypescene.h>
+
+#include <hector_nist_arena_designer/global.h>
 
 Editor::Editor(QWidget *parent)
     : QMainWindow(parent)
@@ -39,7 +41,7 @@ Editor::Editor(QWidget *parent)
     }
     else
     {
-        qDebug() << "[Rescue Arena Designer] Using rospack to find hector_arena_gui and hector_arena_elements packages.";
+        qDebug() << "[Rescue Arena Designer] Using ament_index_cpp to find hector_arena_gui and hector_arena_elements packages.";
         m_hector_arena_gui_package_dir = findRosPackage("hector_nist_arena_designer");
         // findRosPackage() pops up an error message if necessary
         if (m_hector_arena_gui_package_dir.isEmpty())
@@ -81,7 +83,7 @@ Editor::Editor(QWidget *parent)
     qDebug() << "[Rescue Arena Designer] hector_arena_elements = " << m_hector_arena_elements_package_dir;
     qDebug() << "[Rescue Arena Designer] hector_arena_worlds = " << m_hector_arena_worlds_package_dir;
 
-    loadConfig(m_hector_arena_gui_package_dir + "/config.xml");
+    loadConfig(m_hector_arena_gui_package_dir + "/config/config.xml");
 
     connect(m_ui->actionRotateClockwise, SIGNAL(triggered()),
             this, SLOT(slotRotateClockwise()));
@@ -147,6 +149,8 @@ Editor::Editor(QWidget *parent)
 
 QString Editor::findRosPackage(const QString& name)
 {
+    return QString::fromStdString(ament_index_cpp::get_package_share_directory(name.toStdString()));
+
     QString result;
 
     QProcess rosFind;
@@ -234,6 +238,7 @@ bool Editor::parseRosPackageDirsFromCommandLineArguments()
 
 void Editor::loadConfig(const QString &configFile)
 {
+    printf("%s\n", configFile.toStdString().c_str());
     QFile in(configFile);
     in.open(QFile::ReadOnly);
     QDomDocument doc;

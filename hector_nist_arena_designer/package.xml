@@ -11,13 +11,17 @@
   <maintainer email="kohlbrecher@sim.tu-darmstadt.de">Stefan Kohlbrecher</maintainer>
   <author email="kohlbrecher@sim.tu-darmstadt.de">Stefan Kohlbrecher</author>
   <author email="not_available@this.time">Johannes Simon</author>
-  
-  
-  <!-- Dependencies which this package needs to build itself. -->
-  <buildtool_depend>catkin</buildtool_depend>
 
-  <depend>libqt5-widgets</depend>
-  <depend>libqt5-xml</depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <build_depend>ament_index_cpp</build_depend>
+  
+  <!-- <depend>libqt5-widgets</depend>
+  <depend>libqt5-xml</depend> -->
   <depend>hector_nist_arena_worlds</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 
 </package>

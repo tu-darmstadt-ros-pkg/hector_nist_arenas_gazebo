@@ -6,7 +6,7 @@
 #include <QDomNode>
 #include <QXmlStreamWriter>
 
-#include "xmlloadingexception.h"
+#include <hector_nist_arena_designer/model/xmlloadingexception.h>
 
 class Arena;
 class ArenaElementType;
