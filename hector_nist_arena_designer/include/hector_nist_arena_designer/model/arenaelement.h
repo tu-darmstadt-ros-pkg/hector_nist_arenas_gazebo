@@ -32,7 +32,6 @@ public:
     /// Serializes this element in XML
     void save(QXmlStreamWriter& writer);
     /// Writes .world format-compliant XML
-    void saveWorld(QXmlStreamWriter& writer);
     void saveWorldSdf(QXmlStreamWriter& writer);
 
     /// Called from Arena::addElement()

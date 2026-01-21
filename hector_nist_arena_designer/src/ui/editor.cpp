@@ -113,8 +113,8 @@ Editor::Editor(QWidget *parent)
     connect(m_ui->actionExport, SIGNAL(triggered()),
             this, SLOT(slotExport()));
 
-    connect(m_ui->actionExportSdf, SIGNAL(triggered()),
-            this, SLOT(slotExportSdf()));
+    connect(m_ui->actionExportXacro, SIGNAL(triggered()),
+            this, SLOT(slotExportXacro()));
 
     connect(m_ui->actionShowDocumentation, SIGNAL(triggered()),
             this, SLOT(slotShowDocumentation()));
@@ -461,12 +461,12 @@ void Editor::slotExport()
     }
 }
 
-void Editor::slotExportSdf()
+void Editor::slotExportXacro()
 {
-    QString target = QFileDialog::getSaveFileName(this, "Select file to export arena to", m_exportDir, "Gazebo .world File (*.world)");
+    QString target = QFileDialog::getSaveFileName(this, "Select file to export arena to", m_exportDir, "Gazebo .world.xacro File (*.world.xacro)");
     if (!target.isEmpty())
     {
-        m_arena->saveWorldSdf(target);
+        m_arena->saveWorldXacro(target);
         m_exportDir = QFileInfo(target).path();
     }
 }

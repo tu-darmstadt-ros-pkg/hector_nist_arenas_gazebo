@@ -72,7 +72,7 @@
     <addaction name="actionSave"/>
     <addaction name="actionSaveAs"/>
     <addaction name="actionExport"/>
-    <addaction name="actionExportSdf"/>
+    <addaction name="actionExportXacro"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -384,9 +384,9 @@ If you want to select multiple objects, either use the rubber-band selection too
     <string>Open the Designer's HTML documentation in a webbrowser</string>
    </property>
   </action>
-  <action name="actionExportSdf">
+  <action name="actionExportXacro">
    <property name="text">
-    <string>Export to .sdf File ...</string>
+    <string>Export to .world.xacro File ...</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+E</string>

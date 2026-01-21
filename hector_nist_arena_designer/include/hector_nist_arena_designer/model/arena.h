@@ -19,9 +19,16 @@ public:
     void load(const QString& filename);
     /// Serializes this arena in XML
     void save(const QString& filename);
-    /// Writes .world format-compliant XML
+    /**
+     * Writes .world format-compliant XML
+     * @param filename Path of the file to write
+     */
     void saveWorld(const QString& filename);
-    void saveWorldSdf(const QString& filename);
+    /**
+     * Writes .world.xacro XML
+     * @param filename Path of the file to write
+     */
+    void saveWorldXacro(const QString& filename);
 
     /// Creates and adds an element of type elementType
     ArenaElement* addElement(const QString& elementType);
